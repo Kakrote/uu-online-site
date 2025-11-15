@@ -1,26 +1,1058 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Fee Structure Content Styles */
+.fee-structure-content {
+  @apply space-y-8;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.fee-structure-content h4 {
+  @apply text-xl font-bold text-gray-900 mb-6 mt-8 first:mt-0 pb-2 border-b-2 border-blue-500;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.fee-structure-content h5 {
+  @apply text-lg font-semibold text-gray-800 mb-4 mt-6 first:mt-0;
+}
+
+.fee-structure-content p {
+  @apply text-gray-700 mb-4 leading-relaxed;
+}
+
+/* Modern table styling */
+.fee-structure-content table {
+  @apply w-full border-collapse rounded-lg overflow-hidden shadow-lg mb-8 bg-white;
+  border-spacing: 0;
+}
+
+.fee-structure-content thead {
+  @apply bg-gradient-to-r from-blue-600 to-blue-700;
+}
+
+.fee-structure-content th {
+  @apply px-6 py-4 text-left font-bold text-white text-sm uppercase tracking-wide;
+  border: none;
+  position: relative;
+}
+
+.fee-structure-content th:first-child {
+  @apply rounded-tl-lg;
+}
+
+.fee-structure-content th:last-child {
+  @apply rounded-tr-lg;
+}
+
+.fee-structure-content th::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 25%;
+  height: 50%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.fee-structure-content th:last-child::after {
+  display: none;
+}
+
+.fee-structure-content td {
+  @apply px-6 py-4 text-gray-700 text-sm border-b border-gray-100;
+  transition: all 0.2s ease;
+}
+
+.fee-structure-content tbody tr {
+  @apply transition-all duration-200 ease-in-out;
+}
+
+.fee-structure-content tbody tr:nth-child(even) {
+  @apply bg-gray-50;
+}
+
+.fee-structure-content tbody tr:hover {
+  @apply bg-blue-50 shadow-md transform scale-[1.01];
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+}
+
+.fee-structure-content tbody tr:last-child td:first-child {
+  @apply rounded-bl-lg;
+}
+
+.fee-structure-content tbody tr:last-child td:last-child {
+  @apply rounded-br-lg;
+}
+
+/* Footer styling */
+.fee-structure-content tfoot {
+  @apply bg-gradient-to-r from-gray-100 to-gray-200 font-bold;
+}
+
+.fee-structure-content tfoot td {
+  @apply font-bold text-gray-900 px-6 py-4 border-t-2 border-gray-300;
+}
+
+.fee-structure-content tfoot tr:first-child td:first-child {
+  @apply rounded-bl-lg;
+}
+
+.fee-structure-content tfoot tr:first-child td:last-child {
+  @apply rounded-br-lg;
+}
+
+/* Text formatting */
+.fee-structure-content strong {
+  @apply font-bold text-gray-900;
+}
+
+.fee-structure-content em {
+  @apply italic text-gray-600;
+}
+
+/* Special row highlighting for totals/important rows */
+.fee-structure-content tr[style*="font-weight: bold"],
+.fee-structure-content tr.total-row {
+  @apply bg-yellow-50 font-semibold;
+}
+
+.fee-structure-content tr[style*="font-weight: bold"] td,
+.fee-structure-content tr.total-row td {
+  @apply font-semibold text-gray-900 border-t-2 border-yellow-300;
+}
+
+/* Amount/Currency formatting */
+.fee-structure-content td[style*="text-align: right"],
+.fee-structure-content .amount {
+  @apply text-right font-mono font-medium text-green-700;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .fee-structure-content table {
+    @apply text-xs;
+  }
+  
+  .fee-structure-content th,
+  .fee-structure-content td {
+    @apply px-3 py-2;
+  }
+  
+  .fee-structure-content {
+    @apply space-y-6;
   }
 }
 
+/* Scrollable table container for mobile */
+.fee-structure-content .table-container {
+  @apply overflow-x-auto rounded-lg shadow-lg;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 #f1f5f9;
+}
+
+.fee-structure-content .table-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.fee-structure-content .table-container::-webkit-scrollbar-track {
+  @apply bg-gray-100 rounded;
+}
+
+.fee-structure-content .table-container::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 rounded;
+}
+
+.fee-structure-content .table-container::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500;
+}
+
+/* Enhanced cell styling for better readability */
+.fee-structure-content .fee-table {
+  @apply w-full;
+}
+
+.fee-structure-content td.amount,
+.fee-structure-content td[style*="text-align: right"] {
+  @apply text-right font-mono font-semibold text-green-700 bg-green-50;
+}
+
+.fee-structure-content th.amount-header {
+  @apply text-right;
+}
+
+.fee-structure-content .total-cell {
+  @apply font-bold text-gray-900 bg-yellow-100;
+}
+
+.fee-structure-content .total-row {
+  @apply bg-yellow-50 font-semibold border-t-2 border-yellow-300;
+}
+
+.fee-structure-content .total-row td {
+  @apply font-semibold text-gray-900;
+}
+
+/* Highlight important cells */
+.fee-structure-content td[style*="background-color"],
+.fee-structure-content td.highlight {
+  @apply bg-yellow-100 border-yellow-200;
+}
+
+/* Better spacing for nested content */
+.fee-structure-content div {
+  @apply mb-4 last:mb-0;
+}
+
+/* Print styles */
+@media print {
+  .fee-structure-content table {
+    @apply shadow-none;
+    border: 1px solid #000;
+  }
+  
+  .fee-structure-content th,
+  .fee-structure-content td {
+    border: 1px solid #000;
+  }
+  
+  .fee-structure-content tbody tr:hover {
+    @apply bg-transparent transform-none shadow-none;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .fee-structure-content table {
+    @apply bg-gray-800;
+  }
+  
+  .fee-structure-content thead {
+    @apply bg-gradient-to-r from-blue-700 to-blue-800;
+  }
+  
+  .fee-structure-content td {
+    @apply text-gray-300 border-gray-600;
+  }
+  
+  .fee-structure-content tbody tr:nth-child(even) {
+    @apply bg-gray-700;
+  }
+  
+  .fee-structure-content tbody tr:hover {
+    @apply bg-blue-900;
+  }
+}
+
+/* Animation for table appearance */
+.fee-structure-content table {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+
+  --background: 0 0% 100%;
+  --foreground: 0 0% 3.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 3.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 3.9%;
+  --primary: 48 76 205;
+  --primary-foreground: 255 255 255;
+  --secondary: 0 0% 96.1%;
+  --secondary-foreground: 0 0% 9%;
+  --muted: 0 0% 96.1%;
+  --muted-foreground: 0 0% 45.1%;
+  --accent: 0 0% 96.1%;
+  --accent-foreground: 0 0% 9%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 0 0% 89.8%;
+  --input: 0 0% 89.8%;
+  --ring: 0 0% 3.9%;
+  --chart-1: 12 76% 61%;
+  --chart-2: 173 58% 39%;
+  --chart-3: 197 37% 24%;
+  --chart-4: 43 74% 66%;
+  --chart-5: 27 87% 67%;
+  --radius: 0.5rem;
+  --sidebar-background: 0 0% 98%;
+  --sidebar-foreground: 240 5.3% 26.1%;
+  --sidebar-primary: 240 5.9% 10%;
+  --sidebar-primary-foreground: 0 0% 98%;
+  --sidebar-accent: 240 4.8% 95.9%;
+  --sidebar-accent-foreground: 240 5.9% 10%;
+  --sidebar-border: 220 13% 91%;
+  --sidebar-ring: 217.2 91.2% 59.8%;
+}
+
+.dark {
+  --background: 0 0% 3.9%;
+  --foreground: 0 0% 98%;
+  --card: 0 0% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --popover: 0 0% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 48 76 205;
+  --primary-foreground: 255 255 255;
+  --secondary: 0 0% 14.9%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 0 0% 14.9%;
+  --muted-foreground: 0 0% 63.9%;
+  --accent: 0 0% 14.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 0 0% 14.9%;
+  --input: 0 0% 14.9%;
+  --ring: 0 0% 83.1%;
+  --chart-1: 220 70% 50%;
+  --chart-2: 160 60% 45%;
+  --chart-3: 30 80% 55%;
+  --chart-4: 280 65% 60%;
+  --chart-5: 340 75% 55%;
+  --sidebar-background: 240 5.9% 10%;
+  --sidebar-foreground: 240 4.8% 95.9%;
+  --sidebar-primary: 224.3 76.3% 48%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 240 3.7% 15.9%;
+  --sidebar-accent-foreground: 240 4.8% 95.9%;
+  --sidebar-border: 240 3.7% 15.9%;
+  --sidebar-ring: 217.2 91.2% 59.8%;
+}
+
+/* Add these keyframes definitions */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Smooth scrolling for the entire document */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Adjust based on your header height */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  width: 100%;
+  height: 100%;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  /* Enhanced scrolling performance */
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch; /* iOS smooth scrolling */
+  min-height: 100vh; /* Ensure body takes full height */
+  width: 100%;
+  position: relative;
+}
+
+/* Prevent any element from causing horizontal overflow */
+* {
+  box-sizing: border-box;
+}
+
+*:not(html):not(body) {
+  max-width: 100%;
+}
+
+/* Add Figtree font family */
+.font-figtree {
+  font-family: "Figtree", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.hide-scrollbar,
+.no-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.hide-scrollbar::-webkit-scrollbar,
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Scroll reveal utility */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 700ms ease-in, transform 700ms ease-in;
+  will-change: opacity, transform;
+}
+
+/* Line clamp utilities */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Modal animations */
+.modal-overlay {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.reveal-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Chat Widget Styles */
+/* Make Tawk.to widget responsive */
+#tawk-container iframe {
+  transition: all 0.3s ease !important;
+}
+
+@media (max-width: 640px) {
+  /* Mobile adjustments for Tawk.to - positioned well above drawer */
+  #tawkchat-minified-container {
+    bottom: 250px !important;
+    right: 20px !important;
+    z-index: 45 !important;
+  }
+  
+  #tawkchat-chat-container {
+    bottom: 250px !important;
+    right: 20px !important;
+    z-index: 45 !important;
+  }
+  
+  /* Legacy selectors for older versions */
+  div[id*="tawk"] {
+    bottom: 250px !important;
+    right: 20px !important;
+    z-index: 45 !important;
+  }
+}
+
+/* Ensure proper positioning on larger screens */
+@media (min-width: 641px) {
+  #tawkchat-minified-container {
+    bottom: 20px !important;
+    right: 20px !important;
+    z-index: 45 !important;
+  }
+  
+  #tawkchat-chat-container {
+    bottom: 20px !important;
+    right: 20px !important;
+    z-index: 45 !important;
+  }
+}
+
+/* EE Form widget injected children styling */
+@layer components {
+  /* Form rows stack; spacing handled by gap */
+  #ee-form-1 form {
+    @apply mt-0;
+    display: grid;
+    grid-template-columns: 1fr; /* rows */
+    gap: 0.9rem; /* space between rows */
+  }
+
+  /* Tighter spacing on smaller screens */
+  @media (max-width: 640px) {
+    #ee-form-1 form {
+      gap: 0.2rem;
+    }
+  }
+
+  /* Grid provides spacing; neutralize legacy stacked margins */
+  #ee-form-1 form > * + * {
+    margin-top: 0;
+  }
+
+  /* Ensure elements that should span full width do so in the grid */
+  #ee-form-1 button[type='submit'],
+  #ee-form-1 button.already-registered-button {
+    grid-column: 1 / -1;
+    display: block !important;
+  }
+
+  /* Checkbox wrapper uses flex wrap - not grid */
+  #ee-form-1 .contact-consent-checkbox-wrapper {
+    grid-column: 1 / -1;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    width: 100% !important;
+    align-items: flex-start !important;
+    gap: 0.5rem !important;
+  }
+
+  /*
+    Per-field 2-column layout: label (left) + control (right)
+    Handles two common DOM shapes:
+    1) <div><label/><input|select|textarea/></div>
+    2) <label>Text <input/></label>
+    Stacks on small screens; switches to 2 columns on >=640px.
+  */
+  /* Case 1: generic row container with label + control as siblings */
+  #ee-form-1 form > *:not(.contact-consent-checkbox-wrapper):not(button) {
+    display: grid;
+    grid-template-columns: 1fr; /* stack on mobile */
+    align-items: center;
+    column-gap: 0.75rem;
+    row-gap: 0.25rem;
+  }
+  @media (min-width: 640px) {
+    #ee-form-1 form > *:not(.contact-consent-checkbox-wrapper):not(button) {
+      grid-template-columns: 1fr 2fr; /* label | control */
+    }
+  }
+  
+  /* Explicitly prevent checkbox wrapper from inheriting grid styles - use flex */
+  #ee-form-1 form > .contact-consent-checkbox-wrapper {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    width: 100% !important;
+    align-items: flex-start !important;
+    gap: 0.5rem !important;
+    grid-template-columns: none !important;
+    column-gap: unset !important;
+    row-gap: unset !important;
+  }
+  #ee-form-1 form > *:not(.contact-consent-checkbox-wrapper):not(button) > label {
+    grid-column: 1;
+    margin: 0;
+  }
+  #ee-form-1 form > *:not(.contact-consent-checkbox-wrapper):not(button) > input:not([type='checkbox']):not([type='radio']),
+  #ee-form-1 form > *:not(.contact-consent-checkbox-wrapper):not(button) > select,
+  #ee-form-1 form > *:not(.contact-consent-checkbox-wrapper):not(button) > textarea {
+    grid-column: 1; /* stack on mobile */
+  }
+  @media (min-width: 640px) {
+    #ee-form-1 form > *:not(.contact-consent-checkbox-wrapper):not(button) > input:not([type='checkbox']):not([type='radio']),
+    #ee-form-1 form > *:not(.contact-consent-checkbox-wrapper):not(button) > select,
+    #ee-form-1 form > *:not(.contact-consent-checkbox-wrapper):not(button) > textarea {
+      grid-column: 2; /* move control to right */
+    }
+  }
+
+  /* Case 2: label wraps the control */
+  #ee-form-1 form > label {
+    display: grid;
+    grid-template-columns: 1fr; /* stack on mobile */
+    align-items: center;
+    column-gap: 0.75rem;
+    row-gap: 0.25rem;
+  }
+  @media (min-width: 640px) {
+    #ee-form-1 form > label {
+      grid-template-columns: 1fr 2fr; /*2-col on sm+*/
+    }
+  }
+  #ee-form-1 form > label > input:not([type='checkbox']):not([type='radio']),
+  #ee-form-1 form > label > select,
+  #ee-form-1 form > label > textarea {
+    grid-column: 1; /* stack on mobile */
+  }
+  @media (min-width: 640px) {
+    #ee-form-1 form > label > input:not([type='checkbox']):not([type='radio']),
+    #ee-form-1 form > label > select,
+    #ee-form-1 form > label > textarea {
+      grid-column: 1; /* move to right on sm+ */
+    }
+  }
+
+  /* Keep labels visible by default */
+  #ee-form-1 label:not(.contact-consent-checkbox-wrapper label) {
+    display: block;
+    font-size: 0.875rem; /* text-sm */
+    line-height: 1.25rem;
+    color: #374151; /* gray-700 */
+  }
+
+  /* Slightly smaller labels on small screens */
+  @media (max-width: 640px) {
+    #ee-form-1 label:not(.contact-consent-checkbox-wrapper label) {
+      font-size: 0.6495rem; /* ~13px */
+    }
+  }
+
+  /* Generic form control styling */
+  #ee-form-1 input:not([type='checkbox']):not([type='radio']),
+  #ee-form-1 select,
+  #ee-form-1 textarea {
+    width: 100%;
+    border-radius: 0.5rem; /* rounded-lg */
+    background: #f9fafb; /* gray-50 */
+    font-size: 1rem; /* text-base */
+    line-height: 1.5rem;
+    transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    outline: none;
+    padding: 0.65rem 0.9rem;
+    border: 1px solid #d1d5db;
+  }
+
+  /* Reduce input padding and font size on small screens */
+  @media (max-width: 640px) {
+    #ee-form-1 input:not([type='checkbox']):not([type='radio']),
+    #ee-form-1 select,
+    #ee-form-1 textarea {
+      padding: 0.55rem 0.8rem;
+      font-size: 0.9rem; /* slightly smaller text */
+    }
+  }
+
+  /* Compact input padding for narrow screens; larger on desktop */
+  @media (max-width: 360px) {
+    #ee-form-1 input:not([type='checkbox']):not([type='radio']),
+    #ee-form-1 select,
+    #ee-form-1 textarea {
+      padding: 0.55rem 0.75rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    #ee-form-1 input:not([type='checkbox']):not([type='radio']),
+    #ee-form-1 select,
+    #ee-form-1 textarea {
+      padding: 0.7rem 1rem;
+      font-size: 1.0625rem; /* slightly larger for readability */
+    }
+  }
+
+  #ee-form-1 input:not([type='checkbox']):not([type='radio']):focus,
+  #ee-form-1 select:focus,
+  #ee-form-1 textarea:focus {
+    border-color: #5bc633;
+    box-shadow: 0 0 0 2px rgba(91, 198, 51, 0.2);
+    background: #ffffff;
+  }
+
+  /* Ensure checkboxes render visibly and consistently - exclude consent checkbox */
+  #ee-form-1 input[type='checkbox']:not(.contact-consent-checkbox-wrapper input[type='checkbox']) {
+    appearance: auto;
+    -webkit-appearance: checkbox;
+    width: 18px;
+    height: 18px;
+    margin-right: 0.5rem;
+    accent-color: #5bc633;
+    flex: 0 0 auto;
+    margin-top: 0.2rem;
+  }
+
+  /* Consent checkbox wrapper uses flex wrap */
+  #ee-form-1 .contact-consent-checkbox-wrapper {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    width: 100% !important;
+    grid-column: 1 / -1 !important;
+    align-items: flex-start !important;
+    gap: 0.5rem !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Highest specificity for checkbox wrapper label - using flex */
+  #ee-form-1 form .contact-consent-checkbox-wrapper label,
+  #ee-form-1 .contact-consent-checkbox-wrapper label {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: flex-start !important;
+    font-size: 1rem !important; /* text-base */
+    line-height: 1.5rem !important;
+    font-weight: 400 !important; /* font-normal */
+    color: #4b5563 !important; /* gray-600 */
+    width: 100% !important;
+    gap: 0.5rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  @media (max-width: 640px) {
+    #ee-form-1 form .contact-consent-checkbox-wrapper label,
+    #ee-form-1 .contact-consent-checkbox-wrapper label {
+      font-size: 0.875rem !important; /* smaller on mobile */
+      display: flex !important;
+      flex-wrap: wrap !important;
+      width: 100% !important;
+    }
+  }
+
+  /* Consent checkbox specific styling with highest priority */
+  #ee-form-1 form .contact-consent-checkbox-wrapper input[type='checkbox'],
+  #ee-form-1 .contact-consent-checkbox-wrapper input[type='checkbox'] {
+    width: 20px !important;
+    height: 20px !important;
+    min-width: 20px !important;
+    min-height: 20px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    accent-color: #5bc633 !important;
+    flex: 0 0 20px !important;
+    appearance: auto !important;
+    -webkit-appearance: checkbox !important;
+  }
+
+  /* Text content styling with highest priority - flex wrap */
+  #ee-form-1 form .contact-consent-checkbox-wrapper label span,
+  #ee-form-1 form .contact-consent-checkbox-wrapper label div,
+  #ee-form-1 form .contact-consent-checkbox-wrapper label > *:not(input),
+  #ee-form-1 .contact-consent-checkbox-wrapper label span,
+  #ee-form-1 .contact-consent-checkbox-wrapper label div,
+  #ee-form-1 .contact-consent-checkbox-wrapper label > *:not(input) {
+    flex: 1 1 calc(100% - 30px) !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  #ee-form-1 button[type='submit'] {
+    background: #5bc633;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.125rem; /* text-lg */
+    border-radius: 10px;
+    padding: 0.8rem 1.2rem;
+    cursor: pointer;
+    border: none;
+    transition: background 0.2s;
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+
+  /* Smaller buttons on small screens */
+  @media (max-width: 640px) {
+    #ee-form-1 button[type='submit'] {
+      font-size: 1rem;
+      padding: 0.65rem 1rem;
+    }
+  }
+
+  #ee-form-1 button[type='submit']:hover {
+    background: #5bc633;
+  }
+
+  #ee-form-1 button.already-registered-button {
+    background: #e5e7eb;
+    color: #4b5563;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 10px;
+    padding: 0.8rem 1.2rem;
+    cursor: pointer;
+    border: none;
+    transition: background 0.2s;
+    width: 100%;
+  }
+
+  @media (max-width: 640px) {
+    #ee-form-1 button.already-registered-button {
+      font-size: 0.9375rem;
+      padding: 0.6rem 0.9rem;
+    }
+  }
+
+  #ee-form-1 button.already-registered-button:hover {
+    background: #d1d5db;
+  }
+
+  /* No responsive grid needed; stacked by default */
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Additional smooth scrolling utilities */
+.smooth-scroll {
+  scroll-behavior: smooth;
+}
+
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+/* For any scrollable containers */
+.smooth-scrollbar {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
+}
+
+.smooth-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.smooth-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.smooth-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 155, 155, 0.5);
+  border-radius: 20px;
+  border: transparent;
+}
+
+.smooth-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(155, 155, 155, 0.7);
+}
+
+/* NUCLEAR OPTION: Force all elements in checkbox wrapper to use flex wrap */
+#ee-form-1 * {
+  box-sizing: border-box !important;
+}
+
+#ee-form-1 .contact-consent-checkbox-wrapper * {
+  max-width: 100% !important;
+}
+
+/* Force the wrapper itself to use flex wrap */
+#ee-form-1 .contact-consent-checkbox-wrapper {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 100% !important;
+  grid-column: 1 / -1 !important;
+  align-items: flex-start !important;
+  gap: 0.5rem !important;
+}
+
+/* Force the label inside to use flex wrap */
+#ee-form-1 .contact-consent-checkbox-wrapper label {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  align-items: flex-start !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  gap: 0.5rem !important;
+}
+
+/* Use flex layout instead of float for checkbox and text */
+#ee-form-1 .contact-consent-checkbox-wrapper label::after {
+  content: '';
+  display: none; /* Not needed with flex */
+}
+
+#ee-form-1 .contact-consent-checkbox-wrapper input[type='checkbox'] {
+  width: 20px !important;
+  height: 20px !important;
+  margin: 0 !important;
+  flex: 0 0 20px !important;
+}
+
+/* Text wraps naturally with flex-wrap */
+#ee-form-1 .contact-consent-checkbox-wrapper label > *:not(input[type='checkbox']) {
+  display: block !important;
+  flex: 1 1 calc(100% - 30px) !important;
+  min-width: 0 !important;
+  width: auto !important;
+  max-width: 100% !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+}
+
+/* Use flex wrap for the label instead of grid */
+#ee-form-1 .contact-consent-checkbox-wrapper label {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 0.5rem !important;
+  align-items: flex-start !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+#ee-form-1 .contact-consent-checkbox-wrapper input[type='checkbox'] {
+  flex: 0 0 20px !important;
+  margin: 0 !important;
+  width: 20px !important;
+  height: 20px !important;
+}
+
+#ee-form-1 .contact-consent-checkbox-wrapper label > *:not(input[type='checkbox']) {
+  flex: 1 1 calc(100% - 30px) !important;
+  margin: 0 !important;
+  width: auto !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+}
+
+/* CRITICAL OVERRIDE: Checkbox wrapper full width fix - MAXIMUM SPECIFICITY - FLEX WRAP */
+html body div#ee-form-1 form div.contact-consent-checkbox-wrapper,
+html body #ee-form-1 form .contact-consent-checkbox-wrapper,
+#ee-form-1 form div.contact-consent-checkbox-wrapper,
+#ee-form-1 .contact-consent-checkbox-wrapper {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  grid-column: 1 / -1 !important;
+  align-items: flex-start !important;
+  gap: 0.5rem !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+  /* Debug: add a subtle background to visualize the wrapper */
+  background: rgba(91, 198, 51, 0.05) !important;
+  border: 1px dashed rgba(91, 198, 51, 0.2) !important;
+  border-radius: 4px !important;
+}
+
+/* CRITICAL OVERRIDE: Checkbox wrapper label - MAXIMUM SPECIFICITY - FLEX WRAP */
+html body div#ee-form-1 form div.contact-consent-checkbox-wrapper label,
+html body #ee-form-1 form .contact-consent-checkbox-wrapper label,
+#ee-form-1 form div.contact-consent-checkbox-wrapper label,
+#ee-form-1 .contact-consent-checkbox-wrapper label {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  font-size: 1rem !important;
+  line-height: 1.5rem !important;
+  font-weight: 400 !important;
+  color: #4b5563 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  gap: 0.5rem !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+}
+
+/* CRITICAL OVERRIDE: Checkbox input - MAXIMUM SPECIFICITY */
+html body div#ee-form-1 form div.contact-consent-checkbox-wrapper label input[type='checkbox'],
+html body #ee-form-1 form .contact-consent-checkbox-wrapper label input[type='checkbox'],
+#ee-form-1 form div.contact-consent-checkbox-wrapper label input[type='checkbox'],
+#ee-form-1 .contact-consent-checkbox-wrapper label input[type='checkbox'] {
+  width: 20px !important;
+  height: 20px !important;
+  min-width: 20px !important;
+  min-height: 20px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  accent-color: #5bc633 !important;
+  flex: 0 0 20px !important;
+  appearance: auto !important;
+  -webkit-appearance: checkbox !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* CRITICAL OVERRIDE: Checkbox text content - MAXIMUM SPECIFICITY - FLEX WRAP */
+html body div#ee-form-1 form div.contact-consent-checkbox-wrapper label span,
+html body div#ee-form-1 form div.contact-consent-checkbox-wrapper label div,
+html body div#ee-form-1 form div.contact-consent-checkbox-wrapper label > *:not(input),
+html body #ee-form-1 form .contact-consent-checkbox-wrapper label span,
+html body #ee-form-1 form .contact-consent-checkbox-wrapper label div,
+html body #ee-form-1 form .contact-consent-checkbox-wrapper label > *:not(input),
+#ee-form-1 form div.contact-consent-checkbox-wrapper label span,
+#ee-form-1 form div.contact-consent-checkbox-wrapper label div,
+#ee-form-1 form div.contact-consent-checkbox-wrapper label > *:not(input),
+#ee-form-1 .contact-consent-checkbox-wrapper label span,
+#ee-form-1 .contact-consent-checkbox-wrapper label div,
+#ee-form-1 .contact-consent-checkbox-wrapper label > *:not(input) {
+  flex: 1 1 calc(100% - 30px) !important;
+  min-width: 0 !important;
+  width: auto !important;
+  max-width: 100% !important;
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  hyphens: auto !important;
+}
+
+/* Mobile responsive for checkbox - ensure flex wrap */
+@media (max-width: 640px) {
+  html body div#ee-form-1 form div.contact-consent-checkbox-wrapper label,
+  html body #ee-form-1 form .contact-consent-checkbox-wrapper label,
+  #ee-form-1 form div.contact-consent-checkbox-wrapper label,
+  #ee-form-1 .contact-consent-checkbox-wrapper label {
+    font-size: 0.875rem !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+  }
 }
