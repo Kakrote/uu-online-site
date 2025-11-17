@@ -85,7 +85,7 @@ export default function StarAchievers() {
   }, [api, isHovered])
 
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-white font-figtree">
+    <section className="w-full py-12 md:py-24 lg:py-32 bg-white font-figtree px-3">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-left mb-8 md:mb-12">
           <h2 className="text-v0-dark-gray text-2xl md:text-3xl font-bold tracking-tighter sm:text-4xl">
