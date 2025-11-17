@@ -23,11 +23,11 @@ export default function ApproachSection() {
     },
     {
       type: 'image',
-      image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Oa3mjIQ5zqmAAsuHHE9vF3zfsg2JTK.png',
+      image: '/images/faces/USCS.png',
     },
     {
       type: 'image',
-      image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Oa3mjIQ5zqmAAsuHHE9vF3zfsg2JTK.png',
+      image: '/images/faces/libral-arts.png',
     },
     {
       type: 'text',
@@ -54,7 +54,8 @@ export default function ApproachSection() {
           viewBox="0 0 1670 1106"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-full h-full"
+          className="w-full h-full object-cover"
+          preserveAspectRatio="xMidYMid slice"
         >
           <g clipPath="url(#clip0_217_7394)">
             <rect width="1670" height="1106" fill="#EE495C" />
@@ -88,30 +89,30 @@ export default function ApproachSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 px-8 py-20 max-w-7xl mx-auto">
-        <div className="mb-16">
-          <p className="text-white text-lg font-semibold mb-2">WHAT DRIVES</p>
-          <h2 className="text-white text-5xl md:text-6xl font-bold leading-tight">
+      <div className="relative z-10 px-4 sm:px-6 lg:px-8 py-16 sm:py-20 max-w-7xl mx-auto">
+        <div className="mb-12 sm:mb-16">
+          <p className="text-white text-base sm:text-lg font-semibold mb-2">WHAT DRIVES</p>
+          <h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
             OUR APPROACH
             <br />
             TO ONLINE LEARNING
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {cards.map((card, index) => (
-            <div key={index}>
+            <div key={index} className="h-full">
               {card.type === 'text' ? (
-                <div className="bg-white rounded-3xl p-8 h-full flex flex-col">
+                <div className="bg-white rounded-3xl p-6 sm:p-8 h-full flex flex-col">
                   {/* Icon */}
                   <div
-                    className={`${card.iconBg} w-16 h-16 rounded-full flex items-center justify-center mb-6 text-2xl`}
+                    className={`${card.iconBg} w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-4 sm:mb-6 text-xl sm:text-2xl`}
                   >
                     {card.icon}
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-gray-900 font-bold text-lg mb-4 leading-tight">
+                  <h3 className="text-gray-900 font-bold text-base sm:text-lg mb-3 sm:mb-4 leading-tight">
                     {card.title}
                   </h3>
 
@@ -121,15 +122,15 @@ export default function ApproachSection() {
                   </p>
                 </div>
               ) : (
-                <div className="relative rounded-3xl overflow-hidden h-80 group">
+                <div className="relative rounded-3xl overflow-hidden h-64 sm:h-80 group">
                   <img
                     src={card.image || "/placeholder.svg"}
                     alt="Learning experience"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-black/20 flex items-center justify-center group-hover:bg-black/30 transition-all">
-                    <div className="bg-green-500 rounded-full w-20 h-20 flex items-center justify-center shadow-lg">
-                      <Play className="w-10 h-10 text-white fill-white ml-1" />
+                    <div className="bg-green-500 rounded-full w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center shadow-lg">
+                      <Play className="w-8 h-8 sm:w-10 sm:h-10 text-white fill-white ml-1" />
                     </div>
                   </div>
                 </div>

@@ -14,7 +14,7 @@ export default function UniversityFooter() {
     <footer className="font-figtree">
 
       {/* Top blue section with contact info */}
-      <div className="bg-primary text-primary-foreground py-6">
+      <div className="bg-[#2C83F5] text-white py-6">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 items-center">
             {/* Address */}

@@ -61,14 +61,14 @@ export default function ExplorePrograms() {
     return (
         <main className='bg-white text-[#000] p-3 min-h-screen '>
             {/* headers title */}
-            <header className='flex flex-col md:flex-row justify-center  px-3 mb-8'>
+            <header className='flex flex-col md:flex-row md:justify-between  px-3 mb-8 mt-8'>
                 {/* left side text  */}
                 <div>
                     <h3 className='text-2xl lg:text-[36px] uppercase font-bold'>Explore the Best</h3>
-                    <h1 className='text-4xl lg:text-[72px] uppercase font-bold text-[#6bc533]'>Online Degree  Programs</h1>
+                    <h1 className='text-4xl lg:text-[72px] uppercase py-3 md:leading-[65px] max-w-xl font-bold text-[#6bc533]'>Online Degree Programs</h1>
                 </div>
                 {/* right side text */}
-                <div className='max-w-xl p-2 flex items-baseline-last   text-justify '>
+                <div className='max-w-xl p-2 flex items-end text-justify '>
                     <p className='text-[20px] '>You will learn UGC Entitled Online Degree Programs from the best at Uttaranchal University, as we impart world-class education in the true sense with our leading international faculty</p>
                 </div>
             </header>

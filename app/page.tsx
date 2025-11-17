@@ -14,6 +14,12 @@ import AccreditationsSection from '@/components/ui/accreditations-section'
 import StarAchievers from '@/components/ui/our-star-achiver'
 import StudentSuccessSection from '@/components/ui/student-success-section'
 import ApproachSection from '@/components/ui/approuch-section'
+import AcadmicPartners from '@/components/ui/acadmicPartners'
+import NextStep from '@/components/ui/nextStep'
+import { PrestigiousDegreeSection } from '@/components/ui/degree'
+import CareerLandscape from '@/components/ui/careerLandscap'
+import IndustryTopRecruiters from '@/components/ui/industry-top-recruiters'
+import { HaveQuestion } from '@/components/ui/haveQuestion'
 
 function Home() {
   return (
@@ -69,12 +75,28 @@ function Home() {
         <ImpactSection />
       </div>
 
-      <AccreditationsSection/>
+      <AccreditationsSection />
 
-      <StarAchievers/>
+      <StarAchievers />
 
-      <StudentSuccessSection/>
-      <ApproachSection/>
+      <StudentSuccessSection />
+      <ApproachSection />
+
+      <AcadmicPartners />
+
+      <div className=' lg:pt-20'>
+
+        <NextStep />
+      </div>
+
+      <PrestigiousDegreeSection />
+
+      <CareerLandscape />
+
+      <IndustryTopRecruiters />
+      <div className='container  mx-auto flex justify-center  w-fit mt-10'>
+        <HaveQuestion />
+      </div>
 
     </CommonLayout>
   )
