@@ -228,8 +228,8 @@ function HeroSection({
                 {/* Background image */}
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src={backgroundImageSrc || "/placeholder.svg"}
-                        alt={`${backgroundImageAlt}`}
+                        src={finalBackgroundImageSrc}
+                        alt={finalBackgroundImageAlt}
                         fill
                         className="object-cover"
                         style={{ objectPosition: "center center" }}
@@ -254,7 +254,7 @@ function HeroSection({
                 )}
 
                 {/* Gradient overlay - default option */}
-                {showGradientOverlay && <div className={`absolute inset-0 z-10 ${gradientOverlayClasses}`}></div>}
+                {finalShowGradientOverlay && <div className={`absolute inset-0 z-10 ${gradientOverlayClasses}`}></div>}
 
                 {/* Content container */}
                 <div className="flex-1 flex items-center   relative z-20">
@@ -269,7 +269,7 @@ function HeroSection({
                                     dangerouslySetInnerHTML={subtitleHtmlProcessed.safeHtml}
                                 />
                             ) : (
-                                subtitle && <h2 className="text-2xl  font-bold mb-2 uppercase">{subtitle}</h2>
+                                finalSubtitle && <h2 className="text-2xl  font-bold mb-2 uppercase">{finalSubtitle}</h2>
                             )}
 
                             {titleSource ? (
@@ -278,7 +278,7 @@ function HeroSection({
                                     dangerouslySetInnerHTML={titleHtmlProcessed.safeHtml}
                                 />
                             ) : (
-                                title && <h1 className="text-5xl  font-extrabold mb-2 uppercase">{title}</h1>
+                                finalTitle && <h1 className="text-5xl  font-extrabold mb-2 uppercase">{finalTitle}</h1>
                             )}
 
                             {highlightedSource ? (
@@ -288,9 +288,9 @@ function HeroSection({
                                     dangerouslySetInnerHTML={highlightedHtmlProcessed.safeHtml}
                                 />
                             ) : (
-                                highlightedText && (
-                                    <h1 className="text-5xl md:text-7xl font-extrabold mb-6" style={{ color: highlightColor }}>
-                                        {highlightedText}
+                                finalHighlightedText && (
+                                    <h1 className="text-5xl md:text-7xl font-extrabold mb-6" style={{ color: finalHighlightColor }}>
+                                        {finalHighlightedText}
                                     </h1>
                                 )
                             )}
@@ -298,22 +298,22 @@ function HeroSection({
                             {descriptionSource ? (
                                 <p className="text-lg mb-8" dangerouslySetInnerHTML={descriptionHtmlProcessed.safeHtml} />
                             ) : (
-                                description && <p className="text-lg mb-8">{description}</p>
+                                finalDescription && <p className="text-lg mb-8">{finalDescription}</p>
                             )}
-                            {showButtom && buttonText && buttonUrl && (
+                            {showButtom && finalButtonText && finalButtonUrl && (
                                 <Link
-                                    href={buttonUrl}
+                                    href={finalButtonUrl}
                                     className="inline-flex items-center gap-2 bg-[#6bc533] text-white px-8 py-3 rounded-full hover:bg-[#5ba428] transition-colors text-lg font-medium"
                                 >
-                                    {buttonText}
+                                    {finalButtonText}
                                 </Link>
                             )}
-                            {showButtom && brochure && brouchureUrl && (
+                            {showButtom && finalBrochure && finalBrochureUrl && (
                                 <Link
-                                    href={brouchureUrl}
+                                    href={finalBrochureUrl}
                                     className="inline-flex items-center mt-3 gap-2 border text-white px-8 py-3 lg:mx-5 rounded-full hover:bg-[#5ba428] transition-colors text-lg font-medium"
                                 >
-                                    {brochure}
+                                    {finalBrochure}
                                 </Link>
                             )}
 

@@ -47,6 +47,43 @@ export interface EducationSection {
   features: EducationFeature[]
 }
 
+export interface SemesterCourse {
+  slNo: number
+  code: string
+  title: string
+  credits: number | null
+  isElective?: boolean
+}
+
+export interface SemesterData {
+  number: number
+  courses: SemesterCourse[]
+  totalCredits: number
+}
+
+export interface ProgramStructureSection {
+  programTitle: string
+  semesters: SemesterData[]
+  applyUrl: string
+  imageSrc: string
+}
+
+export interface CareerProspectsSection {
+  label: string
+  title: string
+  description: string
+  industryStatsText: string
+  jobProfiles: string[]
+  applyButtonText?: string
+  applyButtonUrl?: string
+  imageUrl: string
+  imageAlt: string
+  backgroundImage?: string
+  backgroundColor?: string
+  showVideoButton?: boolean
+  videoUrl?: string
+}
+
 export interface HeroSectionConfig {
   subtitle: string
   title: string
@@ -62,12 +99,40 @@ export interface HeroSectionConfig {
   showGradientOverlay?: boolean
 }
 
+export interface SemesterFee {
+  semester: string
+  fee: string
+}
+
+export interface YearFee {
+  year: string
+  fee: string
+}
+
+export interface FeeStructure {
+  semesterData: SemesterFee[]
+  yearData: YearFee[]
+  totalSemesterFee: string
+  totalYearFee: string
+}
+
+export interface FeeDetails {
+  national: FeeStructure
+  international: FeeStructure
+  nationalEligibility: string[]
+  internationalEligibility: string[]
+  paymentModes: string[]
+}
+
 export interface CourseConfig {
   heroSection: HeroSectionConfig
   bannerItems: BannerItem[]
   emiBanner: EMIBanner
   specializationSection: SpecializationSection
   educationSection: EducationSection
+  programStructureSection: ProgramStructureSection
+  careerProspectsSection: CareerProspectsSection
+  feeDetails: FeeDetails
 }
 
 // Predefined course configurations
@@ -83,7 +148,7 @@ export const courseConfigs: Record<string, CourseConfig> = {
       buttonUrl: "#apply",
       brochure: "Download Brochure",
       brochureUrl: "#brochure",
-      backgroundImageSrc: "/images/hero-section/mba-hero.png",
+      backgroundImageSrc: "/images/hero-section/student-with-book-in-uu.png",
       backgroundImageAlt: "MBA online course hero section image",
       showGradientOverlay: true
     },
@@ -151,6 +216,126 @@ export const courseConfigs: Record<string, CourseConfig> = {
           description: 'We offer full placement support to help you join a reputed organization.'
         }
       ]
+    },
+    programStructureSection: {
+      programTitle: "Master of Business Administration (MBA)",
+      applyUrl: "/admissions",
+      imageSrc: "/images/hero-section/student-with-book-in-uu.png",
+      semesters: [
+        {
+          number: 1,
+          totalCredits: 20,
+          courses: [
+            { slNo: 1, code: "MBA-101", title: "Management Principles and Practices", credits: 4 },
+            { slNo: 2, code: "MBA-102", title: "Organizational Behavior", credits: 4 },
+            { slNo: 3, code: "MBA-103", title: "Managerial Economics", credits: 4 },
+            { slNo: 4, code: "MBA-104", title: "Business Statistics", credits: 4 },
+            { slNo: 5, code: "MBA-105", title: "Financial Accounting", credits: 4 },
+          ],
+        },
+        {
+          number: 2,
+          totalCredits: 20,
+          courses: [
+            { slNo: 1, code: "MBA-201", title: "Marketing Management", credits: 4 },
+            { slNo: 2, code: "MBA-202", title: "Human Resource Management", credits: 4 },
+            { slNo: 3, code: "MBA-203", title: "Financial Management", credits: 4 },
+            { slNo: 4, code: "MBA-204", title: "Operations Management", credits: 4 },
+            { slNo: 5, code: "MBA-205", title: "Business Communication", credits: 4 },
+          ],
+        },
+        {
+          number: 3,
+          totalCredits: 20,
+          courses: [
+            { slNo: 1, code: "MBA-301", title: "Strategic Management", credits: 4 },
+            { slNo: 2, code: "MBA-302", title: "Business Research Methods", credits: 4 },
+            { slNo: 3, code: "MBA-303", title: "Elective I", credits: 4, isElective: true },
+            { slNo: 4, code: "MBA-304", title: "Elective II", credits: 4, isElective: true },
+            { slNo: 5, code: "MBA-305", title: "Entrepreneurship Development", credits: 4 },
+          ],
+        },
+        {
+          number: 4,
+          totalCredits: 20,
+          courses: [
+            { slNo: 1, code: "MBA-401", title: "Business Ethics and Corporate Governance", credits: 4 },
+            { slNo: 2, code: "MBA-402", title: "Elective III", credits: 4, isElective: true },
+            { slNo: 3, code: "MBA-403", title: "Elective IV", credits: 4, isElective: true },
+            { slNo: 4, code: "MBA-404", title: "Dissertation/Project", credits: 8 },
+          ],
+        },
+      ],
+    },
+    careerProspectsSection: {
+      label: "MBA",
+      title: "CAREER PROSPECTS",
+      description: "Student with MBA degree is easily absorbed for a managerial role in the field of Finance, marketing, Human Resources, Production, Operation, Advertising, Infrastructure, Energy, Environment sector, IT sector, Health and Hospitality, Retail management, supply chain, public policy and administration and so on.",
+      industryStatsText: "As per the industry stats, here are some of the popular job profiles like:",
+      jobProfiles: [
+        "Human Resource",
+        "Production",
+        "IT Sector",
+        "Advertising",
+        "Hospitality",
+        "Energy",
+        "Infrastructure",
+        "Supply Chain",
+        "Administration",
+        "Public Policy",
+      ],
+      applyButtonText: "Apply Now",
+      applyButtonUrl: "/admissions",
+      imageUrl: "/mba-students-in-classroom-working-together.jpg",
+      imageAlt: "MBA students collaborating",
+      backgroundImage: "/images/backgrouds/org_bg.svg",
+      backgroundColor: "bg-amber-400",
+      showVideoButton: true,
+      videoUrl: "#",
+    },
+    feeDetails: {
+      national: {
+        semesterData: [
+          { semester: 'Semester 1', fee: 'INR 45,000' },
+          { semester: 'Semester 2', fee: 'INR 45,000' },
+          { semester: 'Semester 3', fee: 'INR 45,000' },
+          { semester: 'Semester 4', fee: 'INR 45,000' },
+        ],
+        yearData: [
+          { year: '1st Year', fee: 'INR 90,000' },
+          { year: '2nd Year', fee: 'INR 90,000' },
+        ],
+        totalSemesterFee: 'INR 1,80,000',
+        totalYearFee: 'INR 1,80,000',
+      },
+      international: {
+        semesterData: [
+          { semester: 'Semester 1', fee: 'USD 1,000' },
+          { semester: 'Semester 2', fee: 'USD 1,000' },
+          { semester: 'Semester 3', fee: 'USD 1,000' },
+          { semester: 'Semester 4', fee: 'USD 1,000' },
+        ],
+        yearData: [
+          { year: '1st Year', fee: 'USD 2,000' },
+          { year: '2nd Year', fee: 'USD 2,000' },
+        ],
+        totalSemesterFee: 'USD 4,000',
+        totalYearFee: 'USD 4,000',
+      },
+      nationalEligibility: [
+        'A Bachelor\'s degree of minimum three years duration with minimum 50% marks for the General and 45% marks in case of Reserved Category in the qualifying examination.',
+        'For working professionals with 2 years of experience, please contact the admission department at admissions@onlineuu.in',
+      ],
+      internationalEligibility: [
+        'A Bachelor\'s degree from a recognized international university with minimum 50% marks or equivalent GPA.',
+        'International students must have valid visa documentation and meet all immigration requirements.',
+        'For working professionals with 2 years of experience, please contact the admission department at admissions@onlineuu.in',
+      ],
+      paymentModes: [
+        'Students should pay the prescribed fees on the online portal at the time of admission.',
+        'Fees will be accepted online on the admission portal via Debit Card/Credit Card/UPI/Wallets/Net Banking etc.',
+        'Care should be taken to ensure that payments are not made to unauthorized persons or on any unauthorized website or link. The university will not be responsible for any lapse in this matter.',
+      ],
     }
   },
   
@@ -165,7 +350,7 @@ export const courseConfigs: Record<string, CourseConfig> = {
       buttonUrl: "#apply",
       brochure: "Download Brochure",
       brochureUrl: "#brochure",
-      backgroundImageSrc: "/images/hero-section/bba-hero.png",
+      backgroundImageSrc: "/images/hero-section/student-with-book-in-uu.png",
       backgroundImageAlt: "BBA online course hero section image",
       showGradientOverlay: true
     },
@@ -233,6 +418,154 @@ export const courseConfigs: Record<string, CourseConfig> = {
           description: 'Access career counseling, resume building, and interview preparation services.'
         }
       ]
+    },
+    programStructureSection: {
+      programTitle: "Bachelor of Business Administration (BBA)",
+      applyUrl: "/admissions",
+      imageSrc: "/images/programs/course-detail/student_image.jpeg",
+      semesters: [
+        {
+          number: 1,
+          totalCredits: 20,
+          courses: [
+            { slNo: 1, code: "BBA-101", title: "Principles of Management", credits: 4 },
+            { slNo: 2, code: "BBA-102", title: "Business Economics I", credits: 4 },
+            { slNo: 3, code: "BBA-103", title: "Financial Accounting", credits: 4 },
+            { slNo: 4, code: "BBA-104", title: "Business Communication", credits: 4 },
+            { slNo: 5, code: "BBA-105", title: "Computer Applications in Business", credits: 4 },
+          ],
+        },
+        {
+          number: 2,
+          totalCredits: 20,
+          courses: [
+            { slNo: 1, code: "BBA-201", title: "Organizational Behavior", credits: 4 },
+            { slNo: 2, code: "BBA-202", title: "Business Economics II", credits: 4 },
+            { slNo: 3, code: "BBA-203", title: "Cost Accounting", credits: 4 },
+            { slNo: 4, code: "BBA-204", title: "Business Statistics", credits: 4 },
+            { slNo: 5, code: "BBA-205", title: "Business Law", credits: 4 },
+          ],
+        },
+        {
+          number: 3,
+          totalCredits: 20,
+          courses: [
+            { slNo: 1, code: "BBA-301", title: "Marketing Management", credits: 4 },
+            { slNo: 2, code: "BBA-302", title: "Human Resource Management", credits: 4 },
+            { slNo: 3, code: "BBA-303", title: "Financial Management", credits: 4 },
+            { slNo: 4, code: "BBA-304", title: "Research Methodology", credits: 4 },
+            { slNo: 5, code: "BBA-305", title: "Entrepreneurship Development", credits: 4 },
+          ],
+        },
+        {
+          number: 4,
+          totalCredits: 20,
+          courses: [
+            { slNo: 1, code: "BBA-401", title: "Production and Operations Management", credits: 4 },
+            { slNo: 2, code: "BBA-402", title: "Management Information Systems", credits: 4 },
+            { slNo: 3, code: "BBA-403", title: "Business Environment", credits: 4 },
+            { slNo: 4, code: "BBA-404", title: "Elective I", credits: 4, isElective: true },
+            { slNo: 5, code: "BBA-405", title: "Business Ethics", credits: 4 },
+          ],
+        },
+        {
+          number: 5,
+          totalCredits: 20,
+          courses: [
+            { slNo: 1, code: "BBA-501", title: "Strategic Management", credits: 4 },
+            { slNo: 2, code: "BBA-502", title: "International Business", credits: 4 },
+            { slNo: 3, code: "BBA-503", title: "Elective II", credits: 4, isElective: true },
+            { slNo: 4, code: "BBA-504", title: "Elective III", credits: 4, isElective: true },
+            { slNo: 5, code: "BBA-505", title: "Project Work I", credits: 4 },
+          ],
+        },
+        {
+          number: 6,
+          totalCredits: 20,
+          courses: [
+            { slNo: 1, code: "BBA-601", title: "Corporate Governance", credits: 4 },
+            { slNo: 2, code: "BBA-602", title: "Elective IV", credits: 4, isElective: true },
+            { slNo: 3, code: "BBA-603", title: "Elective V", credits: 4, isElective: true },
+            { slNo: 4, code: "BBA-604", title: "Project Work II", credits: 8 },
+          ],
+        },
+      ],
+    },
+    careerProspectsSection: {
+      label: "BBA",
+      title: "CAREER PROSPECTS",
+      description: "BBA graduates are prepared for diverse roles in business management, from entry-level positions to management trainee programs across various industries including retail, banking, consulting, and corporate sectors.",
+      industryStatsText: "Popular career paths for BBA graduates include:",
+      jobProfiles: [
+        "Business Analyst",
+        "Marketing Executive",
+        "HR Coordinator",
+        "Operations Manager",
+        "Sales Manager",
+        "Financial Analyst",
+        "Business Consultant",
+        "Retail Manager",
+        "Brand Manager",
+        "Entrepreneur",
+      ],
+      applyButtonText: "Apply Now",
+      applyButtonUrl: "/admissions",
+      imageUrl: "/mba-students-in-classroom-working-together.jpg",
+      imageAlt: "BBA students in professional setting",
+      backgroundImage: "/images/backgrouds/org_bg.svg",
+      backgroundColor: "bg-blue-500",
+      showVideoButton: true,
+      videoUrl: "#",
+    },
+    feeDetails: {
+      national: {
+        semesterData: [
+          { semester: 'Semester 1', fee: 'INR 35,000' },
+          { semester: 'Semester 2', fee: 'INR 35,000' },
+          { semester: 'Semester 3', fee: 'INR 35,000' },
+          { semester: 'Semester 4', fee: 'INR 35,000' },
+          { semester: 'Semester 5', fee: 'INR 35,000' },
+          { semester: 'Semester 6', fee: 'INR 35,000' },
+        ],
+        yearData: [
+          { year: '1st Year', fee: 'INR 70,000' },
+          { year: '2nd Year', fee: 'INR 70,000' },
+          { year: '3rd Year', fee: 'INR 70,000' },
+        ],
+        totalSemesterFee: 'INR 2,10,000',
+        totalYearFee: 'INR 2,10,000',
+      },
+      international: {
+        semesterData: [
+          { semester: 'Semester 1', fee: 'USD 800' },
+          { semester: 'Semester 2', fee: 'USD 800' },
+          { semester: 'Semester 3', fee: 'USD 800' },
+          { semester: 'Semester 4', fee: 'USD 800' },
+          { semester: 'Semester 5', fee: 'USD 800' },
+          { semester: 'Semester 6', fee: 'USD 800' },
+        ],
+        yearData: [
+          { year: '1st Year', fee: 'USD 1,600' },
+          { year: '2nd Year', fee: 'USD 1,600' },
+          { year: '3rd Year', fee: 'USD 1,600' },
+        ],
+        totalSemesterFee: 'USD 4,800',
+        totalYearFee: 'USD 4,800',
+      },
+      nationalEligibility: [
+        'A candidate who has passed Higher Secondary/Intermediate (10+2) or any other examination recognized as equivalent thereto with 50% marks (45% in case of candidates belonging to reserved category).',
+        'For working professionals with relevant experience, please contact the admission department at admissions@onlineuu.in',
+      ],
+      internationalEligibility: [
+        'A candidate who has passed Higher Secondary or equivalent from a recognized international institution with minimum 50% marks or equivalent GPA.',
+        'International students must have valid visa documentation and meet all immigration requirements.',
+        'For working professionals with relevant experience, please contact the admission department at admissions@onlineuu.in',
+      ],
+      paymentModes: [
+        'Students should pay the prescribed fees on the online portal at the time of admission.',
+        'Fees will be accepted online on the admission portal via Debit Card/Credit Card/UPI/Wallets/Net Banking etc.',
+        'Care should be taken to ensure that payments are not made to unauthorized persons or on any unauthorized website or link. The university will not be responsible for any lapse in this matter.',
+      ],
     }
   },
 
@@ -247,7 +580,7 @@ export const courseConfigs: Record<string, CourseConfig> = {
       buttonUrl: "#apply",
       brochure: "Download Brochure",
       brochureUrl: "#brochure",
-      backgroundImageSrc: "/images/hero-section/mca-hero.png",
+      backgroundImageSrc: "/images/hero-section/student-with-book-in-uu.png",
       backgroundImageAlt: "MCA online course hero section image",
       showGradientOverlay: true
     },
@@ -315,6 +648,126 @@ export const courseConfigs: Record<string, CourseConfig> = {
           description: 'Receive specialized placement assistance for roles in top IT companies and startups.'
         }
       ]
+    },
+    programStructureSection: {
+      programTitle: "Master of Computer Applications (MCA)",
+      applyUrl: "/admissions",
+      imageSrc: "/images/programs/course-detail/student_image.jpeg",
+      semesters: [
+        {
+          number: 1,
+          totalCredits: 20,
+          courses: [
+            { slNo: 1, code: "MCA-101", title: "Programming Fundamentals", credits: 4 },
+            { slNo: 2, code: "MCA-102", title: "Data Structures", credits: 4 },
+            { slNo: 3, code: "MCA-103", title: "Computer Organization", credits: 4 },
+            { slNo: 4, code: "MCA-104", title: "Discrete Mathematics", credits: 4 },
+            { slNo: 5, code: "MCA-105", title: "Database Management Systems", credits: 4 },
+          ],
+        },
+        {
+          number: 2,
+          totalCredits: 20,
+          courses: [
+            { slNo: 1, code: "MCA-201", title: "Object-Oriented Programming", credits: 4 },
+            { slNo: 2, code: "MCA-202", title: "Operating Systems", credits: 4 },
+            { slNo: 3, code: "MCA-203", title: "Software Engineering", credits: 4 },
+            { slNo: 4, code: "MCA-204", title: "Computer Networks", credits: 4 },
+            { slNo: 5, code: "MCA-205", title: "Web Technologies", credits: 4 },
+          ],
+        },
+        {
+          number: 3,
+          totalCredits: 20,
+          courses: [
+            { slNo: 1, code: "MCA-301", title: "Artificial Intelligence", credits: 4 },
+            { slNo: 2, code: "MCA-302", title: "Mobile Application Development", credits: 4 },
+            { slNo: 3, code: "MCA-303", title: "Cloud Computing", credits: 4 },
+            { slNo: 4, code: "MCA-304", title: "Elective I", credits: 4, isElective: true },
+            { slNo: 5, code: "MCA-305", title: "Mini Project", credits: 4 },
+          ],
+        },
+        {
+          number: 4,
+          totalCredits: 20,
+          courses: [
+            { slNo: 1, code: "MCA-401", title: "Machine Learning", credits: 4 },
+            { slNo: 2, code: "MCA-402", title: "Cyber Security", credits: 4 },
+            { slNo: 3, code: "MCA-403", title: "Elective II", credits: 4, isElective: true },
+            { slNo: 4, code: "MCA-404", title: "Major Project", credits: 8 },
+          ],
+        },
+      ],
+    },
+    careerProspectsSection: {
+      label: "MCA",
+      title: "CAREER PROSPECTS",
+      description: "MCA graduates are highly sought after in the IT industry for roles in software development, system administration, database management, and emerging fields like AI, machine learning, and cloud computing.",
+      industryStatsText: "Top job profiles for MCA graduates include:",
+      jobProfiles: [
+        "Software Developer",
+        "System Analyst",
+        "Database Administrator",
+        "Cloud Architect",
+        "AI/ML Engineer",
+        "Web Developer",
+        "Cybersecurity Expert",
+        "DevOps Engineer",
+        "Mobile App Developer",
+        "Data Scientist",
+      ],
+      applyButtonText: "Apply Now",
+      applyButtonUrl: "/admissions",
+      imageUrl: "/mba-students-in-classroom-working-together.jpg",
+      imageAlt: "MCA students working on technology projects",
+      backgroundImage: "/images/backgrouds/org_bg.svg",
+      backgroundColor: "bg-purple-600",
+      showVideoButton: true,
+      videoUrl: "#",
+    },
+    feeDetails: {
+      national: {
+        semesterData: [
+          { semester: 'Semester 1', fee: 'INR 40,000' },
+          { semester: 'Semester 2', fee: 'INR 40,000' },
+          { semester: 'Semester 3', fee: 'INR 40,000' },
+          { semester: 'Semester 4', fee: 'INR 40,000' },
+        ],
+        yearData: [
+          { year: '1st Year', fee: 'INR 80,000' },
+          { year: '2nd Year', fee: 'INR 80,000' },
+        ],
+        totalSemesterFee: 'INR 1,60,000',
+        totalYearFee: 'INR 1,60,000',
+      },
+      international: {
+        semesterData: [
+          { semester: 'Semester 1', fee: 'USD 900' },
+          { semester: 'Semester 2', fee: 'USD 900' },
+          { semester: 'Semester 3', fee: 'USD 900' },
+          { semester: 'Semester 4', fee: 'USD 900' },
+        ],
+        yearData: [
+          { year: '1st Year', fee: 'USD 1,800' },
+          { year: '2nd Year', fee: 'USD 1,800' },
+        ],
+        totalSemesterFee: 'USD 3,600',
+        totalYearFee: 'USD 3,600',
+      },
+      nationalEligibility: [
+        'A Bachelor\'s degree in Computer Science/IT or equivalent with minimum 50% marks (45% in case of reserved category).',
+        'For working professionals with 2 years of relevant experience, please contact the admission department at admissions@onlineuu.in',
+      ],
+      internationalEligibility: [
+        'A Bachelor\'s degree in Computer Science/IT or equivalent from a recognized international university with minimum 50% marks or equivalent GPA.',
+        'International students must have valid visa documentation and meet all immigration requirements.',
+        'For working professionals with 2 years of relevant experience, please contact the admission department at admissions@onlineuu.in',
+      ],
+      paymentModes: [
+        'Students should pay the prescribed fees on the online portal at the time of admission.',
+        'Fees will be accepted online on the admission portal via Debit Card/Credit Card/UPI/Wallets/Net Banking etc.',
+        'Care should be taken to ensure that payments are not made to unauthorized persons or on any unauthorized website or link. The university will not be responsible for any lapse in this matter.',
+      ],
     }
   },
 
@@ -329,7 +782,7 @@ export const courseConfigs: Record<string, CourseConfig> = {
       buttonUrl: "#apply",
       brochure: "Download Brochure",
       brochureUrl: "#brochure",
-      backgroundImageSrc: "/images/hero-section/btech-hero.png",
+      backgroundImageSrc: "/images/hero-section/student-with-book-in-uu.png",
       backgroundImageAlt: "BTech online course hero section image",
       showGradientOverlay: true
     },
@@ -397,6 +850,180 @@ export const courseConfigs: Record<string, CourseConfig> = {
           description: 'Get placement assistance and career guidance for roles in leading engineering companies.'
         }
       ]
+    },
+    programStructureSection: {
+      programTitle: "Bachelor of Technology (B.Tech)",
+      applyUrl: "/admissions",
+      imageSrc: "/images/programs/course-detail/student_image.jpeg",
+      semesters: [
+        {
+          number: 1,
+          totalCredits: 20,
+          courses: [
+            { slNo: 1, code: "BTECH-101", title: "Engineering Mathematics I", credits: 4 },
+            { slNo: 2, code: "BTECH-102", title: "Engineering Physics", credits: 4 },
+            { slNo: 3, code: "BTECH-103", title: "Engineering Chemistry", credits: 4 },
+            { slNo: 4, code: "BTECH-104", title: "Programming for Problem Solving", credits: 4 },
+            { slNo: 5, code: "BTECH-105", title: "Engineering Graphics", credits: 4 },
+          ],
+        },
+        {
+          number: 2,
+          totalCredits: 20,
+          courses: [
+            { slNo: 1, code: "BTECH-201", title: "Engineering Mathematics II", credits: 4 },
+            { slNo: 2, code: "BTECH-202", title: "Data Structures", credits: 4 },
+            { slNo: 3, code: "BTECH-203", title: "Digital Logic Design", credits: 4 },
+            { slNo: 4, code: "BTECH-204", title: "Basic Electronics", credits: 4 },
+            { slNo: 5, code: "BTECH-205", title: "Environmental Science", credits: 4 },
+          ],
+        },
+        {
+          number: 3,
+          totalCredits: 20,
+          courses: [
+            { slNo: 1, code: "BTECH-301", title: "Engineering Mathematics III", credits: 4 },
+            { slNo: 2, code: "BTECH-302", title: "Object-Oriented Programming", credits: 4 },
+            { slNo: 3, code: "BTECH-303", title: "Computer Organization", credits: 4 },
+            { slNo: 4, code: "BTECH-304", title: "Database Management Systems", credits: 4 },
+            { slNo: 5, code: "BTECH-305", title: "Discrete Mathematics", credits: 4 },
+          ],
+        },
+        {
+          number: 4,
+          totalCredits: 20,
+          courses: [
+            { slNo: 1, code: "BTECH-401", title: "Operating Systems", credits: 4 },
+            { slNo: 2, code: "BTECH-402", title: "Computer Networks", credits: 4 },
+            { slNo: 3, code: "BTECH-403", title: "Software Engineering", credits: 4 },
+            { slNo: 4, code: "BTECH-404", title: "Microprocessors", credits: 4 },
+            { slNo: 5, code: "BTECH-405", title: "Theory of Computation", credits: 4 },
+          ],
+        },
+        {
+          number: 5,
+          totalCredits: 20,
+          courses: [
+            { slNo: 1, code: "BTECH-501", title: "Artificial Intelligence", credits: 4 },
+            { slNo: 2, code: "BTECH-502", title: "Compiler Design", credits: 4 },
+            { slNo: 3, code: "BTECH-503", title: "Elective I", credits: 4, isElective: true },
+            { slNo: 4, code: "BTECH-504", title: "Elective II", credits: 4, isElective: true },
+            { slNo: 5, code: "BTECH-505", title: "Mini Project", credits: 4 },
+          ],
+        },
+        {
+          number: 6,
+          totalCredits: 20,
+          courses: [
+            { slNo: 1, code: "BTECH-601", title: "Machine Learning", credits: 4 },
+            { slNo: 2, code: "BTECH-602", title: "Elective III", credits: 4, isElective: true },
+            { slNo: 3, code: "BTECH-603", title: "Elective IV", credits: 4, isElective: true },
+            { slNo: 4, code: "BTECH-604", title: "Minor Project", credits: 4 },
+            { slNo: 5, code: "BTECH-605", title: "Seminar", credits: 4 },
+          ],
+        },
+        {
+          number: 7,
+          totalCredits: 20,
+          courses: [
+            { slNo: 1, code: "BTECH-701", title: "Cloud Computing", credits: 4 },
+            { slNo: 2, code: "BTECH-702", title: "Cyber Security", credits: 4 },
+            { slNo: 3, code: "BTECH-703", title: "Elective V", credits: 4, isElective: true },
+            { slNo: 4, code: "BTECH-704", title: "Major Project I", credits: 8 },
+          ],
+        },
+        {
+          number: 8,
+          totalCredits: 20,
+          courses: [
+            { slNo: 1, code: "BTECH-801", title: "Industrial Training", credits: 4 },
+            { slNo: 2, code: "BTECH-802", title: "Elective VI", credits: 4, isElective: true },
+            { slNo: 3, code: "BTECH-803", title: "Major Project II", credits: 12 },
+          ],
+        },
+      ],
+    },
+    careerProspectsSection: {
+      label: "B.TECH",
+      title: "CAREER PROSPECTS",
+      description: "B.Tech graduates have excellent career opportunities in engineering, technology, research and development, and various technical fields across manufacturing, IT, construction, and emerging technology sectors.",
+      industryStatsText: "Key career opportunities for B.Tech graduates:",
+      jobProfiles: [
+        "Software Engineer",
+        "Mechanical Engineer",
+        "Civil Engineer",
+        "Electrical Engineer",
+        "Project Engineer",
+        "Quality Engineer",
+        "Design Engineer",
+        "Research Engineer",
+        "Technical Consultant",
+        "System Engineer",
+      ],
+      applyButtonText: "Apply Now",
+      applyButtonUrl: "/admissions",
+      imageUrl: "/mba-students-in-classroom-working-together.jpg",
+      imageAlt: "B.Tech students in engineering lab",
+      backgroundImage: "/images/backgrouds/org_bg.svg",
+      backgroundColor: "bg-green-600",
+      showVideoButton: true,
+      videoUrl: "#",
+    },
+    feeDetails: {
+      national: {
+        semesterData: [
+          { semester: 'Semester 1', fee: 'INR 38,000' },
+          { semester: 'Semester 2', fee: 'INR 38,000' },
+          { semester: 'Semester 3', fee: 'INR 38,000' },
+          { semester: 'Semester 4', fee: 'INR 38,000' },
+          { semester: 'Semester 5', fee: 'INR 38,000' },
+          { semester: 'Semester 6', fee: 'INR 38,000' },
+          { semester: 'Semester 7', fee: 'INR 38,000' },
+          { semester: 'Semester 8', fee: 'INR 38,000' },
+        ],
+        yearData: [
+          { year: '1st Year', fee: 'INR 76,000' },
+          { year: '2nd Year', fee: 'INR 76,000' },
+          { year: '3rd Year', fee: 'INR 76,000' },
+          { year: '4th Year', fee: 'INR 76,000' },
+        ],
+        totalSemesterFee: 'INR 3,04,000',
+        totalYearFee: 'INR 3,04,000',
+      },
+      international: {
+        semesterData: [
+          { semester: 'Semester 1', fee: 'USD 850' },
+          { semester: 'Semester 2', fee: 'USD 850' },
+          { semester: 'Semester 3', fee: 'USD 850' },
+          { semester: 'Semester 4', fee: 'USD 850' },
+          { semester: 'Semester 5', fee: 'USD 850' },
+          { semester: 'Semester 6', fee: 'USD 850' },
+          { semester: 'Semester 7', fee: 'USD 850' },
+          { semester: 'Semester 8', fee: 'USD 850' },
+        ],
+        yearData: [
+          { year: '1st Year', fee: 'USD 1,700' },
+          { year: '2nd Year', fee: 'USD 1,700' },
+          { year: '3rd Year', fee: 'USD 1,700' },
+          { year: '4th Year', fee: 'USD 1,700' },
+        ],
+        totalSemesterFee: 'USD 6,800',
+        totalYearFee: 'USD 6,800',
+      },
+      nationalEligibility: [
+        'A candidate who has passed Higher Secondary/Intermediate (10+2) with Physics and Mathematics as compulsory subjects along with one of the Chemistry/Biotechnology/Biology/Technical Vocational subject with minimum 50% marks (45% in case of reserved category).',
+        'For working professionals with relevant experience, please contact the admission department at admissions@onlineuu.in',
+      ],
+      internationalEligibility: [
+        'A candidate who has passed Higher Secondary or equivalent from a recognized international institution with Physics and Mathematics and minimum 50% marks or equivalent GPA.',
+        'International students must have valid visa documentation and meet all immigration requirements.',
+        'For working professionals with relevant experience, please contact the admission department at admissions@onlineuu.in',
+      ],
+      paymentModes: [
+        'Students should pay the prescribed fees on the online portal at the time of admission.',
+        'Fees will be accepted online on the admission portal via Debit Card/Credit Card/UPI/Wallets/Net Banking etc.',
+        'Care should be taken to ensure that payments are not made to unauthorized persons or on any unauthorized website or link. The university will not be responsible for any lapse in this matter.',
+      ],
     }
   },
 
@@ -480,6 +1107,99 @@ export const courseConfigs: Record<string, CourseConfig> = {
           description: 'We offer full placement support to help you join a reputed organization.'
         }
       ]
+    },
+    programStructureSection: {
+      programTitle: "Academic Program",
+      applyUrl: "/admissions",
+      imageSrc: "/images/programs/course-detail/student_image.jpeg",
+      semesters: [
+        {
+          number: 1,
+          totalCredits: 20,
+          courses: [
+            { slNo: 1, code: "PROG-101", title: "Introduction to Program", credits: 4 },
+            { slNo: 2, code: "PROG-102", title: "Core Subject I", credits: 4 },
+            { slNo: 3, code: "PROG-103", title: "Core Subject II", credits: 4 },
+            { slNo: 4, code: "PROG-104", title: "Foundation Course", credits: 4 },
+            { slNo: 5, code: "PROG-105", title: "Practical Training I", credits: 4 },
+          ],
+        },
+        {
+          number: 2,
+          totalCredits: 20,
+          courses: [
+            { slNo: 1, code: "PROG-201", title: "Advanced Core Subject I", credits: 4 },
+            { slNo: 2, code: "PROG-202", title: "Advanced Core Subject II", credits: 4 },
+            { slNo: 3, code: "PROG-203", title: "Elective I", credits: 4, isElective: true },
+            { slNo: 4, code: "PROG-204", title: "Research Methodology", credits: 4 },
+            { slNo: 5, code: "PROG-205", title: "Project Work", credits: 4 },
+          ],
+        },
+      ],
+    },
+    careerProspectsSection: {
+      label: "CAREER",
+      title: "CAREER PROSPECTS",
+      description: "Our programs prepare students for diverse career opportunities across multiple industries, providing them with the skills and knowledge needed to excel in their chosen fields.",
+      industryStatsText: "Explore various career paths:",
+      jobProfiles: [
+        "Management Professional",
+        "Technical Expert",
+        "Business Analyst",
+        "Project Manager",
+        "Consultant",
+        "Team Leader",
+        "Specialist",
+        "Coordinator",
+        "Administrator",
+        "Executive",
+      ],
+      applyButtonText: "Apply Now",
+      applyButtonUrl: "/admissions",
+      imageUrl: "/mba-students-in-classroom-working-together.jpg",
+      imageAlt: "Students in professional setting",
+      backgroundImage: "/images/backgrouds/org_bg.svg",
+      backgroundColor: "bg-amber-400",
+      showVideoButton: true,
+      videoUrl: "#",
+    },
+    feeDetails: {
+      national: {
+        semesterData: [
+          { semester: 'Semester 1', fee: 'INR 35,000' },
+          { semester: 'Semester 2', fee: 'INR 35,000' },
+        ],
+        yearData: [
+          { year: '1st Year', fee: 'INR 70,000' },
+        ],
+        totalSemesterFee: 'INR 70,000',
+        totalYearFee: 'INR 70,000',
+      },
+      international: {
+        semesterData: [
+          { semester: 'Semester 1', fee: 'USD 800' },
+          { semester: 'Semester 2', fee: 'USD 800' },
+        ],
+        yearData: [
+          { year: '1st Year', fee: 'USD 1,600' },
+        ],
+        totalSemesterFee: 'USD 1,600',
+        totalYearFee: 'USD 1,600',
+      },
+      nationalEligibility: [
+        'A Bachelor\'s degree of minimum three years duration with minimum 50% marks for the General and 45% marks in case of Reserved Category in the qualifying examination.',
+        'For working professionals with 2 years of experience, please contact the admission department at admissions@onlineuu.in',
+      ],
+      internationalEligibility: [
+        'A Bachelor\'s degree from a recognized international university with minimum 50% marks or equivalent GPA.',
+        'International students must have valid visa documentation and meet all immigration requirements.',
+        'For working professionals with 2 years of experience, please contact the admission department at admissions@onlineuu.in',
+      ],
+      paymentModes: [
+        'Students should pay the prescribed fees on the online portal at the time of admission.',
+        'Fees will be accepted online on the admission portal via Debit Card/Credit Card/UPI/Wallets/Net Banking etc.',
+        'Care should be taken to ensure that payments are not made to unauthorized persons or on any unauthorized website or link. The university will not be responsible for any lapse in this matter.',
+      ],
     }
   }
 }
@@ -510,13 +1230,19 @@ export function createCustomCourseConfig(
   customEmiBanner: EMIBanner,
   customHeroSection?: HeroSectionConfig,
   customSpecializationSection?: SpecializationSection,
-  customEducationSection?: EducationSection
+  customEducationSection?: EducationSection,
+  customProgramStructureSection?: ProgramStructureSection,
+  customCareerProspectsSection?: CareerProspectsSection,
+  customFeeDetails?: FeeDetails
 ): CourseConfig {
   return {
     heroSection: customHeroSection || courseConfigs.default.heroSection,
     bannerItems: customBannerItems,
     emiBanner: customEmiBanner,
     specializationSection: customSpecializationSection || courseConfigs.default.specializationSection,
-    educationSection: customEducationSection || courseConfigs.default.educationSection
+    educationSection: customEducationSection || courseConfigs.default.educationSection,
+    programStructureSection: customProgramStructureSection || courseConfigs.default.programStructureSection,
+    careerProspectsSection: customCareerProspectsSection || courseConfigs.default.careerProspectsSection,
+    feeDetails: customFeeDetails || courseConfigs.default.feeDetails
   }
 }
