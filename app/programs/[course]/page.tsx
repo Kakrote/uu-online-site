@@ -1,6 +1,7 @@
 import CommonLayout from '@/components/layouts/CommonLayout'
 import React from 'react'
 import HeroSection from './heroSection'
+import { BreadcrumbsAuto } from '@/components/ui/breadcrumbs-auto'
 import { getCourseConfig } from '@/lib/course-configs'
 import SpecialisationsSection from './specialization-Section'
 import EducationSection from './education_section'
@@ -37,6 +38,11 @@ const Course = async ({ params }: CoursePageProps) => {
         emiBanner={courseConfig.emiBanner}
         showBanner={true}
       />
+      
+      <div className='container mx-auto px-4 py-4'>
+        <BreadcrumbsAuto />
+      </div>
+      
       <SpecialisationsSection specializationData={courseConfig.specializationSection} />
       <EducationSection
         imageUrl={courseConfig.educationSection.imageUrl}

@@ -4,6 +4,7 @@
 import React from 'react'
 import CommonLayout from '@/components/layouts/CommonLayout'
 import HeroSection from '@/components/ui/hero-section'
+import { BreadcrumbsAuto } from '@/components/ui/breadcrumbs-auto'
 import ExplorePrograms from '@/components/ui/ExplorePrograms'
 import NewsNotificationsSection from '@/components/ui/news-notifications-section'
 import ExcellenceSection from '../components/ui/excellence-section'
@@ -37,6 +38,10 @@ function Home() {
       // showAnnouncementBanner={false}
 
       />
+
+      <div className='container mx-auto px-4 py-4'>
+        <BreadcrumbsAuto />
+      </div>
 
       <ExplorePrograms />
       <div className='bg-white py-5'>

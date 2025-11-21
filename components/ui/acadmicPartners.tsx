@@ -20,7 +20,8 @@ const AcadmicPartners = () => {
             {/* icons sections */}
             <div className='mt-10 w-full flex flex-col flex-wrap lg:flex-row items-center gap-3  justify-center '>
                 {icons.map((image)=>(
-                    <div className='p-10 border  relative rounded-xl  w-[200px] h-[100px]'>
+                    <div className='p-10 border  relative rounded-xl  w-[200px] h-[100px]'
+                    key={image.name}>
                         <Image
                             src={image.img}
                             alt={`${image.name}`}

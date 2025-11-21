@@ -2,6 +2,7 @@ import CommonLayout from '@/components/layouts/CommonLayout'
 import AboutUniversity from '@/components/ui/about-university'
 import AboutUniversitySection from '@/components/ui/about-university-section'
 import HeroSection from '@/components/ui/hero-section'
+import { BreadcrumbsAuto } from '@/components/ui/breadcrumbs-auto'
 import React from 'react'
 import Quality from './Quality'
 import IntellectualAssetsSection from '@/components/ui/intellectual-assets-section'
@@ -20,6 +21,10 @@ const page = () => {
                 showButtom={true}
                 showGradientOverlay={true}
             />
+
+            <div className='container mx-auto px-4 py-4'>
+                <BreadcrumbsAuto />
+            </div>
 
             <div className='container px-3 py-3 mx-auto'>
                 <AboutUniversitySection

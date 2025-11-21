@@ -1,6 +1,9 @@
+'use client'
+
 import React from 'react'
 import Image from 'next/image'
 import { Download } from 'lucide-react'
+import { useRouter } from 'next/navigation'
 
 interface cardsProps {
     courseName: string,
@@ -12,11 +15,22 @@ interface cardsProps {
 }
 
 function CourseCard({ courseName, courseSlug, brouchureUrl, courseDuration, courseLevel, courseImage }: cardsProps) {
+    const router = useRouter()
+
+    const handleViewProgram = () => {
+        router.push(`/programs/${courseSlug}`)
+    }
+
+    const handleDownloadBrochure = () => {
+        if (brouchureUrl) {
+            window.open(brouchureUrl, '_blank')
+        }
+    }
 
     return (
         <main className='space-y-3 hover:scale-105 duration-300 '>
             {/* image */}
-            <div className="relative w-full h-64 relative">
+            <div className="relative w-full h-64">
                 <Image
                     src={courseImage}
                     fill
@@ -37,8 +51,18 @@ function CourseCard({ courseName, courseSlug, brouchureUrl, courseDuration, cour
             </h2>
             {/* buttons */}
             <div className='space-x-3 w-full flex'>
-                <button className=' px-2 p-1 rounded-full text-white bg-[#6bc533] '>View Program</button>
-                <button className='border px-2 p-1 rounded-full flex gap-2'>Download Brochure <Download color='#2C83F5' /></button>
+                <button 
+                    onClick={handleViewProgram}
+                    className=' px-2 p-1 rounded-full text-white bg-[#6bc533] hover:bg-[#5aa329] transition-colors'
+                >
+                    View Program
+                </button>
+                <button 
+                    onClick={handleDownloadBrochure}
+                    className='border px-2 p-1 rounded-full flex gap-2 hover:bg-gray-50 transition-colors'
+                >
+                    Download Brochure <Download color='#2C83F5' />
+                </button>
             </div>
         </main>
     )
