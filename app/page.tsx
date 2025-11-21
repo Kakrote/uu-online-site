@@ -21,6 +21,7 @@ import { PrestigiousDegreeSection } from '@/components/ui/degree'
 import CareerLandscape from '@/components/ui/careerLandscap'
 import IndustryTopRecruiters from '@/components/ui/industry-top-recruiters'
 import { HaveQuestion } from '@/components/ui/haveQuestion'
+import StudentsSpeakSection from '@/components/ui/students-speak-section'
 
 function Home() {
   return (
@@ -84,7 +85,10 @@ function Home() {
 
       <StarAchievers />
 
-      <StudentSuccessSection />
+      {/* <StudentSuccessSection /> */}
+
+      <StudentsSpeakSection/>
+      
       <ApproachSection />
 
       <AcadmicPartners />

@@ -20,16 +20,16 @@ export function ImpactSection() {
 
   return (
     <section 
-      className="relative w-full overflow-hidden px-8 py-12"
+      className="relative w-full overflow-hidden px-3  py-12"
       style={{
         backgroundImage: 'url(/images/backgrouds/blue_bg.svg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
+        // backgroundAttachment: 'fixed',
       }}
     >
 
-      <div className="relative z-10 ">
+      <div className="relative z-10 container mx-auto ">
         <div className="mb-16 px-3">
           <p className="text-white text-3xl font-semibold mb-2">OUR</p>
           <h2 className="text-6xl md:text-7xl font-bold text-yellow-300">

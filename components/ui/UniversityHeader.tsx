@@ -223,7 +223,7 @@ export default function UniversityHeader() {
         )}
         {/* Main navigation bar */}
         <div className="bg-white w-full h-20 lg:h-[90px] shadow-nav relative">
-          <div className="container mx-auto h-full  flex items-center justify-between">
+          <div className=" mx-auto h-full  flex items-center justify-around">
             {/* Container for mobile logo and menu button */}
             <div className="lg:hidden flex flex-col w-full">
               {/* Top row with toll-free number and apply button - hidden on very small screens */}
@@ -328,7 +328,7 @@ export default function UniversityHeader() {
             </div>
 
             {/* Desktop navigation - Left side */}
-            <div className="hidden lg:flex flex-1 justify-end items-center gap-1 xl:gap-2 pr-32 xl:pr-40">
+            <div className="hidden lg:flex flex-1 justify-end items-center gap-1 xl:gap-10 pr-32 xl:pr-40">
               <div className="flex items-center gap-2 xl:gap-4 bg-[#E92424] text-white px-2 xl:px-3 py-2 xl:py-3 rounded-full">
                 <PhoneCall size={16} className="xl:w-5 xl:h-5" />
                 <div>
@@ -413,7 +413,7 @@ export default function UniversityHeader() {
             </div>
 
             {/* Desktop navigation - Right side */}
-            <div className="hidden lg:flex flex-1 justify-start gap-1 xl:gap-2 pl-32 xl:pl-40 items-center">
+            <div className="hidden lg:flex flex-1 justify-start gap-1 xl:gap-10 pl-32 xl:pl-40 items-center">
                 {mainLinks.slice(Math.ceil(mainLinks.length / 2)).map((link) => (
                 <div key={link.name} className="relative group" ref={link.name === activeDropdown ? dropdownRef : null}>
                   {link.hasDropdown ? (

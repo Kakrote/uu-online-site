@@ -86,14 +86,26 @@ export default function StarAchievers() {
 
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 bg-white font-figtree px-3">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="text-left mb-8 md:mb-12">
-          <h2 className="text-v0-dark-gray text-2xl md:text-3xl font-bold tracking-tighter sm:text-4xl">
-            OUR <br />
-            <span className="text-[#6BC533] text-4xl font-extrabold sm:text-5xl lg:text-7xl">
-              STAR ACHIEVERS
-            </span>
-          </h2>
+      <div className="px-4 md:px-6">
+        <div className="flex justify-around ">
+
+          <div className="text-left mb-8 md:mb-12">
+            <h2 className="text-v0-dark-gray text-2xl md:text-3xl font-bold tracking-tighter sm:text-4xl">
+              OUR <br />
+              <span className="text-[#6BC533] text-4xl font-extrabold sm:text-5xl lg:text-7xl">
+                STAR ACHIEVERS
+              </span>
+            </h2>
+          </div>
+
+          <div className="text-left mb-8 md:mb-12 max-w-4xl">
+            {/* <h2 className="text-v0-dark-gray text-2xl md:text-3xl font-bold tracking-tighter sm:text-4xl"> */}
+              {/* OUR <br /> */}
+              <span className="text-[#0b0b0b] text-lg ">
+               Uttaranchal University has maintained a strong placement record since the inception of its core institutes—LCD, UIT, and UIM—and especially after becoming a university in 2013. The presence of top recruiters reflects the high-quality talent nurtured across its various academic schools.
+              </span>
+            {/* </h2> */}
+          </div>
         </div>
 
         <div
@@ -110,7 +122,7 @@ export default function StarAchievers() {
               {slides.map((group, slideIdx) => (
                 <CarouselItem key={slideIdx} className="basis-full">
                   <div
-                    className="grid grid-rows-2  gap-4 sm:gap-6 md:gap-6"
+                    className="grid grid-rows-1  gap-4 sm:gap-6 md:gap-6"
                     style={{ gridAutoFlow: "column", gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))` }}
                   >
                     {group.map((achiever, index) => (

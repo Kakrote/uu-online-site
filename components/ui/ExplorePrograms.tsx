@@ -59,7 +59,7 @@ export default function ExplorePrograms() {
     ];
 
     return (
-        <main className='bg-white text-[#000] p-3 min-h-screen '>
+        <main className='bg-white text-[#000] container mx-auto p-3 min-h-screen '>
             {/* headers title */}
             <header className='flex flex-col md:flex-row md:justify-between  px-3 mb-8 mt-8'>
                 {/* left side text  */}

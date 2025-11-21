@@ -12,7 +12,7 @@ const BenefitIcon = ({ icon, text }: { icon: string; text: string }) => (
 
 export function BenefitsSection() {
   return (
-    <div className="w-full min-h-screen bg-black relative overflow-hidden">
+    <div className="w-full  bg-black relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -21,29 +21,29 @@ export function BenefitsSection() {
           fill
           className="object-cover object-center"
           priority
-          quality={90}
+          quality={100}
         />
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 flex min-h-screen">
-        <div className="w-full lg:w-2/5 flex items-center justify-center">
+      <div className="relative z-10 flex ">
+        <div className="w-full lg:w-[50%] flex items-center justify-center">
           <div className="relative w-full h-96 lg:h-full">
             <Image
               src="/images/img/pp_img.png"
               alt="Professional man in business suit"
               fill
-              className="object-cover object-center"
+              className="object-contain object-center relative left-0"
               priority
             />
           </div>
         </div>
 
-        <div className="w-full lg:w-3/5 flex items-center justify-center px-4 lg:px-8">
-          <div className="text-white space-y-8 max-w-2xl">
+        <div className="w-full lg:w-[50%] flex items-center justify-center px-4 lg:py-9 lg:px-2">
+          <div className="text-white space-y-8 max-w-4xl">
             {/* Heading */}
             <div className="space-y-4">
-              <p className="text-base font-medium tracking-wide text-gray-300">
+              <p className="text-2xl md:text-5xl font-medium tracking-wide text-gray-300">
                 WHAT ARE THE
               </p>
               <h2 className="text-5xl lg:text-6xl font-bold tracking-tight text-balance">
@@ -54,7 +54,7 @@ export function BenefitsSection() {
             </div>
 
             {/* Description */}
-            <p className="text-base text-gray-300 leading-relaxed max-w-xl">
+            <p className="text-base text-gray-300 leading-relaxed max-w-2xl">
               With our UGC Entitled Degree Programs, you get the best of both world's - the comfort & flexibility of online education, with the equivalence that is acquired through an on-campus, conventional Degree
             </p>
 

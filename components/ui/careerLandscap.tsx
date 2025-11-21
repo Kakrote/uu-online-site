@@ -41,7 +41,7 @@ export default function CareerLandscape() {
 
   return (
     <div
-      className="relative w-full min-h-screen bg-cover bg-center flex items-center justify-center"
+      className="relative w-full bg-cover bg-center flex items-center justify-center"
       style={{
         backgroundImage: 'url(/images/backgrouds/blue-2.svg)',
       
@@ -52,7 +52,7 @@ export default function CareerLandscape() {
         backgroundSize: 'cover'
       }} />
       
-      <div className="relative z-10 w-full max-w-7xl px-4 py-16">
+      <div className="relative z-10 w-full max-w-7xl px-4 py-12">
         <div className="text-center mb-12">
           <p className="text-white md:text-4xl text-xl font-semibold tracking-wide mb-2">UNDERSTANDING THE</p>
           <h1 className="text-white text-2xl md:text-3xl lg:text-5xl font-bold text-balance">GLOBAL CAREER LANDSCAPE</h1>

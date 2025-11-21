@@ -3,8 +3,8 @@ import { BookOpen, Video, MessageSquare, Handshake } from 'lucide-react'
 
 export default function WhyChooce() {
   return (
-    <main className="min-h-screen bg-white p-8">
-      <div className="max-w-7xl mx-auto">
+    <main className=" bg-white p-8">
+      <div className="container mx-auto">
         {/* Header */}
         <div className="mb-12">
           <h1 className="text-2xl font-bold text-foreground mb-2">WHY STUDENTS</h1>
