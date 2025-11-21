@@ -129,23 +129,23 @@ export default function UniversityHeader() {
         columns: [
           {
             items: [
+              { name: "B.Sc Computer Science", href: "/programs/bsc-computer-science" },
+              { name: "BBA Business Administration", href: "/programs/bba-business-administration" },
+              { name: "B.Com Commerce", href: "/programs/bcom-commerce" },
               { name: "Engineering", href: "/programs/engineering" },
-              { name: "Management", href: "/programs/management" },
               { name: "Law", href: "/programs/law" },
-              { name: "Pharmaceutical sciences", href: "/programs/pharmaceutical-sciences" },
+              { name: "Pharmaceutical Sciences", href: "/programs/pharmaceutical-sciences" },
               { name: "Applied & Life Sciences", href: "/programs/applied-life-sciences" },
-              { name: "Agriculture", href: "/programs/agriculture" },
-              { name: "Liberal Arts", href: "/programs/liberal-arts" },
             ],
           },
           {
             items: [
-              { name: "Nursing", href: "/programs/nursing" },
+              { name: "M.Sc Data Science", href: "/programs/msc-data-science" },
+              { name: "MBA Marketing", href: "/programs/mba-marketing" },
+              { name: "M.Com Finance", href: "/programs/mcom-finance" },
               { name: "Computer Applications", href: "/programs/computer-applications" },
               { name: "Hotel & Hospitality Management", href: "/programs/hotel-hospitality-management" },
-              { name: "Paramedical", href: "/programs/paramedical" },
-              { name: "For BAMS →", href: "#", isButton: true },
-              { name: "Online Learning →", href: "#", isButton: true },
+              { name: "View All Programs →", href: "/programs", isButton: true },
             ],
           },
         ],
@@ -172,7 +172,7 @@ export default function UniversityHeader() {
       },
     },
     { name: "Disclosure", href: "/placement", hasDropdown: false },
-    { name: "LMS Login", href: "/placement", hasDropdown: false },
+    { name: "LMS Login", href: "https://ulm.onlineuu.in/", hasDropdown: false },
     { name: "Contact US", href: "/contact", hasDropdown: false },
   ]
 
