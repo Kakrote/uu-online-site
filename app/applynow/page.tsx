@@ -3,11 +3,11 @@
 
 import React from 'react'
 import CommonLayout from '@/components/layouts/CommonLayout'
-import HeroSection from '@/components/ui/hero-section'
+import Hero from './hero'
 import { BreadcrumbsAuto } from '@/components/ui/breadcrumbs-auto'
 import ExplorePrograms from '@/components/ui/ExplorePrograms'
 import NewsNotificationsSection from '@/components/ui/news-notifications-section'
-import ExcellenceSection from '../components/ui/excellence-section'
+import ExcellenceSection from '../../components/ui/excellence-section'
 import { BenefitsSection } from '@/components/ui/benefits-section'
 import WhyChooce from '@/components/ui/why-choose'
 import { ImpactSection } from '@/components/ui/impect-section'
@@ -23,12 +23,12 @@ import IndustryTopRecruiters from '@/components/ui/industry-top-recruiters'
 import { HaveQuestion } from '@/components/ui/haveQuestion'
 import StudentsSpeakSection from '@/components/ui/students-speak-section'
 
-function Home() {
+function ApplyNow() {
   return (
     <CommonLayout>
-      <HeroSection
+      <Hero
         backgroundImageAlt='Hero-image'
-        backgroundImageSrc='/images/hero-section/home-hero.png'
+        backgroundImageSrc='/images/hero-section/apply.png'
         animateContent={false}
         title=""
         subtitle=''
@@ -36,6 +36,7 @@ function Home() {
         highlightedText=''
         description=''
         showButtom={false}
+        showGradientOverlay={true}
       // showAnnouncementBanner={false}
 
       />
@@ -71,7 +72,7 @@ function Home() {
           leftOverlayGradient={true}
         />
       </div>
-  
+
       <BenefitsSection />
 
       <WhyChooce />
@@ -111,4 +112,4 @@ function Home() {
   )
 }
 
-export default Home
+export default ApplyNow
