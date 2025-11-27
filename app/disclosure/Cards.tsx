@@ -33,7 +33,7 @@ const Card = ({ image, title, desc, link, showButton }: DataProps) => {
 
       {showButton && (
         <button className="bg-[#6bc533] absolute bottom-8 text-white px-4 py-2 rounded-full w-fit">
-         View Document
+          View Document
         </button>
       )}
     </div>
