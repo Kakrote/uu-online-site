@@ -35,7 +35,7 @@ export default function ApproachSection() {
       title: 'PROBLEM SOLVING',
       description:
         'Online programs at Uttaranchal University nurture you to develop the analytical skills required to be applied to real life problems, add value to your projects and organisation.',
-      iconBg: 'bg-green-500',
+      iconBg: 'bg-[#6bc533]',
       icon: '🧩',
     },
     {
@@ -138,7 +138,7 @@ export default function ApproachSection() {
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-black/20 flex items-center justify-center group-hover:bg-black/30 transition-all">
-                      <div className="bg-green-500 rounded-full w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center shadow-lg">
+                      <div className="bg-[#6bc533] rounded-full w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center shadow-lg">
                         <Play className="w-8 h-8 sm:w-10 sm:h-10 text-white fill-white ml-1" />
                       </div>
                     </div>

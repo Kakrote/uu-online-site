@@ -180,7 +180,7 @@ export default function IntellectualAssetsSection() {
                         {/* Read More button */}
                         <Link
                           href="/about/leadership"
-                          className="inline-flex items-center gap-2 bg-[#6bc533] text-white px-4 py-2 rounded-full hover:bg-[#5aa428] transition-colors text-sm"
+                          className="inline-flex items-center gap-2 bg-[#6bc533] text-white px-4 py-2 rounded-full hover:bg-[#5ab22c] transition-colors text-sm"
                         >
                           Read More <ArrowRight className="h-4 w-4" />
                         </Link>

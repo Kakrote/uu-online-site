@@ -48,7 +48,7 @@ export default function FeeDetails({ feeDetails }: FeeDetailsProps) {
               International Students
             </button>
           </div>
-          <button className="flex items-center gap-2 bg-[#6bc533] hover:bg-green-600 text-white px-6 py-2 rounded-full font-semibold transition-all">
+          <button className="flex items-center gap-2 bg-[#6bc533] hover:bg-[#5ab22c] text-white px-6 py-2 rounded-full font-semibold transition-all">
             Download
             <Download size={18} />
           </button>

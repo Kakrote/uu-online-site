@@ -285,7 +285,7 @@ function PlacementsOverviewRight() {
         </div>
 
         {/* Bottom compact stats */}
-        <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-xl p-6 mt-8">
+        <div className="bg-gradient-to-r from-blue-50 to-[#f0fdf4] rounded-xl p-6 mt-8">
           <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-5">
             <Stat number="20" unit="LPA" caption="Package Offered by 30+ Companies" />
             <Stat number="15" unit="LPA" caption="Package Offered by 50+ Companies" />

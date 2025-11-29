@@ -16,7 +16,7 @@ export default function EMIPayments() {
         {/* Header */}
         <div className="text-center mb-10">
           <p className="text-gray-700 text-xl font-bold tracking-wide">EASY</p>
-          <h1 className="text-5xl md:text-6xl font-bold text-green-500">EMI PAYMENTS</h1>
+          <h1 className="text-5xl md:text-6xl font-bold text-[#6bc533]">EMI PAYMENTS</h1>
         </div>
 
         {/* Cards Container */}
@@ -46,7 +46,7 @@ export default function EMIPayments() {
           </div>
 
           {/* Green Card - Right */}
-          <div className="flex-1 bg-green-500 rounded-3xl p-8 text-white shadow-lg">
+          <div className="flex-1 bg-[#6bc533] rounded-3xl p-8 text-white shadow-lg">
             <div className="flex items-start gap-6">
               {/* Fee/Money Icon */}
               <div className="flex-shrink-0">

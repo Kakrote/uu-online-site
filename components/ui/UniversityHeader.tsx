@@ -327,7 +327,7 @@ export default function UniversityHeader() {
                                 <Link
                                   key={itemIndex}
                                   href={item.href}
-                                  className="inline-block bg-[#6bc533] text-white px-6 py-3 rounded-full hover:bg-[#5aa428] transition-colors"
+                                  className="inline-block bg-[#6bc533] text-white px-6 py-3 rounded-full hover:bg-[#5ab22c] transition-colors"
                                 >
                                   {item.name}
                                 </Link>
@@ -413,7 +413,7 @@ export default function UniversityHeader() {
                                   <Link
                                     key={itemIndex}
                                     href={item.href}
-                                    className="inline-block bg-[#6bc533] text-white px-6 py-3 rounded-full hover:bg-[#5aa428] transition-colors"
+                                    className="inline-block bg-[#6bc533] text-white px-6 py-3 rounded-full hover:bg-[#5ab22c] transition-colors"
                                   >
                                     {item.name}
                                   </Link>

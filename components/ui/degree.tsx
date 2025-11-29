@@ -52,8 +52,8 @@ export function PrestigiousDegreeSection() {
             <div>
               <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
                 <span className="block text-gray-900">GET A</span>
-                <span className="block text-green-500">PRESTIGIOUS</span>
-                <span className="block text-green-500">DEGREE</span>
+                <span className="block text-[#6bc533]">PRESTIGIOUS</span>
+                <span className="block text-[#6bc533]">DEGREE</span>
               </h1>
             </div>
 

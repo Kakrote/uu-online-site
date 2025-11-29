@@ -33,7 +33,7 @@ export default function SpecialisationsSection({ specializationData }: Specialis
                             <h1 className="text-4xl font-bold leading-tight">
                                 <span className="text-black">{specializationData.title.main}</span>
                                 <br />
-                                <span className="text-green-500 md:text-5xl lg:text-7xl">{specializationData.title.highlighted}</span>
+                                <span className="text-[#6bc533] md:text-5xl lg:text-7xl">{specializationData.title.highlighted}</span>
                             </h1>
                         </div>
                         <p className="max-w-lg text-sm leading-relaxed text-gray-900">

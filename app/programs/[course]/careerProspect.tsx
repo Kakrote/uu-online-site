@@ -99,7 +99,7 @@ export default function CareerProspects({
             {/* Play Button Overlay */}
             {showVideoButton && (
               <a href={videoUrl} target="_blank" rel="noopener noreferrer">
-                <button className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-green-500 hover:bg-green-600 rounded-full p-4 shadow-lg transition-all">
+                <button className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#6bc533] hover:bg-[#5ab22c] rounded-full p-4 shadow-lg transition-all">
                   <Play size={28} className="text-white fill-white" />
                 </button>
               </a>

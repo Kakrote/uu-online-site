@@ -68,7 +68,7 @@ export function UniversityShowcase() {
                         <div className="absolute inset-0 flex items-center justify-center bg-black/20">
                             <button
                                 onClick={() => setIsPlaying(true)}
-                                className="w-24 h-24 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-2xl transition-transform hover:scale-110 group"
+                                className="w-24 h-24 bg-[#6bc533] hover:bg-[#5ab22c] rounded-full flex items-center justify-center shadow-2xl transition-transform hover:scale-110 group"
                                 aria-label="Play video"
                             >
                                 <Play size={48} className="text-white ml-2 group-hover:scale-110 transition-transform" fill="white" />

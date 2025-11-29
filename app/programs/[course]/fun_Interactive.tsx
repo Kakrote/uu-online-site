@@ -67,7 +67,7 @@ export default function Fun() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button className="bg-green-500 hover:bg-green-600 text-white px-8 py-6 text-base font-semibold rounded-full">
+            <Button className="bg-[#6bc533] hover:bg-[#5ab22c] text-white px-8 py-6 text-base font-semibold rounded-full">
               Apply Now <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
             <Button

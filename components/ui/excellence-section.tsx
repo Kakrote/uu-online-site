@@ -83,7 +83,7 @@ export default function ExcellenceSection({
               <AnimatedButton
                 delay={1000}
                 href={buttonLink}
-                className="inline-flex items-center gap-2 bg-[#6bc533] text-white px-4 py-2 rounded-full hover:bg-[#5aa428] transition-colors text-sm mt-6"
+                className="inline-flex items-center gap-2 bg-[#6bc533] text-white px-4 py-2 rounded-full hover:bg-[#5ab22c] transition-colors text-sm mt-6"
               >
                 {buttonText} <ArrowRight className="h-4 w-4" />
               </AnimatedButton>

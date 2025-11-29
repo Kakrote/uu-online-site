@@ -123,7 +123,7 @@
 /* Amount/Currency formatting */
 .fee-structure-content td[style*="text-align: right"],
 .fee-structure-content .amount {
-  @apply text-right font-mono font-medium text-green-700;
+  @apply text-right font-mono font-medium text-[#6bc533];
 }
 
 /* Responsive design */
@@ -172,7 +172,7 @@
 
 .fee-structure-content td.amount,
 .fee-structure-content td[style*="text-align: right"] {
-  @apply text-right font-mono font-semibold text-green-700 bg-green-50;
+  @apply text-right font-mono font-semibold text-[#6bc533] bg-[#f0fdf4];
 }
 
 .fee-structure-content th.amount-header {
