@@ -1,3 +1,5 @@
+"use client"
+
 import CommonLayout from '@/components/layouts/CommonLayout'
 import React from 'react'
 import HeroSection from './heroSection'
@@ -18,6 +20,8 @@ import { PrestigiousDegreeSection } from '@/components/ui/degree'
 import CareerLandscape from '@/components/ui/careerLandscap'
 import StudentTestimonials from '@/components/ui/student-testimonials'
 import { HaveQuestion } from '@/components/ui/haveQuestion'
+import AnimatedSection from '@/components/ui/AnimatedSection'
+import { useEffect, useState } from 'react'
 
 interface CoursePageProps {
   params: Promise<{
@@ -25,44 +29,65 @@ interface CoursePageProps {
   }>
 }
 
-const Course = async ({ params }: CoursePageProps) => {
-  // Await the params Promise and get course configuration
-  const { course } = await params
-  const courseConfig = getCourseConfig(course)
+const Course = ({ params }: CoursePageProps) => {
+  const [courseConfig, setCourseConfig] = useState<any>(null)
+  const [course, setCourse] = useState<string>('')
+
+  useEffect(() => {
+    const loadCourse = async () => {
+      const resolvedParams = await params
+      setCourse(resolvedParams.course)
+      const config = getCourseConfig(resolvedParams.course)
+      setCourseConfig(config)
+    }
+    loadCourse()
+  }, [params])
+
+  if (!courseConfig) {
+    return <div>Loading...</div>
+  }
 
   return (
     <CommonLayout>
-      <HeroSection
-        heroConfig={courseConfig.heroSection}
-        bannerItems={courseConfig.bannerItems}
-        emiBanner={courseConfig.emiBanner}
-        showBanner={true}
-      />
+      <AnimatedSection delay={0.1}>
+        <HeroSection
+          heroConfig={courseConfig.heroSection}
+          bannerItems={courseConfig.bannerItems}
+          emiBanner={courseConfig.emiBanner}
+          showBanner={true}
+        />
+      </AnimatedSection>
       
-      <div className='container mx-auto px-4 py-4'>
+      <AnimatedSection delay={0.2} className='container mx-auto px-4 py-4'>
         <BreadcrumbsAuto />
-      </div>
+      </AnimatedSection>
       
-      <SpecialisationsSection specializationData={courseConfig.specializationSection} />
-      <EducationSection
-        imageUrl={courseConfig.educationSection.imageUrl}
-        imageAlt={courseConfig.educationSection.imageAlt}
-        backgroundImage={courseConfig.educationSection.backgroundImage}
-        backgroundColor={courseConfig.educationSection.backgroundColor}
-        preTitle={courseConfig.educationSection.preTitle}
-        title={courseConfig.educationSection.title}
-        subtitle={courseConfig.educationSection.subtitle}
-        features={courseConfig.educationSection.features}
-      />
+      <AnimatedSection delay={0.3}>
+        <SpecialisationsSection specializationData={courseConfig.specializationSection} />
+      </AnimatedSection>
 
-      <div className='max-w-7xl mx-auto mt-10 mb-0'>
+      <AnimatedSection delay={0.4}>
+        <EducationSection
+          imageUrl={courseConfig.educationSection.imageUrl}
+          imageAlt={courseConfig.educationSection.imageAlt}
+          backgroundImage={courseConfig.educationSection.backgroundImage}
+          backgroundColor={courseConfig.educationSection.backgroundColor}
+          preTitle={courseConfig.educationSection.preTitle}
+          title={courseConfig.educationSection.title}
+          subtitle={courseConfig.educationSection.subtitle}
+          features={courseConfig.educationSection.features}
+        />
+      </AnimatedSection>
+
+      <AnimatedSection delay={0.5} className='max-w-7xl mx-auto mt-10 mb-0'>
         <Fun />
-      </div>
+      </AnimatedSection>
 
-      <AccreditationsSection />
+      <AnimatedSection delay={0.6}>
+        <AccreditationsSection />
+      </AnimatedSection>
 
-      <div className='relative'>
-
+      <AnimatedSection delay={0.7} className='relative'>
         <CareerProspects
           label={courseConfig.careerProspectsSection.label}
           title={courseConfig.careerProspectsSection.title}
@@ -78,38 +103,52 @@ const Course = async ({ params }: CoursePageProps) => {
           showVideoButton={courseConfig.careerProspectsSection.showVideoButton}
           videoUrl={courseConfig.careerProspectsSection.videoUrl}
         />
-      </div>
+      </AnimatedSection>
 
-      <CourseDetailProgramStructureSection
-        programTitle={courseConfig.programStructureSection.programTitle}
-        semesters={courseConfig.programStructureSection.semesters}
-        applyUrl={courseConfig.programStructureSection.applyUrl}
-        imageSrc={courseConfig.programStructureSection.imageSrc}
-      />
+      <AnimatedSection delay={0.8}>
+        <CourseDetailProgramStructureSection
+          programTitle={courseConfig.programStructureSection.programTitle}
+          semesters={courseConfig.programStructureSection.semesters}
+          applyUrl={courseConfig.programStructureSection.applyUrl}
+          imageSrc={courseConfig.programStructureSection.imageSrc}
+        />
+      </AnimatedSection>
 
-      <FeeDetails feeDetails={courseConfig.feeDetails} />
+      <AnimatedSection delay={0.9}>
+        <FeeDetails feeDetails={courseConfig.feeDetails} />
+      </AnimatedSection>
 
+      <AnimatedSection delay={1.0}>
+        <EMIPayments />
+      </AnimatedSection>
 
-      <EMIPayments />
+      <AnimatedSection delay={1.1}>
+        <HowToApplySection />
+      </AnimatedSection>
 
-      <HowToApplySection />
+      <AnimatedSection delay={1.2}>
+        <IndustryTopRecruiters />
+      </AnimatedSection>
 
-      <IndustryTopRecruiters />
-      <div className='mt-10 py-10'>
+      <AnimatedSection delay={1.3} className='mt-10 py-10'>
         <NextStep />
-      </div>
+      </AnimatedSection>
 
-      <PrestigiousDegreeSection />
+      <AnimatedSection delay={1.4}>
+        <PrestigiousDegreeSection />
+      </AnimatedSection>
 
-      <CareerLandscape />
+      <AnimatedSection delay={1.5}>
+        <CareerLandscape />
+      </AnimatedSection>
 
-      <StudentTestimonials />
-      <div className=' flex justify-center'>
+      <AnimatedSection delay={1.6}>
+        <StudentTestimonials />
+      </AnimatedSection>
 
+      <AnimatedSection delay={1.7} className='flex justify-center'>
         <HaveQuestion />
-      </div>
-
-
+      </AnimatedSection>
     </CommonLayout>
   )
 }

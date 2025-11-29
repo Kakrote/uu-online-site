@@ -771,88 +771,88 @@ export const courseConfigs: Record<string, CourseConfig> = {
     }
   },
 
-  btech: {
+  bca: {
     heroSection: {
-      subtitle: "ENGINEERING PROGRAM",
+      subtitle: "UNDERGRADUATE PROGRAM",
       title: "BACHELOR OF",
-      highlightedText: "TECHNOLOGY (B.TECH)",
-      highlightColor: "#6BC533",
-      description: "Engineer your future with our comprehensive B.Tech program. Choose from diverse engineering specializations and build expertise in cutting-edge technologies that shape tomorrow's world.",
+      highlightedText: "COMPUTER APPLICATIONS (BCA)",
+      highlightColor: "#00D4FF",
+      description: "Launch your career in computer applications with our comprehensive BCA program. Develop strong programming skills and technical expertise to excel in the dynamic IT industry.",
       buttonText: "Apply Now →",
       buttonUrl: "#apply",
       brochure: "Download Brochure",
       brochureUrl: "#brochure",
       backgroundImageSrc: "/images/hero-section/student-with-book-in-uu.png",
-      backgroundImageAlt: "BTech online course hero section image",
+      backgroundImageAlt: "BCA online course hero section image",
       showGradientOverlay: true
     },
     bannerItems: [
-      { title: "Duration", time: "4 Years", duration: "8 semesters", icon: "Clock" },
-      { title: "Degree Type", time: "Bachelor's", duration: "Engineering", icon: "GraduationCap" },
-      { title: "Course Fee", time: "INR 60,000", duration: "Per Semester", icon: "IndianRupee" },
+      { title: "Duration", time: "3 Years", duration: "6 semesters", icon: "Clock" },
+      { title: "Study Mode", time: "Online", duration: "Flexible", icon: "BookOpen" },
+      { title: "Course Fee", time: "INR 35,000", duration: "Per Semester", icon: "IndianRupee" },
     ],
     emiBanner: {
       title: "No Cost EMI",
       subtitle: "EMI starting at",
-      amount: "₹10,000 INR",
+      amount: "₹5,800 INR",
       iconSrc: "/images/icons/fee.png",
-      iconAlt: "BTech EMI"
+      iconAlt: "BCA EMI"
     },
     specializationSection: {
       title: {
-        main: "BRANCHES &",
+        main: "COMPUTER APPLICATIONS",
         highlighted: "SPECIALIZATIONS"
       },
-      description: "Choose your engineering specialization and build expertise in cutting-edge technologies. Our comprehensive BTech program offers diverse branches to match your interests and prepare you for successful careers in engineering and technology.",
+      description: "Choose your specialization to build expertise in specific areas of computer applications. Our BCA program offers diverse tracks to match your interests and prepare you for successful careers in IT.",
       specializations: [
-        { title: "COMPUTER SCIENCE\n& ENGINEERING", icon: "technology" },
-        { title: "INFORMATION\nTECHNOLOGY", icon: "technology" },
-        { title: "MECHANICAL\nENGINEERING", icon: "technology" },
-        { title: "ELECTRICAL\nENGINEERING", icon: "technology" },
-        { title: "CIVIL\nENGINEERING", icon: "technology" },
-        { title: "ELECTRONICS &\nCOMMUNICATION", icon: "technology" },
-        { title: "DATA SCIENCE\n& AI", icon: "analytics" },
-        { title: "ROBOTICS &\nAUTOMATION", icon: "technology" },
+        { title: "WEB\nDEVELOPMENT", icon: "technology" },
+        { title: "SOFTWARE\nDEVELOPMENT", icon: "technology" },
+        { title: "DATABASE\nMANAGEMENT", icon: "analytics" },
+        { title: "MOBILE APP\nDEVELOPMENT", icon: "technology" },
+        { title: "CYBERSECURITY", icon: "technology" },
+        { title: "DATA SCIENCE", icon: "analytics" },
+        { title: "CLOUD\nCOMPUTING", icon: "technology" },
+        { title: "ARTIFICIAL\nINTELLIGENCE", icon: "technology" },
       ]
     },
     educationSection: {
       imageUrl: '/images/faces/student_image.jpeg',
-      imageAlt: 'BTech engineering students',
+      imageAlt: 'BCA students learning computer applications',
       backgroundImage: '/images/backgrouds/green_bg.svg',
-      backgroundColor: '#6BC533',
+      backgroundColor: '#00D4FF',
       preTitle: 'WHY OPT FOR',
-      title: 'ONLINE B.TECH?',
-      subtitle: 'Engineer your future with a comprehensive program that combines theoretical knowledge with practical skills.',
+      title: 'ONLINE BCA?',
+      subtitle: 'Our computer applications program combines theoretical knowledge with practical programming skills to prepare you for successful careers in technology.',
       features: [
         {
           number: '01',
-          title: 'DISTINGUISHED ENGINEERING FACULTY',
-          description: 'Learn from experienced engineers and researchers with expertise across multiple engineering disciplines.'
+          title: 'COMPREHENSIVE PROGRAMMING FOUNDATION',
+          description: 'Master multiple programming languages and development frameworks used in the industry.'
         },
         {
           number: '02',
-          title: 'COMPREHENSIVE LAB ACCESS',
-          description: 'Access virtual labs and simulation tools to gain practical experience in engineering concepts.'
+          title: 'HANDS-ON PROJECT EXPERIENCE',
+          description: 'Work on real-world projects and build a strong portfolio showcasing your technical skills.'
         },
         {
           number: '03',
-          title: 'INDUSTRY-ALIGNED CURRICULUM',
-          description: 'Study a curriculum designed in collaboration with industry experts to meet current market demands.'
+          title: 'INDUSTRY-RELEVANT CURRICULUM',
+          description: 'Learn the latest technologies and methodologies that are in high demand in the IT sector.'
         },
         {
           number: '04',
-          title: 'RESEARCH OPPORTUNITIES',
-          description: 'Participate in research projects and innovation initiatives to develop problem-solving skills.'
+          title: 'PRACTICAL LAB SESSIONS',
+          description: 'Access virtual labs and development environments to gain hands-on experience.'
         },
         {
           number: '05',
-          title: 'ENGINEERING CAREER SUPPORT',
-          description: 'Get placement assistance and career guidance for roles in leading engineering companies.'
+          title: 'IT CAREER PLACEMENT SUPPORT',
+          description: 'Receive specialized placement assistance for roles in software companies and IT firms.'
         }
       ]
     },
     programStructureSection: {
-      programTitle: "Bachelor of Technology (B.Tech)",
+      programTitle: "Bachelor of Computer Applications (BCA)",
       applyUrl: "/admissions",
       imageSrc: "/images/programs/course-detail/student_image.jpeg",
       semesters: [
@@ -860,164 +860,560 @@ export const courseConfigs: Record<string, CourseConfig> = {
           number: 1,
           totalCredits: 20,
           courses: [
-            { slNo: 1, code: "BTECH-101", title: "Engineering Mathematics I", credits: 4 },
-            { slNo: 2, code: "BTECH-102", title: "Engineering Physics", credits: 4 },
-            { slNo: 3, code: "BTECH-103", title: "Engineering Chemistry", credits: 4 },
-            { slNo: 4, code: "BTECH-104", title: "Programming for Problem Solving", credits: 4 },
-            { slNo: 5, code: "BTECH-105", title: "Engineering Graphics", credits: 4 },
+            { slNo: 1, code: "BCA-101", title: "Fundamentals of Computer Science", credits: 4 },
+            { slNo: 2, code: "BCA-102", title: "Programming in C", credits: 4 },
+            { slNo: 3, code: "BCA-103", title: "Digital Computer Fundamentals", credits: 4 },
+            { slNo: 4, code: "BCA-104", title: "Mathematics I", credits: 4 },
+            { slNo: 5, code: "BCA-105", title: "Communication Skills", credits: 4 },
           ],
         },
         {
           number: 2,
           totalCredits: 20,
           courses: [
-            { slNo: 1, code: "BTECH-201", title: "Engineering Mathematics II", credits: 4 },
-            { slNo: 2, code: "BTECH-202", title: "Data Structures", credits: 4 },
-            { slNo: 3, code: "BTECH-203", title: "Digital Logic Design", credits: 4 },
-            { slNo: 4, code: "BTECH-204", title: "Basic Electronics", credits: 4 },
-            { slNo: 5, code: "BTECH-205", title: "Environmental Science", credits: 4 },
+            { slNo: 1, code: "BCA-201", title: "Data Structures", credits: 4 },
+            { slNo: 2, code: "BCA-202", title: "Object Oriented Programming", credits: 4 },
+            { slNo: 3, code: "BCA-203", title: "Computer Organization", credits: 4 },
+            { slNo: 4, code: "BCA-204", title: "Mathematics II", credits: 4 },
+            { slNo: 5, code: "BCA-205", title: "Environmental Studies", credits: 4 },
           ],
         },
         {
           number: 3,
           totalCredits: 20,
           courses: [
-            { slNo: 1, code: "BTECH-301", title: "Engineering Mathematics III", credits: 4 },
-            { slNo: 2, code: "BTECH-302", title: "Object-Oriented Programming", credits: 4 },
-            { slNo: 3, code: "BTECH-303", title: "Computer Organization", credits: 4 },
-            { slNo: 4, code: "BTECH-304", title: "Database Management Systems", credits: 4 },
-            { slNo: 5, code: "BTECH-305", title: "Discrete Mathematics", credits: 4 },
+            { slNo: 1, code: "BCA-301", title: "Database Management Systems", credits: 4 },
+            { slNo: 2, code: "BCA-302", title: "Web Technologies", credits: 4 },
+            { slNo: 3, code: "BCA-303", title: "Operating Systems", credits: 4 },
+            { slNo: 4, code: "BCA-304", title: "Software Engineering", credits: 4 },
+            { slNo: 5, code: "BCA-305", title: "Computer Networks", credits: 4 },
           ],
         },
         {
           number: 4,
           totalCredits: 20,
           courses: [
-            { slNo: 1, code: "BTECH-401", title: "Operating Systems", credits: 4 },
-            { slNo: 2, code: "BTECH-402", title: "Computer Networks", credits: 4 },
-            { slNo: 3, code: "BTECH-403", title: "Software Engineering", credits: 4 },
-            { slNo: 4, code: "BTECH-404", title: "Microprocessors", credits: 4 },
-            { slNo: 5, code: "BTECH-405", title: "Theory of Computation", credits: 4 },
+            { slNo: 1, code: "BCA-401", title: "Advanced Java Programming", credits: 4 },
+            { slNo: 2, code: "BCA-402", title: "Python Programming", credits: 4 },
+            { slNo: 3, code: "BCA-403", title: "Mobile Application Development", credits: 4 },
+            { slNo: 4, code: "BCA-404", title: "Elective I", credits: 4, isElective: true },
+            { slNo: 5, code: "BCA-405", title: "Project Work I", credits: 4 },
           ],
         },
         {
           number: 5,
           totalCredits: 20,
           courses: [
-            { slNo: 1, code: "BTECH-501", title: "Artificial Intelligence", credits: 4 },
-            { slNo: 2, code: "BTECH-502", title: "Compiler Design", credits: 4 },
-            { slNo: 3, code: "BTECH-503", title: "Elective I", credits: 4, isElective: true },
-            { slNo: 4, code: "BTECH-504", title: "Elective II", credits: 4, isElective: true },
-            { slNo: 5, code: "BTECH-505", title: "Mini Project", credits: 4 },
+            { slNo: 1, code: "BCA-501", title: "Cloud Computing", credits: 4 },
+            { slNo: 2, code: "BCA-502", title: "Data Science and Analytics", credits: 4 },
+            { slNo: 3, code: "BCA-503", title: "Cybersecurity Fundamentals", credits: 4 },
+            { slNo: 4, code: "BCA-504", title: "Elective II", credits: 4, isElective: true },
+            { slNo: 5, code: "BCA-505", title: "Internship", credits: 4 },
           ],
         },
         {
           number: 6,
           totalCredits: 20,
           courses: [
-            { slNo: 1, code: "BTECH-601", title: "Machine Learning", credits: 4 },
-            { slNo: 2, code: "BTECH-602", title: "Elective III", credits: 4, isElective: true },
-            { slNo: 3, code: "BTECH-603", title: "Elective IV", credits: 4, isElective: true },
-            { slNo: 4, code: "BTECH-604", title: "Minor Project", credits: 4 },
-            { slNo: 5, code: "BTECH-605", title: "Seminar", credits: 4 },
+            { slNo: 1, code: "BCA-601", title: "Artificial Intelligence", credits: 4 },
+            { slNo: 2, code: "BCA-602", title: "Machine Learning", credits: 4 },
+            { slNo: 3, code: "BCA-603", title: "Blockchain Technology", credits: 4 },
+            { slNo: 4, code: "BCA-604", title: "Elective III", credits: 4, isElective: true },
+            { slNo: 5, code: "BCA-605", title: "Major Project", credits: 4 },
           ],
-        },
-        {
-          number: 7,
-          totalCredits: 20,
-          courses: [
-            { slNo: 1, code: "BTECH-701", title: "Cloud Computing", credits: 4 },
-            { slNo: 2, code: "BTECH-702", title: "Cyber Security", credits: 4 },
-            { slNo: 3, code: "BTECH-703", title: "Elective V", credits: 4, isElective: true },
-            { slNo: 4, code: "BTECH-704", title: "Major Project I", credits: 8 },
-          ],
-        },
-        {
-          number: 8,
-          totalCredits: 20,
-          courses: [
-            { slNo: 1, code: "BTECH-801", title: "Industrial Training", credits: 4 },
-            { slNo: 2, code: "BTECH-802", title: "Elective VI", credits: 4, isElective: true },
-            { slNo: 3, code: "BTECH-803", title: "Major Project II", credits: 12 },
-          ],
-        },
-      ],
+        }
+      ]
     },
     careerProspectsSection: {
-      label: "B.TECH",
-      title: "CAREER PROSPECTS",
-      description: "B.Tech graduates have excellent career opportunities in engineering, technology, research and development, and various technical fields across manufacturing, IT, construction, and emerging technology sectors.",
-      industryStatsText: "Key career opportunities for B.Tech graduates:",
+      label: "CAREER PROSPECTS",
+      title: "Career Opportunities in Computer Applications",
+      description: "BCA graduates are in high demand across IT companies, software development firms, startups, and various industries embracing digital transformation.",
+      industryStatsText: "Computer application professionals enjoy excellent career prospects with opportunities in software development, web development, mobile app development, and emerging technologies.",
       jobProfiles: [
-        "Software Engineer",
-        "Mechanical Engineer",
-        "Civil Engineer",
-        "Electrical Engineer",
-        "Project Engineer",
-        "Quality Engineer",
-        "Design Engineer",
-        "Research Engineer",
-        "Technical Consultant",
-        "System Engineer",
+        "Software Developer",
+        "Web Developer",
+        "Mobile App Developer",
+        "Database Administrator",
+        "System Analyst",
+        "Software Tester",
+        "UI/UX Designer",
+        "Technical Support Engineer",
+        "Data Analyst",
+        "Cybersecurity Analyst"
       ],
       applyButtonText: "Apply Now",
-      applyButtonUrl: "/admissions",
-      imageUrl: "/mba-students-in-classroom-working-together.jpg",
-      imageAlt: "B.Tech students in engineering lab",
-      backgroundImage: "/images/backgrouds/org_bg.svg",
-      backgroundColor: "bg-green-600",
-      showVideoButton: true,
-      videoUrl: "#",
+      applyButtonUrl: "#apply",
+      imageUrl: "/images/career-prospects/bca-career.png",
+      imageAlt: "BCA Career Prospects",
+      backgroundColor: "#00D4FF",
+      showVideoButton: false,
     },
     feeDetails: {
       national: {
         semesterData: [
-          { semester: 'Semester 1', fee: 'INR 38,000' },
-          { semester: 'Semester 2', fee: 'INR 38,000' },
-          { semester: 'Semester 3', fee: 'INR 38,000' },
-          { semester: 'Semester 4', fee: 'INR 38,000' },
-          { semester: 'Semester 5', fee: 'INR 38,000' },
-          { semester: 'Semester 6', fee: 'INR 38,000' },
-          { semester: 'Semester 7', fee: 'INR 38,000' },
-          { semester: 'Semester 8', fee: 'INR 38,000' },
+          { semester: "Semester 1", fee: "₹35,000" },
+          { semester: "Semester 2", fee: "₹35,000" },
+          { semester: "Semester 3", fee: "₹35,000" },
+          { semester: "Semester 4", fee: "₹35,000" },
+          { semester: "Semester 5", fee: "₹35,000" },
+          { semester: "Semester 6", fee: "₹35,000" },
         ],
         yearData: [
-          { year: '1st Year', fee: 'INR 76,000' },
-          { year: '2nd Year', fee: 'INR 76,000' },
-          { year: '3rd Year', fee: 'INR 76,000' },
-          { year: '4th Year', fee: 'INR 76,000' },
+          { year: "Year 1", fee: "₹70,000" },
+          { year: "Year 2", fee: "₹70,000" },
+          { year: "Year 3", fee: "₹70,000" },
         ],
-        totalSemesterFee: 'INR 3,04,000',
-        totalYearFee: 'INR 3,04,000',
+        totalSemesterFee: "₹2,10,000",
+        totalYearFee: "₹2,10,000"
       },
       international: {
         semesterData: [
-          { semester: 'Semester 1', fee: 'USD 850' },
-          { semester: 'Semester 2', fee: 'USD 850' },
-          { semester: 'Semester 3', fee: 'USD 850' },
-          { semester: 'Semester 4', fee: 'USD 850' },
-          { semester: 'Semester 5', fee: 'USD 850' },
-          { semester: 'Semester 6', fee: 'USD 850' },
-          { semester: 'Semester 7', fee: 'USD 850' },
-          { semester: 'Semester 8', fee: 'USD 850' },
+          { semester: "Semester 1", fee: "$500" },
+          { semester: "Semester 2", fee: "$500" },
+          { semester: "Semester 3", fee: "$500" },
+          { semester: "Semester 4", fee: "$500" },
+          { semester: "Semester 5", fee: "$500" },
+          { semester: "Semester 6", fee: "$500" },
         ],
         yearData: [
-          { year: '1st Year', fee: 'USD 1,700' },
-          { year: '2nd Year', fee: 'USD 1,700' },
-          { year: '3rd Year', fee: 'USD 1,700' },
-          { year: '4th Year', fee: 'USD 1,700' },
+          { year: "Year 1", fee: "$1,000" },
+          { year: "Year 2", fee: "$1,000" },
+          { year: "Year 3", fee: "$1,000" },
         ],
-        totalSemesterFee: 'USD 6,800',
-        totalYearFee: 'USD 6,800',
+        totalSemesterFee: "$3,000",
+        totalYearFee: "$3,000"
       },
       nationalEligibility: [
-        'A candidate who has passed Higher Secondary/Intermediate (10+2) with Physics and Mathematics as compulsory subjects along with one of the Chemistry/Biotechnology/Biology/Technical Vocational subject with minimum 50% marks (45% in case of reserved category).',
-        'For working professionals with relevant experience, please contact the admission department at admissions@onlineuu.in',
+        'Pass in 12th standard from any recognized board',
+        'Minimum 50% marks in 12th standard (45% for SC/ST candidates)',
+        'Mathematics as a subject in 12th standard',
       ],
       internationalEligibility: [
-        'A candidate who has passed Higher Secondary or equivalent from a recognized international institution with Physics and Mathematics and minimum 50% marks or equivalent GPA.',
-        'International students must have valid visa documentation and meet all immigration requirements.',
-        'For working professionals with relevant experience, please contact the admission department at admissions@onlineuu.in',
+        'Equivalent to Indian 12th standard',
+        'Minimum 50% marks or equivalent grade',
+        'English proficiency certificate (if applicable)',
+        'Valid passport and student visa',
+      ],
+      paymentModes: [
+        'Students should pay the prescribed fees on the online portal at the time of admission.',
+        'Fees will be accepted online on the admission portal via Debit Card/Credit Card/UPI/Wallets/Net Banking etc.',
+        'Care should be taken to ensure that payments are not made to unauthorized persons or on any unauthorized website or link. The university will not be responsible for any lapse in this matter.',
+      ],
+    }
+  },
+
+  ba: {
+    heroSection: {
+      subtitle: "UNDERGRADUATE PROGRAM",
+      title: "BACHELOR OF",
+      highlightedText: "ARTS (BA)",
+      highlightColor: "#FF6B6B",
+      description: "Explore diverse fields of arts and humanities with our comprehensive BA program. Develop critical thinking, communication skills, and cultural understanding for a successful career in various sectors.",
+      buttonText: "Apply Now →",
+      buttonUrl: "#apply",
+      brochure: "Download Brochure",
+      brochureUrl: "#brochure",
+      backgroundImageSrc: "/images/hero-section/student-with-book-in-uu.png",
+      backgroundImageAlt: "BA online course hero section image",
+      showGradientOverlay: true
+    },
+    bannerItems: [
+      { title: "Duration", time: "3 Years", duration: "6 semesters", icon: "Clock" },
+      { title: "Study Mode", time: "Online", duration: "Flexible", icon: "BookOpen" },
+      { title: "Course Fee", time: "INR 25,000", duration: "Per Semester", icon: "IndianRupee" },
+    ],
+    emiBanner: {
+      title: "No Cost EMI",
+      subtitle: "EMI starting at",
+      amount: "₹4,200 INR",
+      iconSrc: "/images/icons/fee.png",
+      iconAlt: "BA EMI"
+    },
+    specializationSection: {
+      title: {
+        main: "ARTS & HUMANITIES",
+        highlighted: "SPECIALIZATIONS"
+      },
+      description: "Choose your specialization to build expertise in specific areas of arts and humanities. Our BA program offers diverse tracks to develop your intellectual and creative capabilities.",
+      specializations: [
+        { title: "ENGLISH\nLITERATURE", icon: "marketing" },
+        { title: "HISTORY", icon: "marketing" },
+        { title: "PSYCHOLOGY", icon: "hr" },
+        { title: "SOCIOLOGY", icon: "hr" },
+        { title: "POLITICAL\nSCIENCE", icon: "international" },
+        { title: "ECONOMICS", icon: "finance" },
+        { title: "PHILOSOPHY", icon: "marketing" },
+        { title: "JOURNALISM &\nMASS COMM.", icon: "digital" },
+      ]
+    },
+    educationSection: {
+      imageUrl: '/images/faces/student_image.jpeg',
+      imageAlt: 'BA students in liberal arts education',
+      backgroundImage: '/images/backgrouds/green_bg.svg',
+      backgroundColor: '#FF6B6B',
+      preTitle: 'WHY OPT FOR',
+      title: 'ONLINE BA?',
+      subtitle: 'Our arts program combines classical education with modern perspectives to develop well-rounded individuals with strong analytical and communication skills.',
+      features: [
+        {
+          number: '01',
+          title: 'LIBERAL ARTS FOUNDATION',
+          description: 'Develop critical thinking, analytical skills, and broad intellectual perspectives across multiple disciplines.'
+        },
+        {
+          number: '02',
+          title: 'COMMUNICATION EXCELLENCE',
+          description: 'Master written and oral communication skills essential for success in any career path.'
+        },
+        {
+          number: '03',
+          title: 'CULTURAL AWARENESS',
+          description: 'Gain deep understanding of society, culture, history, and human behavior through diverse coursework.'
+        },
+        {
+          number: '04',
+          title: 'RESEARCH METHODOLOGY',
+          description: 'Learn systematic research approaches and analytical methods used in social sciences and humanities.'
+        },
+        {
+          number: '05',
+          title: 'DIVERSE CAREER PATHWAYS',
+          description: 'Prepare for careers in education, media, government, non-profits, and various other sectors.'
+        }
+      ]
+    },
+    programStructureSection: {
+      programTitle: "Bachelor of Arts (BA)",
+      applyUrl: "/admissions",
+      imageSrc: "/images/programs/course-detail/student_image.jpeg",
+      semesters: [
+        {
+          number: 1,
+          totalCredits: 20,
+          courses: [
+            { slNo: 1, code: "BA-101", title: "English Literature I", credits: 4 },
+            { slNo: 2, code: "BA-102", title: "History I", credits: 4 },
+            { slNo: 3, code: "BA-103", title: "Political Science I", credits: 4 },
+            { slNo: 4, code: "BA-104", title: "Economics I", credits: 4 },
+            { slNo: 5, code: "BA-105", title: "Communication Skills", credits: 4 },
+          ],
+        },
+        {
+          number: 2,
+          totalCredits: 20,
+          courses: [
+            { slNo: 1, code: "BA-201", title: "English Literature II", credits: 4 },
+            { slNo: 2, code: "BA-202", title: "History II", credits: 4 },
+            { slNo: 3, code: "BA-203", title: "Political Science II", credits: 4 },
+            { slNo: 4, code: "BA-204", title: "Economics II", credits: 4 },
+            { slNo: 5, code: "BA-205", title: "Environmental Studies", credits: 4 },
+          ],
+        },
+        {
+          number: 3,
+          totalCredits: 20,
+          courses: [
+            { slNo: 1, code: "BA-301", title: "Psychology I", credits: 4 },
+            { slNo: 2, code: "BA-302", title: "Sociology I", credits: 4 },
+            { slNo: 3, code: "BA-303", title: "Philosophy I", credits: 4 },
+            { slNo: 4, code: "BA-304", title: "Elective I", credits: 4, isElective: true },
+            { slNo: 5, code: "BA-305", title: "Research Methodology", credits: 4 },
+          ],
+        },
+        {
+          number: 4,
+          totalCredits: 20,
+          courses: [
+            { slNo: 1, code: "BA-401", title: "Psychology II", credits: 4 },
+            { slNo: 2, code: "BA-402", title: "Sociology II", credits: 4 },
+            { slNo: 3, code: "BA-403", title: "Philosophy II", credits: 4 },
+            { slNo: 4, code: "BA-404", title: "Elective II", credits: 4, isElective: true },
+            { slNo: 5, code: "BA-405", title: "Project Work I", credits: 4 },
+          ],
+        },
+        {
+          number: 5,
+          totalCredits: 20,
+          courses: [
+            { slNo: 1, code: "BA-501", title: "Contemporary Issues", credits: 4 },
+            { slNo: 2, code: "BA-502", title: "Media and Communication", credits: 4 },
+            { slNo: 3, code: "BA-503", title: "Gender Studies", credits: 4 },
+            { slNo: 4, code: "BA-504", title: "Elective III", credits: 4, isElective: true },
+            { slNo: 5, code: "BA-505", title: "Internship", credits: 4 },
+          ],
+        },
+        {
+          number: 6,
+          totalCredits: 20,
+          courses: [
+            { slNo: 1, code: "BA-601", title: "Global Perspectives", credits: 4 },
+            { slNo: 2, code: "BA-602", title: "Cultural Studies", credits: 4 },
+            { slNo: 3, code: "BA-603", title: "Human Rights", credits: 4 },
+            { slNo: 4, code: "BA-604", title: "Elective IV", credits: 4, isElective: true },
+            { slNo: 5, code: "BA-605", title: "Major Project", credits: 4 },
+          ],
+        }
+      ]
+    },
+    careerProspectsSection: {
+      label: "CAREER PROSPECTS",
+      title: "Career Opportunities in Arts and Humanities",
+      description: "BA graduates have diverse career opportunities in education, media, government, social services, cultural organizations, and many other sectors that value critical thinking and communication skills.",
+      industryStatsText: "Arts graduates bring valuable skills to various industries including creative writing, content creation, social work, teaching, civil services, and cultural preservation.",
+      jobProfiles: [
+        "Teacher/Lecturer",
+        "Content Writer",
+        "Journalist",
+        "Social Worker",
+        "Civil Services Officer",
+        "Museum Curator",
+        "Human Resources Executive",
+        "NGO Worker",
+        "Research Assistant",
+        "Cultural Program Coordinator"
+      ],
+      applyButtonText: "Apply Now",
+      applyButtonUrl: "#apply",
+      imageUrl: "/images/career-prospects/ba-career.png",
+      imageAlt: "BA Career Prospects",
+      backgroundColor: "#FF6B6B",
+      showVideoButton: false,
+    },
+    feeDetails: {
+      national: {
+        semesterData: [
+          { semester: "Semester 1", fee: "₹25,000" },
+          { semester: "Semester 2", fee: "₹25,000" },
+          { semester: "Semester 3", fee: "₹25,000" },
+          { semester: "Semester 4", fee: "₹25,000" },
+          { semester: "Semester 5", fee: "₹25,000" },
+          { semester: "Semester 6", fee: "₹25,000" },
+        ],
+        yearData: [
+          { year: "Year 1", fee: "₹50,000" },
+          { year: "Year 2", fee: "₹50,000" },
+          { year: "Year 3", fee: "₹50,000" },
+        ],
+        totalSemesterFee: "₹1,50,000",
+        totalYearFee: "₹1,50,000"
+      },
+      international: {
+        semesterData: [
+          { semester: "Semester 1", fee: "$400" },
+          { semester: "Semester 2", fee: "$400" },
+          { semester: "Semester 3", fee: "$400" },
+          { semester: "Semester 4", fee: "$400" },
+          { semester: "Semester 5", fee: "$400" },
+          { semester: "Semester 6", fee: "$400" },
+        ],
+        yearData: [
+          { year: "Year 1", fee: "$800" },
+          { year: "Year 2", fee: "$800" },
+          { year: "Year 3", fee: "$800" },
+        ],
+        totalSemesterFee: "$2,400",
+        totalYearFee: "$2,400"
+      },
+      nationalEligibility: [
+        'Pass in 12th standard from any recognized board',
+        'Minimum 50% marks in 12th standard (45% for SC/ST candidates)',
+        'No specific subject requirements',
+      ],
+      internationalEligibility: [
+        'Equivalent to Indian 12th standard',
+        'Minimum 50% marks or equivalent grade',
+        'English proficiency certificate (if applicable)',
+        'Valid passport and student visa',
+      ],
+      paymentModes: [
+        'Students should pay the prescribed fees on the online portal at the time of admission.',
+        'Fees will be accepted online on the admission portal via Debit Card/Credit Card/UPI/Wallets/Net Banking etc.',
+        'Care should be taken to ensure that payments are not made to unauthorized persons or on any unauthorized website or link. The university will not be responsible for any lapse in this matter.',
+      ],
+    }
+  },
+
+  executivemba: {
+    heroSection: {
+      subtitle: "EXECUTIVE PROGRAM",
+      title: "EXECUTIVE",
+      highlightedText: "MASTER OF BUSINESS ADMINISTRATION",
+      highlightColor: "#8B5A2B",
+      description: "Advance your leadership career with our Executive MBA program designed for working professionals. Develop strategic thinking and executive skills while maintaining your professional commitments.",
+      buttonText: "Apply Now →",
+      buttonUrl: "#apply",
+      brochure: "Download Brochure",
+      brochureUrl: "#brochure",
+      backgroundImageSrc: "/images/hero-section/student-with-book-in-uu.png",
+      backgroundImageAlt: "Executive MBA online course hero section image",
+      showGradientOverlay: true
+    },
+    bannerItems: [
+      { title: "Duration", time: "18 Months", duration: "3 semesters", icon: "Clock" },
+      { title: "Study Mode", time: "Online", duration: "Weekend Classes", icon: "BookOpen" },
+      { title: "Course Fee", time: "INR 75,000", duration: "Per Semester", icon: "IndianRupee" },
+    ],
+    emiBanner: {
+      title: "No Cost EMI",
+      subtitle: "EMI starting at",
+      amount: "₹12,500 INR",
+      iconSrc: "/images/icons/fee.png",
+      iconAlt: "Executive MBA EMI"
+    },
+    specializationSection: {
+      title: {
+        main: "EXECUTIVE",
+        highlighted: "SPECIALIZATIONS"
+      },
+      description: "Choose your specialization to enhance your executive leadership capabilities. Our Executive MBA program offers strategic tracks designed for senior professionals and executives.",
+      specializations: [
+        { title: "STRATEGIC\nLEADERSHIP", icon: "hr" },
+        { title: "DIGITAL\nTRANSFORMATION", icon: "digital" },
+        { title: "FINANCIAL\nSTRATEGY", icon: "finance" },
+        { title: "OPERATIONS\nEXCELLENCE", icon: "logistics" },
+        { title: "INNOVATION\nMANAGEMENT", icon: "technology" },
+        { title: "GLOBAL\nBUSINESS", icon: "international" },
+        { title: "CHANGE\nMANAGEMENT", icon: "hr" },
+        { title: "CORPORATE\nSTRATEGY", icon: "analytics" },
+      ]
+    },
+    educationSection: {
+      imageUrl: '/images/faces/student_image.jpeg',
+      imageAlt: 'Executive MBA professionals in leadership roles',
+      backgroundImage: '/images/backgrouds/green_bg.svg',
+      backgroundColor: '#8B5A2B',
+      preTitle: 'WHY OPT FOR',
+      title: 'EXECUTIVE MBA?',
+      subtitle: 'Our Executive MBA program is designed for experienced professionals seeking to advance their careers to senior leadership positions while maintaining their professional commitments.',
+      features: [
+        {
+          number: '01',
+          title: 'STRATEGIC LEADERSHIP DEVELOPMENT',
+          description: 'Develop advanced leadership skills and strategic thinking capabilities essential for executive roles.'
+        },
+        {
+          number: '02',
+          title: 'FLEXIBLE LEARNING FORMAT',
+          description: 'Weekend and evening classes designed to accommodate busy professional schedules.'
+        },
+        {
+          number: '03',
+          title: 'EXECUTIVE PEER NETWORK',
+          description: 'Build valuable connections with senior professionals and executives from diverse industries.'
+        },
+        {
+          number: '04',
+          title: 'REAL-WORLD CASE STUDIES',
+          description: 'Apply learning through contemporary business cases and real organizational challenges.'
+        },
+        {
+          number: '05',
+          title: 'IMMEDIATE APPLICATION',
+          description: 'Implement learnings directly in your current role for immediate professional impact.'
+        }
+      ]
+    },
+    programStructureSection: {
+      programTitle: "Executive Master of Business Administration",
+      applyUrl: "/admissions",
+      imageSrc: "/images/programs/course-detail/student_image.jpeg",
+      semesters: [
+        {
+          number: 1,
+          totalCredits: 24,
+          courses: [
+            { slNo: 1, code: "EMBA-101", title: "Strategic Management", credits: 4 },
+            { slNo: 2, code: "EMBA-102", title: "Leadership and Organizational Behavior", credits: 4 },
+            { slNo: 3, code: "EMBA-103", title: "Financial Management for Executives", credits: 4 },
+            { slNo: 4, code: "EMBA-104", title: "Marketing Strategy", credits: 4 },
+            { slNo: 5, code: "EMBA-105", title: "Operations Management", credits: 4 },
+            { slNo: 6, code: "EMBA-106", title: "Managerial Economics", credits: 4 },
+          ],
+        },
+        {
+          number: 2,
+          totalCredits: 24,
+          courses: [
+            { slNo: 1, code: "EMBA-201", title: "Digital Transformation Strategy", credits: 4 },
+            { slNo: 2, code: "EMBA-202", title: "Global Business Environment", credits: 4 },
+            { slNo: 3, code: "EMBA-203", title: "Corporate Finance", credits: 4 },
+            { slNo: 4, code: "EMBA-204", title: "Innovation and Entrepreneurship", credits: 4 },
+            { slNo: 5, code: "EMBA-205", title: "Supply Chain Management", credits: 4 },
+            { slNo: 6, code: "EMBA-206", title: "Business Ethics and Governance", credits: 4 },
+          ],
+        },
+        {
+          number: 3,
+          totalCredits: 24,
+          courses: [
+            { slNo: 1, code: "EMBA-301", title: "Executive Specialization I", credits: 6, isElective: true },
+            { slNo: 2, code: "EMBA-302", title: "Executive Specialization II", credits: 6, isElective: true },
+            { slNo: 3, code: "EMBA-303", title: "Capstone Project", credits: 8 },
+            { slNo: 4, code: "EMBA-304", title: "Executive Seminar", credits: 4 },
+          ],
+        }
+      ]
+    },
+    careerProspectsSection: {
+      label: "CAREER PROSPECTS",
+      title: "Executive Career Advancement",
+      description: "Executive MBA graduates typically advance to senior leadership positions including C-suite roles, board positions, and strategic consulting opportunities.",
+      industryStatsText: "Executive MBA professionals experience significant career acceleration with opportunities for leadership roles across industries and enhanced earning potential.",
+      jobProfiles: [
+        "Chief Executive Officer (CEO)",
+        "Chief Operating Officer (COO)",
+        "Chief Strategy Officer",
+        "Vice President",
+        "General Manager",
+        "Management Consultant",
+        "Board Member",
+        "Business Unit Head",
+        "Regional Director",
+        "Strategic Advisor"
+      ],
+      applyButtonText: "Apply Now",
+      applyButtonUrl: "#apply",
+      imageUrl: "/images/career-prospects/executive-mba-career.png",
+      imageAlt: "Executive MBA Career Prospects",
+      backgroundColor: "#8B5A2B",
+      showVideoButton: false,
+    },
+    feeDetails: {
+      national: {
+        semesterData: [
+          { semester: "Semester 1", fee: "₹75,000" },
+          { semester: "Semester 2", fee: "₹75,000" },
+          { semester: "Semester 3", fee: "₹75,000" },
+        ],
+        yearData: [
+          { year: "Total Program", fee: "₹2,25,000" },
+        ],
+        totalSemesterFee: "₹2,25,000",
+        totalYearFee: "₹2,25,000"
+      },
+      international: {
+        semesterData: [
+          { semester: "Semester 1", fee: "$1,200" },
+          { semester: "Semester 2", fee: "$1,200" },
+          { semester: "Semester 3", fee: "$1,200" },
+        ],
+        yearData: [
+          { year: "Total Program", fee: "$3,600" },
+        ],
+        totalSemesterFee: "$3,600",
+        totalYearFee: "$3,600"
+      },
+      nationalEligibility: [
+        'Graduate degree from a recognized university',
+        'Minimum 5 years of professional work experience',
+        'Preference for candidates in managerial/supervisory roles',
+        'Valid score in entrance exam or personal interview',
+      ],
+      internationalEligibility: [
+        'Equivalent bachelor\'s degree',
+        'Minimum 5 years of professional work experience',
+        'English proficiency certificate (IELTS/TOEFL)',
+        'Valid passport and student visa',
       ],
       paymentModes: [
         'Students should pay the prescribed fees on the online portal at the time of admission.',

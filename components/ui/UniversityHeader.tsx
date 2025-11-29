@@ -103,22 +103,16 @@ export default function UniversityHeader() {
         columns: [
           {
             items: [
-              { name: "B.Sc Computer Science", href: "/programs/bsc-computer-science" },
-              { name: "BBA Business Administration", href: "/programs/bba-business-administration" },
-              { name: "B.Com Commerce", href: "/programs/bcom-commerce" },
-              { name: "Engineering", href: "/programs/engineering" },
-              { name: "Law", href: "/programs/law" },
-              { name: "Pharmaceutical Sciences", href: "/programs/pharmaceutical-sciences" },
-              { name: "Applied & Life Sciences", href: "/programs/applied-life-sciences" },
+              { name: "Bachelor of Business Administration (BBA)", href: "/programs/bba" },
+              { name: "Bachelor of Computer Application (BCA)", href: "/programs/bca" },
+              { name: "Bachelor of Arts (BA)", href: "/programs/ba" },
             ],
           },
           {
             items: [
-              { name: "M.Sc Data Science", href: "/programs/msc-data-science" },
-              { name: "MBA Marketing", href: "/programs/mba-marketing" },
-              { name: "M.Com Finance", href: "/programs/mcom-finance" },
-              { name: "Computer Applications", href: "/programs/computer-applications" },
-              { name: "Hotel & Hospitality Management", href: "/programs/hotel-hospitality-management" },
+              { name: "Master of Business Administration (MBA)", href: "/programs/mba" },
+              { name: "Master of Computer Application (MCA)", href: "/programs/mca" },
+              { name: "Executive MBA", href: "/programs/executivemba" },
               { name: "View All Programs →", href: "/programs", isButton: true },
             ],
           },

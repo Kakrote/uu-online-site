@@ -63,7 +63,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   // Dynamic course routes
-  const courses = ['mba', 'bba', 'mca'] // Add all courses from courseConfigs
+  const courses = ['mba', 'bba', 'mca', 'bca', 'ba', 'executivemba'] // Add all courses from courseConfigs
   const courseRoutes = courses.map((course) => ({
     url: `${baseUrl}/programs/${course}`,
     lastModified: currentDate,

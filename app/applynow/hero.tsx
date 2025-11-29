@@ -396,11 +396,10 @@ function Hero({
                                                 <option>Choose Program</option>
                                                 <option>MBA</option>
                                                 <option>MCA</option>
-                                                <option>M.Sc</option>
-                                                <option>MA</option>
                                                 <option>BBA</option>
                                                 <option>BCA</option>
                                                 <option>BA</option>
+                                                <option>Executive MBA</option>
                                             </select>
                                         </div>
 

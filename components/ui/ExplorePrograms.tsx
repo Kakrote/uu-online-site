@@ -6,25 +6,25 @@ export default function ExplorePrograms() {
     // Sample data for undergraduate courses
     const undergraduateCourses = [
         {
-            courseName: "B.Sc Computer Science",
-            courseSlug: "bsc-computer-science",
-            brouchureUrl: "https://example.com/brochure/bsc-cs.pdf",
-            courseDuration: "3 Years",
-            courseLevel: "Undergraduate",
-            courseImage: "/images/cards/tec-1.png"
-        },
-        {
-            courseName: "BBA Business Administration",
-            courseSlug: "bba-business-administration",
+            courseName: "Bachelor of Business Administration (BBA)",
+            courseSlug: "bba",
             brouchureUrl: "https://example.com/brochure/bba.pdf",
             courseDuration: "3 Years",
             courseLevel: "Undergraduate",
             courseImage: "/images/cards/tec.png"
         },
         {
-            courseName: "B.Com Commerce",
-            courseSlug: "bcom-commerce",
-            brouchureUrl: "https://example.com/brochure/bcom.pdf",
+            courseName: "Bachelor of Computer Application (BCA)",
+            courseSlug: "bca",
+            brouchureUrl: "https://example.com/brochure/bca.pdf",
+            courseDuration: "3 Years",
+            courseLevel: "Undergraduate",
+            courseImage: "/images/cards/tec-1.png"
+        },
+        {
+            courseName: "Bachelor of Arts (BA)",
+            courseSlug: "ba",
+            brouchureUrl: "https://example.com/brochure/ba.pdf",
             courseDuration: "3 Years",
             courseLevel: "Undergraduate",
             courseImage: "/images/cards/mba-2.png"
@@ -34,27 +34,27 @@ export default function ExplorePrograms() {
     // Sample data for postgraduate courses
     const postgraduateCourses = [
         {
-            courseName: "M.Sc Data Science",
-            courseSlug: "msc-data-science",
-            brouchureUrl: "https://example.com/brochure/msc-ds.pdf",
-            courseDuration: "2 Years",
-            courseLevel: "Postgraduate",
-            courseImage: "/images/cards/mba-3.png"
-        },
-        {
-            courseName: "MBA Marketing",
-            courseSlug: "mba-marketing",
-            brouchureUrl: "https://example.com/brochure/mba-marketing.pdf",
+            courseName: "Master of Business Administration (MBA)",
+            courseSlug: "mba",
+            brouchureUrl: "https://example.com/brochure/mba.pdf",
             courseDuration: "2 Years",
             courseLevel: "Postgraduate",
             courseImage: "/images/cards/mba.png"
         },
         {
-            courseName: "M.Com Finance",
-            courseSlug: "mcom-finance",
-            brouchureUrl: "https://example.com/brochure/mcom-finance.pdf",
+            courseName: "Master of Computer Application (MCA)",
+            courseSlug: "mca",
+            brouchureUrl: "https://example.com/brochure/mca.pdf",
             courseDuration: "2 Years",
             courseLevel: "Postgraduate",
+            courseImage: "/images/cards/mba-3.png"
+        },
+        {
+            courseName: "Executive MBA",
+            courseSlug: "executivemba",
+            brouchureUrl: "https://example.com/brochure/executive-mba.pdf",
+            courseDuration: "18 Months",
+            courseLevel: "Executive",
             courseImage: "/images/cards/mba-1.png"
         }
     ];

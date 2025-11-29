@@ -102,7 +102,7 @@ interface HeroSectionProps {
 function HeroSection({
     // Hero configuration object - provides defaults
     heroConfig,
-    
+
     // Text content with defaults (can override heroConfig)
     subtitle,
     title,
@@ -145,7 +145,7 @@ function HeroSection({
     descriptionHtml,
     mobileSlot,
     mobileSlotWrapperClasses,
-    
+
     // Banner props with defaults
     bannerItems = [
         { title: "Duration", time: "2 Years", duration: "4 semesters", icon: "Clock" },

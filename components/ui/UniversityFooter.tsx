@@ -11,20 +11,20 @@ export default function UniversityFooter() {
     })
   }
   return (
-    <footer className="font-figtree">
+    <footer className="font-figtree overflow-hidden">
 
       {/* Top blue section with contact info */}
       <div className="bg-[#2C83F5] text-white py-6">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 items-center">
+        <div className="container mx-auto px-4 max-w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 items-center">
             {/* Address */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 min-w-0">
               <div className="bg-white rounded-full p-3 flex-shrink-0">
                 <MapPin className="h-6 w-6 text-[#6bc533]" />
               </div>
-              <div>
+              <div className="min-w-0">
                 <h3 className="font-medium">Address</h3>
-                <p className="text-sm">
+                <p className="text-sm break-words">
                   Premnagar, Dehradun-248007,
                   <br />
                   Uttarakhand, INDIA
@@ -32,37 +32,37 @@ export default function UniversityFooter() {
               </div>
             </div>
 
-            {/* Phone */}
-            <div className="flex items-center gap-4">
+            {/* Admission Helpline */}
+            <div className="flex items-center gap-4 min-w-0">
               <div className="bg-white rounded-full p-3 flex-shrink-0">
                 <Phone className="h-6 w-6 text-[#6bc533]" />
               </div>
-              <div>
-                <h3 className="font-medium">Phone</h3>
-                <p className="text-sm">0135-2770300</p>
+              <div className="min-w-0">
+                <h3 className="font-medium">Admission Helpline</h3>
+                <p className="text-sm break-words">0135-2770300</p>
               </div>
             </div>
 
             {/* Email */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 min-w-0">
               <div className="bg-white rounded-full p-3 flex-shrink-0">
                 <Mail className="h-6 w-6 text-[#6bc533]" />
               </div>
-              <div>
+              <div className="min-w-0">
                 <h3 className="font-medium">Email</h3>
-                <p className="text-sm">university@uumail.in</p>
+                <p className="text-sm break-all">admissions@onlineuu.in</p>
               </div>
             </div>
 
-            {/* Social Media */}
-            <div className="flex flex-col ">
-              <h3 className="font-medium ">Socials</h3>
+            {/* Get Connected */}
+            <div className="flex flex-col">
+              <h3 className="font-medium mb-2">Get Connected</h3>
               <div className="flex gap-2">
                 <Link href="#" className="bg-white rounded-full p-2 hover:bg-gray-100 transition-colors">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
+                    width="20"
+                    height="20"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="#25D366"
@@ -77,16 +77,16 @@ export default function UniversityFooter() {
                   </svg>
                 </Link>
                 <Link href="#" className="bg-white rounded-full p-2 hover:bg-gray-100 transition-colors">
-                  <Facebook className="h-5 w-5 text-[#1877F2]" />
+                  <Facebook className="h-4 w-4 text-[#1877F2]" />
                 </Link>
                 <Link href="#" className="bg-white rounded-full p-2 hover:bg-gray-100 transition-colors">
-                  <Linkedin className="h-5 w-5 text-[#0A66C2]" />
+                  <Linkedin className="h-4 w-4 text-[#0A66C2]" />
                 </Link>
                 <Link href="#" className="bg-white rounded-full p-2 hover:bg-gray-100 transition-colors">
-                  <Instagram className="h-5 w-5 text-[#E4405F]" />
+                  <Instagram className="h-4 w-4 text-[#E4405F]" />
                 </Link>
                 <Link href="#" className="bg-white rounded-full p-2 hover:bg-gray-100 transition-colors">
-                  <Youtube className="h-5 w-5 text-[#FF0000]" />
+                  <Youtube className="h-4 w-4 text-[#FF0000]" />
                 </Link>
               </div>
             </div>
@@ -94,287 +94,171 @@ export default function UniversityFooter() {
         </div>
       </div>
 
-      {/* Main footer section with links */}
-      <div className="bg-[#1E1E1E] text-white py-12 ">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2   md:grid-cols-2 lg:grid-cols-6 md:gap-8">
-            {/* Column 1: Mandatory Disclosure */}
-            <div>
-              <h3 className="text-[#6bc533] font-bold mb-4">Mandatory Disclosure</h3>
-              <ul className="space-y-2 text-sm">
+      {/* Main footer section */}
+      <div className="bg-[#1E1E1E] text-white py-12">
+        <div className="container mx-auto px-4 max-w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+            {/* University Info */}
+            <div className="lg:col-span-1 min-w-0">
+              <div className="flex items-center mb-6">
+                <Image
+                  src="/images/icons/uu-online.png"
+                  alt="Uttaranchal University Logo"
+                  width={60}
+                  height={60}
+                  className="object-contain mr-3 flex-shrink-0"
+                />
+                <div className="min-w-0">
+                  <h2 className="text-xl font-bold text-white">ONLINE</h2>
+                  <p className="text-sm text-blue-400 break-words">UTTARANCHAL UNIVERSITY</p>
+                </div>
+              </div>
+              <p className="text-sm text-gray-300 leading-relaxed break-words">
+                The university came into establishment in 2013, vide Uttaranchal University Act, 2012 (Uttaranchal Act No. 11 of 2013) as a Private University. It's located in Dehradun, the capital city of the Indian state of Uttarakhand. The Uttaranchal University has been recognized by the University Grants Commission, Government of India, under Sections 2(f) and 12(B) of the UGC Act, 1956, and other statutory bodies of the State and the nation. Its lush green campus is situated on NH-72, Dehradun, India.
+              </p>
+            </div>
+
+            {/* Programs */}
+            <div className="min-w-0">
+              <h3 className="text-xl font-bold text-white mb-4">Programs</h3>
+              <ul className="space-y-3 text-sm text-gray-300">
                 <li>
-                  <Link href="https://www.uudoon.in/allpdfs/UGC_Approval_Uttaranchal_University_Dehradun.pdf" className="hover:text-[#6bc533] transition-colors">
-                    UGC Approval
+                  <Link href="/programs/bba" className="hover:text-[#6bc533] transition-colors break-words">
+                    Bachelor of Business Administration (BBA)
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://www.uudoon.in/anti-ragging-cell.php" className="hover:text-[#6bc533] transition-colors">
-                    Anti Ragging Cell
+                  <Link href="/programs/mba" className="hover:text-[#6bc533] transition-colors break-words">
+                    Master of Business Administration (MBA)
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://www.uudoon.in/complaints.php" className="hover:text-[#6bc533] transition-colors">
-                    Internal Complaint Committee
+                  <Link href="/programs/bca" className="hover:text-[#6bc533] transition-colors break-words">
+                    Bachelor of Computer Application (BCA)
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://www.uudoon.in/caste-based-discrimination.php" className="hover:text-[#6bc533] transition-colors">
-                    Complaints - Caste Based Discrimination
+                  <Link href="/programs/mca" className="hover:text-[#6bc533] transition-colors break-words">
+                    Master of Computer Application (MCA)
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://www.uudoon.in/grievance-redressal-cell.php" className="hover:text-[#6bc533] transition-colors">
+                  <Link href="/programs/ba" className="hover:text-[#6bc533] transition-colors">
+                    Bachelor of Arts (BA)
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/programs/executive-mba" className="hover:text-[#6bc533] transition-colors break-words">
+                    Executive MBA
+                  </Link>
+                </li>
+              </ul>
+              <div className="mt-6">
+                <Link 
+                  href="/programs" 
+                  className="inline-block bg-[#6bc533] text-white px-4 lg:px-6 py-2 rounded-md text-sm font-medium hover:bg-[#5ba82b] transition-colors text-center break-words"
+                >
+                  For Regular Degree Programs<br />CLICK HERE
+                </Link>
+              </div>
+            </div>
+
+            {/* Others */}
+            <div className="min-w-0">
+              <h3 className="text-xl font-bold text-white mb-4">Others</h3>
+              <ul className="space-y-3 text-sm text-gray-300">
+                <li>
+                  <Link href="/about/equivalence" className="hover:text-[#6bc533] transition-colors break-words">
+                    Equivalence of Online Mode Degree
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/apply-now" className="hover:text-[#6bc533] transition-colors break-words">
+                    Application submitted to UGC-DEB
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/fee-refund" className="hover:text-[#6bc533] transition-colors break-words">
+                    Fee Refund & Cancellation Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/about/university" className="hover:text-[#6bc533] transition-colors">
+                    Uttaranchal University
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/grievance" className="hover:text-[#6bc533] transition-colors">
                     Grievance Redressal
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://www.uudoon.in/women-cell.php" className="hover:text-[#6bc533] transition-colors">
-                    Women Cell
+                  <Link href="/apply-now" className="hover:text-[#6bc533] transition-colors">
+                    How to Apply?
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://iqac.uudoon.in/" className="hover:text-[#6bc533] transition-colors">
-                    IQAC
+                  <Link href="/disclosure" className="hover:text-[#6bc533] transition-colors">
+                    Disclosure
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://www.digilocker.gov.in/" className="hover:text-[#6bc533] transition-colors">
-                    DigiLocker
+                  <Link href="/deb-id" className="hover:text-[#6bc533] transition-colors">
+                    DEB-ID
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://iqac.uudoon.in/sustainability.php" className="hover:text-[#6bc533] transition-colors">
-                    Sustainability
+                  <Link href="/faculty" className="hover:text-[#6bc533] transition-colors">
+                    Faculty
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://nad.gov.in/" className="hover:text-[#6bc533] transition-colors">
-                    NAD
+                  <Link href="/contact/ciqa" className="hover:text-[#6bc533] transition-colors">
+                    CIQA
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://www.abc.gov.in/" className="hover:text-[#6bc533] transition-colors">
-                    Register on ABC
+                  <Link href="/faq" className="hover:text-[#6bc533] transition-colors">
+                    FAQs
                   </Link>
                 </li>
               </ul>
             </div>
 
-            {/* Column 2: Study Here */}
-            <div>
-              <h3 className="text-[#6bc533] font-bold mb-4">Study Here</h3>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <Link href="/about/university" className="hover:text-[#6bc533] transition-colors">
-                    About UU
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/academics" className="hover:text-[#6bc533] transition-colors">
-                    Academics
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/admissions" className="hover:text-[#6bc533] transition-colors">
-                    Admissions
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/about/scholarships" className="hover:text-[#6bc533] transition-colors">
-                    Scholarship
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/admissions/educational-loan" className="hover:text-[#6bc533] transition-colors">
-                    Education Loan
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/admissions/fee-payment" className="hover:text-[#6bc533] transition-colors">
-                    Fee Payment
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/international/admissions" className="hover:text-[#6bc533] transition-colors">
-                    International Admissions
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Column 3: Live Here */}
-            <div>
-              <h3 className="text-[#6bc533] font-bold mb-4">Live Here</h3>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <Link href="/academics/student-support" className="hover:text-[#6bc533] transition-colors">
-                    Student Services
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/academics/collage-departments" className="hover:text-[#6bc533] transition-colors">
-                    Hostel Facility
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/life-at-uu" className="hover:text-[#6bc533] transition-colors">
-                    Campus Life
-                  </Link>
-                </li>
-                <li>
-                  <Link href="https://news.uudoon.in/" className="hover:text-[#6bc533] transition-colors">
-                    News & Events
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/about/infrastructure" className="hover:text-[#6bc533] transition-colors">
-                    Infrastructure
-                  </Link>
-                </li>
-                <li>
-                  <Link href="https://virtual-tour.uudoon.in/" className="hover:text-[#6bc533] transition-colors">
-                    UU Virtual Tour
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Column 4: Grow Here */}
-            <div>
-              <h3 className="text-[#6bc533] font-bold mb-4">Grow Here</h3>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <Link href="/placement" className="hover:text-[#6bc533] transition-colors">
-                    Placements
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/research" className="hover:text-[#6bc533] transition-colors">
-                    Research
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/research/innovation-cell" className="hover:text-[#6bc533] transition-colors">
-                    Startups
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/research/research-Development-Cell" className="hover:text-[#6bc533] transition-colors">
-                    Research & Development Center
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/centre-of-excellence" className="hover:text-[#6bc533] transition-colors">
-                    Center of Excellence
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/academics/list-of-holidays" className="hover:text-[#6bc533] transition-colors">
-                    List of Holidays
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Column 5: EDP in Specializations */}
-            <div>
-              <h3 className="text-[#6bc533] font-bold mb-4">EDP in Specializations</h3>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <Link href="https://www.uudoon.in/international/assets/brochure/EDP-Price-Cap-Process.pdf" className="hover:text-[#6bc533] transition-colors">
-                    Price Cap Process
-                  </Link>
-                </li>
-                <li>
-                  <Link href="https://www.uudoon.in/international/assets/brochure/EDP-Data-Analytics.pdf" className="hover:text-[#6bc533] transition-colors">
-                    Data Analytics
-                  </Link>
-                </li>
-                <li>
-                  <Link href="https://www.uudoon.in/international/assets/brochure/General-Management.pdf" className="hover:text-[#6bc533] transition-colors">
-                    General Management
-                  </Link>
-                </li>
-                <li>
-                  <Link href="https://www.uudoon.in/international/assets/brochure/EDP-Hospitality-Management.pdf" className="hover:text-[#6bc533] transition-colors">
-                    Hospitality Management
-                  </Link>
-                </li>
-                <li>
-                  <Link href="https://www.uudoon.in/international/iedp.php" className="hover:text-[#6bc533] transition-colors">
-                    EDP Connect
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Column 6: Get in Touch */}
-            <div>
-              <h3 className="text-[#6bc533] font-bold mb-4">Get in Touch</h3>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <Link href="/contact" className="hover:text-[#6bc533] transition-colors">
-                    Contact Us
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact" className="hover:text-[#6bc533] transition-colors">
-                    Admission Offices
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact" className="hover:text-[#6bc533] transition-colors">
-                    UU Helpline
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact" className="hover:text-[#6bc533] transition-colors">
-                    Visit Us
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact" className="hover:text-[#6bc533] transition-colors">
-                    WhatsApp
-                  </Link>
-                </li>
-                <li>
-                  <Link href="https://careers.uudoon.in/" className="hover:text-[#6bc533] transition-colors">
-                    Careers
-                  </Link>
-                </li>
-              </ul>
+            {/* Contact Buttons */}
+            <div className="space-y-4 min-w-0">
+              <div className="bg-[#6bc533] text-white p-5 w-fit rounded-lg text-center flex space-x-5 items-center ">
+                <Phone className="  " />
+                <h4 className="font-bold text-sm">ACADEMIC HELPLINE</h4>
+                <p className="text-lg font-bold break-all">08071176059</p>
+              </div>
+              <div className="bg-[#6bc533] text-white p-5 w-fit rounded-lg text-center flex space-x-5 items-center">
+                <Mail className="" />
+                <h4 className="font-bold text-sm">ACADEMIC EMAIL</h4>
+                <p className="text-sm break-all">helpdesk@onlineuu.in</p>
+              </div>
             </div>
           </div>
-
-          {/* Degree Verification Service */}
-          <div className="mt-8 text-center">
-            <p className="text-white">UU Degree Verification Service</p>
-            <Link href="https://degree.uttaranchaluniversity.ac.in/" className="text-[#6bc533] hover:underline">
-              Click Here
-            </Link>
-          </div>
-          <div className="w-full flex justify-center">
-            {/* University Logo */}
-            <div className="flex justify-center mt-8 bg-white p-4 w-fit  rounded-xl ">
+          {/* Bottom section with logo and copyright */}
+          <div className="mt-12 pt-8 border-t border-gray-700">
+            <div className="flex flex-col items-center">
               <Image
                 src="/images/icons/uu-online.png"
                 alt="Uttaranchal University Logo"
                 width={100}
-                height={40}
-                className="object-contain"
+                height={50}
+                className="object-contain mb-4"
               />
+              <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-400">
+                <Link href="/privacy-policy" className="hover:text-white transition-colors">
+                  Privacy Policy
+                </Link>
+                <Link href="/disclaimer" className="hover:text-white transition-colors">
+                  Disclaimer
+                </Link>
+                <span>© Uttaranchal University</span>
+              </div>
             </div>
-          </div>
-
-          {/* Copyright and Policy Links */}
-          <div className="flex justify-center pb-10 gap-6 mt-3 lg:mt-8 text-sm text-gray-400">
-            <Link href="https://www.uudoon.in/privacy-policy.php" className="hover:text-white transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="https://www.uudoon.in/disclaimer.php" className="hover:text-white transition-colors">
-              Disclaimer
-            </Link>
-            <span>© Uttaranchal University</span>
           </div>
         </div>
       </div>

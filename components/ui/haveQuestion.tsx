@@ -30,7 +30,7 @@ export  const HaveQuestion = () => {
                     src="/images/faces/call-girl.png"
                     alt='smiling girl'
                     fill
-                    className='object-contain lg:object-cover'
+                    className='object-contain lg:object-cover rounded-b-xl'
                     priority
                 />
             </section>
