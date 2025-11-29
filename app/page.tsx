@@ -22,6 +22,7 @@ import CareerLandscape from '@/components/ui/careerLandscap'
 import IndustryTopRecruiters from '@/components/ui/industry-top-recruiters'
 import { HaveQuestion } from '@/components/ui/haveQuestion'
 import StudentsSpeakSection from '@/components/ui/students-speak-section'
+import AnimatedSection from '@/components/ui/AnimatedSection'
 
 function Home() {
   return (
@@ -40,72 +41,102 @@ function Home() {
 
       />
 
-      <div className='container mx-auto px-4 py-4'>
-        <BreadcrumbsAuto />
-      </div>
+      <AnimatedSection>
+        <div className='container mx-auto px-4 py-4'>
+          <BreadcrumbsAuto />
+        </div>
+      </AnimatedSection>
 
-      <ExplorePrograms />
-      <div className='bg-white py-5'>
+      <AnimatedSection delay={0.1}>
+        <ExplorePrograms />
+      </AnimatedSection>
 
-        <NewsNotificationsSection />
-      </div>
+      <AnimatedSection delay={0.2}>
+        <div className='bg-white py-5'>
+          <NewsNotificationsSection />
+        </div>
+      </AnimatedSection>
 
-      <div className='bg-white py-4'>
+      <AnimatedSection delay={0.3}>
+        <div className='bg-white py-4'>
+          <ExcellenceSection
+            universityName="uttaranchal university"
+            headingTop="FOR THE"
+            headingMain="Excellence with in 'U'"
+            description="Uttaranchal University has come a long way since its inception providing world-class multidisciplinary education."
+            buttonText="Read More"
+            buttonLink="#"
+            backgroundPattern="/images/backgrouds/blue_bg.svg"
+            leftBgImage=""
+            rightImage="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/right-image-o1kDt64ivwm3x4GT0jTMpSTzC9bOMO.png"
+            stats={[
+              { value: "22+", label: "Years of Educational Experience" },
+              { value: "100+", label: "Multidisciplinary Programs" },
+              { value: "500+", label: "Companies Visited For Placement" },
+              { value: "15K+", label: "Glorious Alumni" },
+            ]}
+            leftOverlayGradient={true}
+          />
+        </div>
+      </AnimatedSection>
 
-        <ExcellenceSection
-          universityName="uttaranchal university"
-          headingTop="FOR THE"
-          headingMain="Excellence with in 'U'"
-          description="Uttaranchal University has come a long way since its inception providing world-class multidisciplinary education."
-          buttonText="Read More"
-          buttonLink="#"
-          backgroundPattern="/images/backgrouds/blue_bg.svg"
-          leftBgImage=""
-          rightImage="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/right-image-o1kDt64ivwm3x4GT0jTMpSTzC9bOMO.png"
-          stats={[
-            { value: "22+", label: "Years of Educational Experience" },
-            { value: "100+", label: "Multidisciplinary Programs" },
-            { value: "500+", label: "Companies Visited For Placement" },
-            { value: "15K+", label: "Glorious Alumni" },
-          ]}
-          leftOverlayGradient={true}
-        />
-      </div>
-  
-      <BenefitsSection />
+      <AnimatedSection delay={0.1}>
+        <BenefitsSection />
+      </AnimatedSection>
 
-      <WhyChooce />
+      <AnimatedSection delay={0.2}>
+        <WhyChooce />
+      </AnimatedSection>
 
-      <div className='mb-3'>
+      <AnimatedSection delay={0.1}>
+        <div className='mb-3'>
+          <ImpactSection />
+        </div>
+      </AnimatedSection>
 
-        <ImpactSection />
-      </div>
+      <AnimatedSection delay={0.2}>
+        <AccreditationsSection />
+      </AnimatedSection>
 
-      <AccreditationsSection />
+      <AnimatedSection delay={0.1}>
+        <StarAchievers />
+      </AnimatedSection>
 
-      <StarAchievers />
-
-      {/* <StudentSuccessSection /> */}
-
-      <StudentsSpeakSection/>
+      <AnimatedSection delay={0.2}>
+        <StudentsSpeakSection/>
+      </AnimatedSection>
       
-      <ApproachSection />
+      <AnimatedSection delay={0.1}>
+        <ApproachSection />
+      </AnimatedSection>
 
-      <AcadmicPartners />
+      <AnimatedSection delay={0.2}>
+        <AcadmicPartners />
+      </AnimatedSection>
 
-      <div className=' lg:pt-20'>
+      <AnimatedSection delay={0.1}>
+        <div className=' lg:pt-20'>
+          <NextStep />
+        </div>
+      </AnimatedSection>
 
-        <NextStep />
-      </div>
+      <AnimatedSection delay={0.2}>
+        <PrestigiousDegreeSection />
+      </AnimatedSection>
 
-      <PrestigiousDegreeSection />
+      <AnimatedSection delay={0.1}>
+        <CareerLandscape />
+      </AnimatedSection>
 
-      <CareerLandscape />
+      <AnimatedSection delay={0.2}>
+        <IndustryTopRecruiters />
+      </AnimatedSection>
 
-      <IndustryTopRecruiters />
-      <div className='container  mx-auto flex justify-center  w-fit mt-10'>
-        <HaveQuestion />
-      </div>
+      <AnimatedSection delay={0.1}>
+        <div className='container  mx-auto flex justify-center  w-fit mt-10'>
+          <HaveQuestion />
+        </div>
+      </AnimatedSection>
 
     </CommonLayout>
   )

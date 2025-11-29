@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { Play } from 'lucide-react'
+import AnimatedSection from './AnimatedSection'
 
 export default function ApproachSection() {
   const cards = [
@@ -90,52 +91,61 @@ export default function ApproachSection() {
 
       {/* Content */}
       <div className="relative z-10 px-4 sm:px-6 lg:px-8 py-16 sm:py-20 max-w-7xl mx-auto">
-        <div className="mb-12 sm:mb-16">
-          <p className="text-white text-base sm:text-lg font-semibold mb-2">WHAT DRIVES</p>
-          <h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-            OUR APPROACH
-            <br />
-            TO ONLINE LEARNING
-          </h2>
-        </div>
+        <AnimatedSection>
+          <div className="mb-12 sm:mb-16">
+            <p className="text-white text-base sm:text-lg font-semibold mb-2">WHAT DRIVES</p>
+            <h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+              OUR APPROACH
+              <br />
+              TO ONLINE LEARNING
+            </h2>
+          </div>
+        </AnimatedSection>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {cards.map((card, index) => (
-            <div key={index} className="h-full">
-              {card.type === 'text' ? (
-                <div className="bg-white rounded-3xl p-6 sm:p-8 h-full flex flex-col">
-                  {/* Icon */}
-                  <div
-                    className={`${card.iconBg} w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-4 sm:mb-6 text-xl sm:text-2xl`}
-                  >
-                    {card.icon}
+            <AnimatedSection 
+              key={index}
+              delay={0.1 + (index * 0.15)}
+              direction="up"
+              duration={0.6}
+            >
+              <div className="h-full">
+                {card.type === 'text' ? (
+                  <div className="bg-white rounded-3xl p-6 sm:p-8 h-full flex flex-col">
+                    {/* Icon */}
+                    <div
+                      className={`${card.iconBg} w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-4 sm:mb-6 text-xl sm:text-2xl`}
+                    >
+                      {card.icon}
+                    </div>
+
+                    {/* Title */}
+                    <h3 className="text-gray-900 font-bold text-base sm:text-lg mb-3 sm:mb-4 leading-tight">
+                      {card.title}
+                    </h3>
+
+                    {/* Description */}
+                    <p className="text-gray-700 text-sm leading-relaxed">
+                      {card.description}
+                    </p>
                   </div>
-
-                  {/* Title */}
-                  <h3 className="text-gray-900 font-bold text-base sm:text-lg mb-3 sm:mb-4 leading-tight">
-                    {card.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="text-gray-700 text-sm leading-relaxed">
-                    {card.description}
-                  </p>
-                </div>
-              ) : (
-                <div className="relative rounded-3xl overflow-hidden h-64 sm:h-80 group">
-                  <img
-                    src={card.image || "/placeholder.svg"}
-                    alt="Learning experience"
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-black/20 flex items-center justify-center group-hover:bg-black/30 transition-all">
-                    <div className="bg-green-500 rounded-full w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center shadow-lg">
-                      <Play className="w-8 h-8 sm:w-10 sm:h-10 text-white fill-white ml-1" />
+                ) : (
+                  <div className="relative rounded-3xl overflow-hidden h-64 sm:h-80 group">
+                    <img
+                      src={card.image || "/placeholder.svg"}
+                      alt="Learning experience"
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/20 flex items-center justify-center group-hover:bg-black/30 transition-all">
+                      <div className="bg-green-500 rounded-full w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center shadow-lg">
+                        <Play className="w-8 h-8 sm:w-10 sm:h-10 text-white fill-white ml-1" />
+                      </div>
                     </div>
                   </div>
-                </div>
-              )}
-            </div>
+                )}
+              </div>
+            </AnimatedSection>
           ))}
         </div>
       </div>

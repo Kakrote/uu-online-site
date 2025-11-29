@@ -1,5 +1,6 @@
 import React from 'react'
 import CourseCard from '../Course-Card'
+import AnimatedSection from '@/components/ui/AnimatedSection';
 
 export default function ExplorePrograms() {
     // Sample data for undergraduate courses
@@ -74,40 +75,56 @@ export default function ExplorePrograms() {
             </header>
 
             {/* Undergraduate Courses Section */}
-            <section className='px-3 mb-12'>
-                <h2 className='text-[20px] font-bold text-[#2C83F5] mb-6 uppercase'>Undergraduate <span className='text-black'>Programs</span></h2>
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-                    {undergraduateCourses.map((course, index) => (
-                        <CourseCard
-                            key={index}
-                            courseName={course.courseName}
-                            courseSlug={course.courseSlug}
-                            brouchureUrl={course.brouchureUrl}
-                            courseDuration={course.courseDuration}
-                            courseLevel={course.courseLevel}
-                            courseImage={course.courseImage}
-                        />
-                    ))}
-                </div>
-            </section>
+            <AnimatedSection>
+                <section className='px-3 mb-12'>
+                    <h2 className='text-[20px] font-bold text-[#2C83F5] mb-6 uppercase'>Undergraduate <span className='text-black'>Programs</span></h2>
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+                        {undergraduateCourses.map((course, index) => (
+                            <AnimatedSection 
+                                key={index}
+                                delay={index * 0.5}
+                                direction="up"
+                                duration={0.6}
+                            >
+                                <CourseCard
+                                    courseName={course.courseName}
+                                    courseSlug={course.courseSlug}
+                                    brouchureUrl={course.brouchureUrl}
+                                    courseDuration={course.courseDuration}
+                                    courseLevel={course.courseLevel}
+                                    courseImage={course.courseImage}
+                                />
+                            </AnimatedSection>
+                        ))}
+                    </div>
+                </section>
+            </AnimatedSection>
 
             {/* Postgraduate Courses Section */}
-            <section className='px-3 mb-12'>
-                 <h2 className='text-[20px] font-bold text-[#2C83F5] mb-6 uppercase'>Postgraduate <span className='text-black'>Programs</span></h2>
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-                    {postgraduateCourses.map((course, index) => (
-                        <CourseCard
-                            key={index}
-                            courseName={course.courseName}
-                            courseSlug={course.courseSlug}
-                            brouchureUrl={course.brouchureUrl}
-                            courseDuration={course.courseDuration}
-                            courseLevel={course.courseLevel}
-                            courseImage={course.courseImage}
-                        />
-                    ))}
-                </div>
-            </section>
+            <AnimatedSection delay={0.3}>
+                <section className='px-3 mb-12'>
+                    <h2 className='text-[20px] font-bold text-[#2C83F5] mb-6 uppercase'>Postgraduate <span className='text-black'>Programs</span></h2>
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+                        {postgraduateCourses.map((course, index) => (
+                            <AnimatedSection 
+                                key={index}
+                                delay={(index + 3) * 0.2} // Start after undergraduate cards
+                                direction="up"
+                                duration={0.6}
+                            >
+                                <CourseCard
+                                    courseName={course.courseName}
+                                    courseSlug={course.courseSlug}
+                                    brouchureUrl={course.brouchureUrl}
+                                    courseDuration={course.courseDuration}
+                                    courseLevel={course.courseLevel}
+                                    courseImage={course.courseImage}
+                                />
+                            </AnimatedSection>
+                        ))}
+                    </div>
+                </section>
+            </AnimatedSection>
         </main>
     )
 }

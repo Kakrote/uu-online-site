@@ -3,6 +3,7 @@ import BreadcrumbsAuto from '@/components/ui/breadcrumbs-auto'
 import HeroSection from '@/components/ui/hero-section'
 import React from 'react'
 import FAQSection from './faq-section'
+import AnimatedSection from '@/components/ui/AnimatedSection'
 
 const FAQ = () => {
     return (
@@ -20,11 +21,15 @@ const FAQ = () => {
                 description=''
                 showButtom={false}
             />
-            <div className='container mx-auto px-3 py-3'>
-                <BreadcrumbsAuto />
-            </div>
+            <AnimatedSection>
+                <div className='container mx-auto px-3 py-3'>
+                    <BreadcrumbsAuto />
+                </div>
+            </AnimatedSection>
 
-            <FAQSection />
+            <AnimatedSection delay={0.1}>
+                <FAQSection />
+            </AnimatedSection>
         </CommonLayout>
     )
 }

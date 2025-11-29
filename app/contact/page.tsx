@@ -4,6 +4,7 @@ import { BreadcrumbsAuto } from '@/components/ui/breadcrumbs-auto'
 import React from 'react'
 import ContactHelpline from './contact-helpline'
 import LocateUsMapSection from '@/components/ui/locate-us-map-section'
+import AnimatedSection from '@/components/ui/AnimatedSection'
 
 const Contact = () => {
     return (
@@ -19,13 +20,22 @@ const Contact = () => {
                 showButtom={false}
             />
 
-            <div className='container mx-auto px-4 py-4'>
-                <BreadcrumbsAuto />
-            </div>
+            <AnimatedSection>
+                <div className='container mx-auto px-4 py-4'>
+                    <BreadcrumbsAuto />
+                </div>
+            </AnimatedSection>
 
-            <ContactHelpline/>
+            <AnimatedSection delay={0.1}>
+                <div className='container mx-auto px-4 py-4'>
+                    <ContactHelpline />
+                </div>
 
-            <LocateUsMapSection/>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.2}>
+                <LocateUsMapSection />
+            </AnimatedSection>
         </CommonLayout>
     )
 }

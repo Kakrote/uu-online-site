@@ -6,6 +6,7 @@ import HeroSection from '@/components/ui/hero-section'
 import React from 'react'
 import { FacultySection } from './faculty-section'
 import { FacultyMember } from './faculty-card'
+import AnimatedSection from '@/components/ui/AnimatedSection'
 
 
 const facultyMembers: FacultyMember[] = [
@@ -369,27 +370,36 @@ const Facultys = () => {
                 showButtom={false}
                 showGradientOverlay={true}
             />
-            <div className='container mx-auto px-3 py-3'>
-                <BreadcrumbsAuto />
-            </div>
-            <FromTheDeskOfDirector
-                directorImage='/images/faces/director.png'
-                readMoreContent='Uttaranchal University which is a premier Institute in India to provide best quality education in various disciplines of Science with hands-on training, dissertation, industrial tours, seminar presentation and scientific activities. The Best quality education is provided with the help of well qualified'
-                directorMessage='Uttaranchal University which is a premier Institute in India to provide best quality education in various disciplines of Science with hands-on training, dissertation, industrial tours, seminar presentation and scientific activities. The Best quality education is provided with the help of well qualified'
-                directorName='Dr. Kartikey'
-                directorTitle='Director, Online Uttaranchal University'
-                disciplineColor='#6bc533'
-                directorQoute='I extend a warm welcome to all the students in Online Uttaranchal University'
-            />
+            
+            <AnimatedSection>
+                <div className='container mx-auto px-3 py-3'>
+                    <BreadcrumbsAuto />
+                </div>
+            </AnimatedSection>
 
-            <div className='container mx-auto'>
+            <AnimatedSection delay={0.1}>
+                <FromTheDeskOfDirector
+                    directorImage='/images/faces/director.png'
+                    readMoreContent='Uttaranchal University which is a premier Institute in India to provide best quality education in various disciplines of Science with hands-on training, dissertation, industrial tours, seminar presentation and scientific activities. The Best quality education is provided with the help of well qualified'
+                    directorMessage='Uttaranchal University which is a premier Institute in India to provide best quality education in various disciplines of Science with hands-on training, dissertation, industrial tours, seminar presentation and scientific activities. The Best quality education is provided with the help of well qualified'
+                    directorName='Dr. Kartikey'
+                    directorTitle='Director, Online Uttaranchal University'
+                    disciplineColor='#6bc533'
+                    directorQoute='I extend a warm welcome to all the students in Online Uttaranchal University'
+                />
+            </AnimatedSection>
 
-                <FacultySection departmentName='MCA & MBA' members={facultyMembers} departmentPrefix="FACULTY OF" />
-            </div>
-            <div className='container mx-auto'>
+            <AnimatedSection delay={0.2}>
+                <div className='container mx-auto'>
+                    <FacultySection departmentName='MCA & MBA' members={facultyMembers} departmentPrefix="FACULTY OF" />
+                </div>
+            </AnimatedSection>
 
-                <FacultySection departmentName='BA,BCA,BBA' members={facultyMembers2} departmentPrefix="FACULTY OF" />
-            </div>
+            <AnimatedSection delay={0.1}>
+                <div className='container mx-auto'>
+                    <FacultySection departmentName='BA,BCA,BBA' members={facultyMembers2} departmentPrefix="FACULTY OF" />
+                </div>
+            </AnimatedSection>
 
         </CommonLayout>
     )

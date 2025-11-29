@@ -258,7 +258,7 @@ function HeroSection({
 
                 {/* Content container */}
                 <div className="flex-1 flex items-center   relative z-20">
-                    <div className=" min-w-[70%] mx-5 px-5">
+                    <div className="container mx-auto px-4">
                         <div
                             className={`${contentMaxWidth} text-white relative z-30 ${animateContent ? "opacity-0 translate-y-10 animate-[fadeInUp_0.8s_ease-out_forwards]" : ""
                                 }`}

@@ -3,6 +3,7 @@ import BreadcrumbsAuto from '@/components/ui/breadcrumbs-auto'
 import HeroSection from '@/components/ui/hero-section'
 import React from 'react'
 import { PolicySection } from './polacySection'
+import AnimatedSection from '@/components/ui/AnimatedSection'
 
 
 
@@ -64,13 +65,18 @@ const FeeRefund = () => {
                 highlightedText=''
                 showButtom={false}
             />
-            <div className='container mx-auto px-3 py-3'>
-                <BreadcrumbsAuto />
-            </div>
-            <div className='container mx-auto px-3 py-3'>
+            
+            <AnimatedSection>
+                <div className='container mx-auto px-3 py-3'>
+                    <BreadcrumbsAuto />
+                </div>
+            </AnimatedSection>
 
-                <PolicySection policies={refundPolicies} title='Fee refund & cancellation policy' />
-            </div >
+            <AnimatedSection delay={0.1}>
+                <div className='container mx-auto px-3 py-3'>
+                    <PolicySection policies={refundPolicies} title='Fee refund & cancellation policy' />
+                </div >
+            </AnimatedSection>
         </CommonLayout>
     )
 }

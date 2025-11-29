@@ -80,46 +80,20 @@ export default function UniversityHeader() {
   }, [mobileMenuOpen])
 
   const topLinks = [
-    { name: "Library", href: "#" },
-    { name: "Student Corner", href: "#" },
-    { name: "Careers", href: "#" },
-    { name: "Alumni", href: "#" },
-    { name: "News & Events", href: "#" },
+    { name: "Library", href: "/library" },
+    { name: "Student Corner", href: "/student-corner" },
+    { name: "Careers", href: "/careers" },
+    { name: "Alumni", href: "/alumni" },
+    { name: "News & Events", href: "/news-events" },
     { name: "International", href: "/international" },
-    { name: "IQAC", href: "#" },
+    { name: "IQAC", href: "/iqac" },
   ]
 
   const mainLinks: MenuItem[] = [
     {
       name: "About UU",
-      href: "#",
+      href: "/about",
       hasDropdown: false,
-      dropdownItems: {
-        columns: [
-          {
-            items: [
-              { name: "The University", href: "/about/university" },
-              { name: "Leadership", href: "/about/leadership" },
-              { name: "Vision & Mission", href: "/about/vision-mission" },
-              { name: "Approvals, Accreditation, Memberships & Rankings", href: "/about/accreditations-approvals" },
-              { name: "Awards & Rankings", href: "/about/awards-rankings" },
-              { name: "Institutional Social Responsibilities", href: "/about/institutional-social-responsibilities" },
-              { name: "International Collaborations & Tie-Ups", href: "/about/international-collaborations-tie-ups" },
-            ],
-          },
-          {
-            items: [
-              { name: "Institutes & Departments", href: "/academics/collage-departments" },
-              { name: "Governance", href: "/about/governance" },
-              { name: "Admissions", href: "#" },
-              { name: "Scholarships", href: "/about/scholarships" },
-              { name: "Campus Life", href: "#" },
-              { name: "Infrastructure", href: "/about/infrastructure" },
-              { name: "How to Reach Us?", href: "/contact" },
-            ],
-          },
-        ],
-      },
     },
     {
       name: "Programs",
@@ -154,24 +128,10 @@ export default function UniversityHeader() {
 
     {
       name: "Campus Tour",
-      href: "#",
+      href: "/campus-tour",
       hasDropdown: false,
-      dropdownItems: {
-        columns: [
-          {
-            items: [
-              { name: "Overview", href: "/research" },
-              { name: "Research & Development Cell", href: "/research/research-Development-Cell" },
-              { name: "Intellectual Property Rights Cell", href: "/research/intellectual-Property-Rights-Cell" },
-              { name: "Centre of Excellence", href: "/research/centre-of-excellence" },
-              { name: "Student Research Cell", href: "/research/student-research-cell" },
-              { name: "Startups, Entrepreneurship, and Innovation Cell", href: "/research/innovation-cell" },
-            ],
-          },
-        ],
-      },
     },
-    { name: "Disclosure", href: "/placement", hasDropdown: false },
+    { name: "Disclosure", href: "/disclosure", hasDropdown: false },
     { name: "LMS Login", href: "https://ulm.onlineuu.in/", hasDropdown: false },
     { name: "Contact US", href: "/contact", hasDropdown: false },
   ]
@@ -239,7 +199,7 @@ export default function UniversityHeader() {
                 </div>
                   <div className="flex gap-2">
                     <Link
-                      href="#"
+                      href="/applynow"
                       className="bg-[#dd1717] flex items-center text-white text-xs px-2 py-1 rounded-full hover:bg-[#e01f2f] transition-colors"
                     >
                       <span>
@@ -267,9 +227,9 @@ export default function UniversityHeader() {
                         aria-label="ERP Login options"
                         className={`absolute right-0 mt-2 w-32 bg-white rounded-md shadow-lg ring-1 z-50 ring-black/5 overflow-hidden transition-all duration-150 ${erpMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-1 pointer-events-none"}`}
                       >
-                        {/* TODO: Replace href="#" with actual Student/Staff ERP URLs */}
+                        {/* Student and Staff ERP URLs */}
                         <Link
-                          href="#"
+                          href="https://erp.uuonline.in/student"
                           role="menuitem"
                           className="block px-3 py-2 text-xs text-[#2A2A2F] hover:bg-[#5bc633]/80"
                           onClick={() => setErpMenuOpen(false)}
@@ -277,7 +237,7 @@ export default function UniversityHeader() {
                           Student
                         </Link>
                         <Link
-                          href="#"
+                          href="https://erp.uuonline.in/staff"
                           role="menuitem"
                           className="block px-3 py-2 text-xs text-[#2A2A2F] hover:bg-[#5bc633]/80"
                           onClick={() => setErpMenuOpen(false)}
@@ -292,7 +252,7 @@ export default function UniversityHeader() {
               {/* Simplified header for very small screens */}
               <div className="sm:hidden flex bg-[#3048CD] text-white justify-center items-center px-3 w-full py-1 border-b border-gray-100">
                 <Link
-                  href="#"
+                  href="/applynow"
                   className="bg-[#dd1717] flex items-center text-white text-xs px-2 py-1 rounded-full hover:bg-[#e01f2f] transition-colors"
                 >
                   <span>Apply Now</span>
@@ -483,14 +443,14 @@ export default function UniversityHeader() {
 
 
 
-              <button className="bg-[#6bc533] hover:shadow-[0_0_20px_4px_rgba(107,197,51,1)] text-white p-1 px-2 xl:px-3 rounded-xl flex items-center gap-1 transition duration-300 ease-in-out whitespace-nowrap">
+              <Link href="/applynow" className="bg-[#6bc533] hover:shadow-[0_0_20px_4px_rgba(107,197,51,1)] text-white p-1 px-2 xl:px-3 rounded-xl flex items-center gap-1 transition duration-300 ease-in-out whitespace-nowrap">
                 <span className="text-xs xl:text-sm">
                   Apply Now
                 </span>
                 <span>
                   <ArrowRight size={18} className="xl:w-5 xl:h-5" />
                 </span>
-              </button>
+              </Link>
             </div>
           </div>
 

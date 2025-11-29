@@ -3,6 +3,7 @@ import BreadcrumbsAuto from '@/components/ui/breadcrumbs-auto'
 import HeroSection from '@/components/ui/hero-section'
 import React from 'react'
 import Ranking_Affliation from './Ranking_Affliation'
+import AnimatedSection from '@/components/ui/AnimatedSection'
 
 const Disclosures = () => {
   return (
@@ -22,11 +23,15 @@ const Disclosures = () => {
         description=''
         showButtom={false}
       />
-      <div className='container mx-auto px-4 py-4'>
-        <BreadcrumbsAuto />
-      </div>
+      <AnimatedSection>
+        <div className='container mx-auto px-4 py-4'>
+          <BreadcrumbsAuto />
+        </div>
+      </AnimatedSection>
 
-      <Ranking_Affliation/>
+      <AnimatedSection delay={0.1}>
+        <Ranking_Affliation/>
+      </AnimatedSection>
     </CommonLayout>
   )
 }

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import AnimatedSection from './AnimatedSection';
 
 const CareerCard = ({ title, description, image }: { title: string; description: string; image: string }) => (
   <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
@@ -53,19 +54,27 @@ export default function CareerLandscape() {
       }} />
       
       <div className="relative z-10 w-full max-w-7xl px-4 py-12">
-        <div className="text-center mb-12">
-          <p className="text-white md:text-4xl text-xl font-semibold tracking-wide mb-2">UNDERSTANDING THE</p>
-          <h1 className="text-white text-2xl md:text-3xl lg:text-5xl font-bold text-balance">GLOBAL CAREER LANDSCAPE</h1>
-        </div>
+        <AnimatedSection>
+          <div className="text-center mb-12">
+            <p className="text-white md:text-4xl text-xl font-semibold tracking-wide mb-2">UNDERSTANDING THE</p>
+            <h1 className="text-white text-2xl md:text-3xl lg:text-5xl font-bold text-balance">GLOBAL CAREER LANDSCAPE</h1>
+          </div>
+        </AnimatedSection>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {cards.map((card, index) => (
-            <CareerCard
+            <AnimatedSection 
               key={index}
-              title={card.title}
-              description={card.description}
-              image={card.image}
-            />
+              delay={0.2 + (index * 0.2)}
+              direction="up"
+              duration={0.6}
+            >
+              <CareerCard
+                title={card.title}
+                description={card.description}
+                image={card.image}
+              />
+            </AnimatedSection>
           ))}
         </div>
       </div>

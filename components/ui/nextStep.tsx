@@ -12,7 +12,7 @@ const NextStep = () => {
             }}
         >
             {/* left section */}
-            <section className='w-full lg:w-auto z-10 text-center lg:text-left mb-6 lg:mb-0'>
+            <section className='w-full lg:container mx-auto z-10 text-center lg:text-left mb-6 lg:mb-0'>
                 <h3 className='text-base sm:text-lg md:text-xl font-semibold uppercase'>Take the </h3>
                 <h1 className='text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-7xl font-bold text-white max-w-full lg:max-w-3xl uppercase leading-tight'>
                     Next Step into your Educational{' '}

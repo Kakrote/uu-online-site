@@ -11,6 +11,7 @@ import { UniversityShowcase } from './universityShow'
 import LearnWithUsSection from '@/components/ui/about-learn-with-us-section'
 import NextStep from '@/components/ui/nextStep'
 import StudentTestimonials from '@/components/ui/student-testimonials'
+import AnimatedSection from '@/components/ui/AnimatedSection'
 
 const page = () => {
     return (
@@ -22,32 +23,50 @@ const page = () => {
                 showGradientOverlay={true}
             />
 
-            <div className='container mx-auto px-4 py-4'>
-                <BreadcrumbsAuto />
-            </div>
+            <AnimatedSection>
+                <div className='container mx-auto px-4 py-4'>
+                    <BreadcrumbsAuto />
+                </div>
+            </AnimatedSection>
 
-            <div className='container px-3 py-3 mx-auto'>
-                <AboutUniversitySection
-                    imageSrc='/images/hero-section/uu.png'
-                    imageAlt='university building'
-                />
-            </div>
+            <AnimatedSection delay={0.1}>
+                <div className='container px-3 py-3 mx-auto'>
+                    <AboutUniversitySection
+                        imageSrc='/images/hero-section/uu.png'
+                        imageAlt='university building'
+                    />
+                </div>
+            </AnimatedSection>
 
-            <Quality />
+            <AnimatedSection delay={0.2}>
+                <Quality />
+            </AnimatedSection>
 
-            <IntellectualAssetsSection />
+            <AnimatedSection delay={0.1}>
+                <IntellectualAssetsSection />
+            </AnimatedSection>
 
-            <WhyChooseSection />
+            <AnimatedSection delay={0.2}>
+                <WhyChooseSection />
+            </AnimatedSection>
 
-            <UniversityShowcase />
-            <div className='max-w-7xl px-3 py-3 mx-auto'>
+            <AnimatedSection delay={0.1}>
+                <UniversityShowcase />
+            </AnimatedSection>
 
-                <LearnWithUsSection />
-            </div>
+            <AnimatedSection delay={0.2}>
+                <div className='max-w-7xl px-3 py-3 mx-auto'>
+                    <LearnWithUsSection />
+                </div>
+            </AnimatedSection>
 
-            <NextStep/>
+            <AnimatedSection delay={0.1}>
+                <NextStep/>
+            </AnimatedSection>
 
-            <StudentTestimonials/>
+            <AnimatedSection delay={0.2}>
+                <StudentTestimonials/>
+            </AnimatedSection>
 
         </CommonLayout>
     )
