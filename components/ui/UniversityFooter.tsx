@@ -193,7 +193,7 @@ export default function UniversityFooter() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/apply-now" className="hover:text-[#6bc533] transition-colors">
+                  <Link href="/howtoapply" className="hover:text-[#6bc533] transition-colors">
                     How to Apply?
                   </Link>
                 </li>
