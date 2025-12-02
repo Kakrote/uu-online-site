@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next'
+import { courseConfigs } from '@/lib/course-configs'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.uuonline.in'
@@ -55,6 +56,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/grievance`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/disclosure`,
       lastModified: currentDate,
       changeFrequency: 'monthly' as const,
@@ -68,8 +75,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
-  // Dynamic course routes
-  const courses = ['mba', 'bba', 'mca', 'bca', 'ba', 'executivemba'] // Add all courses from courseConfigs
+  // Dynamic course routes - automatically generated from courseConfigs
+  const courses = Object.keys(courseConfigs)
   const courseRoutes = courses.map((course) => ({
     url: `${baseUrl}/programs/${course}`,
     lastModified: currentDate,
