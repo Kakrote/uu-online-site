@@ -63,23 +63,7 @@ export default function AnnouncementBanner() {
 
   return (
     <div className="bg-[#3048CD] text-white py-2 relative font-figtree text-sm min-h-[3rem] flex items-center" data-announcement-banner>
-      {isLoading && (
-        <div className="flex-1 text-center">
-          <span>Loading announcements...</span>
-        </div>
-      )}
 
-      {error && (
-        <div className="flex-1 text-center">
-          <span>{error}</span>
-        </div>
-      )}
-
-      {!isLoading && !error && announcements.length === 0 && (
-        <div className="flex-1 text-center">
-          <span>No announcements available</span>
-        </div>
-      )}
       <div className="container mx-auto px-4 flex items-center justify-between">
         <button
           onClick={goToPrevious}
@@ -90,15 +74,31 @@ export default function AnnouncementBanner() {
         </button>
 
         <div className="flex-1 overflow-hidden px-2">
+          {isLoading && (
+            <div className="flex-1 text-center">
+              <span>Loading announcements...</span>
+            </div>
+          )}
+
+          {error && (
+            <div className="flex-1 text-center">
+              <span>{error}</span>
+            </div>
+          )}
+
+          {!isLoading && !error && announcements.length === 0 && (
+            <div className="flex-1 text-center">
+              <span>No announcements available</span>
+            </div>
+          )}
           {announcements.map((announcement, index) => (
             <div
               key={announcement.id}
-              className={`flex flex-col md:flex-row items-center justify-center gap-1 text-center transition-opacity duration-300 ${
-                currentIndex === index ? "opacity-100" : "hidden"
-              }`}
+              className={`flex flex-col md:flex-row items-center justify-center gap-1 text-center transition-opacity duration-300 ${currentIndex === index ? "opacity-100" : "hidden"
+                }`}
             >
-              <SafeHtmlInline 
-                content={announcement.text} 
+              <SafeHtmlInline
+                content={announcement.text}
                 className="font-medium text-xs md:text-sm line-clamp-2 md:line-clamp-1"
                 maxLength={150}
               />
