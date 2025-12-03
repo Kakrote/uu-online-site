@@ -52,9 +52,9 @@ export default function EducationSection({
   ]
 }: EducationSectionProps) {
   return (
-    <div className="flex min-h-screen">
+    <div className="flex flex-col lg:flex-row min-h-screen">
       {/* Left Side - Student Image */}
-      <div className="w-1/2 flex items-center justify-center bg-gray-100">
+      <div className="w-full lg:w-1/2 flex items-center justify-center bg-gray-100 min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-0">
         <img 
           src={imageUrl}
           alt={imageAlt}
@@ -64,7 +64,7 @@ export default function EducationSection({
 
       {/* Right Side - Green Section with Features */}
       <div 
-        className="w-1/2 relative flex flex-col justify-center px-12 py-16"
+        className="w-full lg:w-1/2 relative flex flex-col justify-center px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-8 sm:py-10 md:py-12 lg:py-16"
         style={{
           backgroundImage: `url(${backgroundImage})`,
           backgroundSize: 'cover',
@@ -75,25 +75,25 @@ export default function EducationSection({
         {/* Content overlay */}
         <div className="relative z-10">
           {/* Header */}
-          <div className="mb-12">
-            <p className="text-white text-3xl font-bold tracking-wide">{preTitle}</p>
-            <h2 className="text-white text-5xl lg:text-7xl font-bold">{title}</h2>
-            <p className="text-white text-base  leading-relaxed">
+          <div className="mb-6 sm:mb-8 md:mb-10 lg:mb-12">
+            <p className="text-white text-xl sm:text-2xl md:text-3xl font-bold tracking-wide">{preTitle}</p>
+            <h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold">{title}</h2>
+            <p className="text-white text-sm sm:text-base leading-relaxed">
               {subtitle}
             </p>
           </div>
 
           {/* Features List */}
-          <div className="space-y-4">
+          <div className="space-y-3 sm:space-y-4">
             {features.map((feature) => (
-              <div key={feature.number} className="bg-white rounded-lg p-6 shadow-md">
-                <div className="flex gap-4">
-                  <span className="text-gray-300 text-3xl lg:text-6xl font-bold min-w-fit">{feature.number}</span>
+              <div key={feature.number} className="bg-white rounded-lg p-4 sm:p-5 md:p-6 shadow-md hover:shadow-lg transition-shadow">
+                <div className="flex gap-3 sm:gap-4">
+                  <span className="text-gray-300 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold min-w-fit leading-tight">{feature.number}</span>
                   <div>
-                    <h3 className="text-black text-xl font-bold tracking-wide mb-2">
+                    <h3 className="text-black text-base sm:text-lg md:text-xl font-bold tracking-wide mb-1 sm:mb-2">
                       {feature.title}
                     </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">
+                    <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
                       {feature.description}
                     </p>
                   </div>

@@ -85,26 +85,23 @@ export default function StarAchievers() {
   }, [api, isHovered])
 
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-white font-figtree px-3">
-      <div className="px-4 md:px-6">
-        <div className="flex justify-around ">
+    <section className="w-full py-8 sm:py-12 md:py-16 lg:py-24 xl:py-32 bg-white font-figtree px-4 sm:px-6 md:px-8">
+      <div className="px-0 sm:px-2 md:px-4 lg:px-6">
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-6 sm:gap-8 md:gap-10 lg:gap-12">
 
-          <div className="text-left mb-8 md:mb-12">
-            <h2 className="text-v0-dark-gray text-2xl md:text-3xl font-bold tracking-tighter sm:text-4xl">
+          <div className="text-left mb-4 sm:mb-6 md:mb-8 lg:mb-0 flex-shrink-0">
+            <h2 className="text-v0-dark-gray text-xl sm:text-2xl md:text-3xl font-bold tracking-tighter">
               OUR <br />
-              <span className="text-[#6BC533] text-4xl font-extrabold sm:text-5xl lg:text-7xl">
+              <span className="text-[#6BC533] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold">
                 STAR ACHIEVERS
               </span>
             </h2>
           </div>
 
-          <div className="text-left mb-8 md:mb-12 max-w-4xl">
-            {/* <h2 className="text-v0-dark-gray text-2xl md:text-3xl font-bold tracking-tighter sm:text-4xl"> */}
-              {/* OUR <br /> */}
-              <span className="text-[#0b0b0b] text-lg ">
+          <div className="text-left mb-6 sm:mb-8 md:mb-10 lg:mb-0 max-w-full lg:max-w-2xl xl:max-w-4xl">
+              <p className="text-[#0b0b0b] text-sm sm:text-base md:text-lg leading-relaxed">
                Uttaranchal University has maintained a strong placement record since the inception of its core institutes—LCD, UIT, and UIM—and especially after becoming a university in 2013. The presence of top recruiters reflects the high-quality talent nurtured across its various academic schools.
-              </span>
-            {/* </h2> */}
+              </p>
           </div>
         </div>
 
@@ -122,13 +119,13 @@ export default function StarAchievers() {
               {slides.map((group, slideIdx) => (
                 <CarouselItem key={slideIdx} className="basis-full">
                   <div
-                    className="grid grid-rows-1  gap-4 sm:gap-6 md:gap-6"
+                    className="grid grid-rows-1 gap-3 sm:gap-4 md:gap-5 lg:gap-6"
                     style={{ gridAutoFlow: "column", gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))` }}
                   >
                     {group.map((achiever, index) => (
                       <div
                         key={`${slideIdx}-${index}`}
-                        className="relative aspect-square w-full overflow-hidden rounded-xl border bg-white shadow-sm"
+                        className="relative aspect-square w-full overflow-hidden rounded-lg sm:rounded-xl border bg-white shadow-sm hover:shadow-md transition-shadow"
                       >
                         <Image
                           src={achiever.img}
@@ -144,8 +141,8 @@ export default function StarAchievers() {
               ))}
             </CarouselContent>
 
-            <CarouselPrevious className="-left-3 md:-left-6 bg-white/90 shadow" />
-            <CarouselNext className="-right-3 md:-right-6 bg-white/90 shadow" />
+            <CarouselPrevious className="-left-2 sm:-left-3 md:-left-4 lg:-left-6 bg-white/90 shadow hover:bg-white" />
+            <CarouselNext className="-right-2 sm:-right-3 md:-right-4 lg:-right-6 bg-white/90 shadow hover:bg-white" />
           </Carousel>
         </div>
       </div>
