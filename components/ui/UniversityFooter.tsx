@@ -168,7 +168,7 @@ export default function UniversityFooter() {
               <h3 className="text-xl font-bold text-white mb-4">Others</h3>
               <ul className="space-y-3 text-sm text-gray-300">
                 <li>
-                  <Link href="/about/equivalence" className="hover:text-[#6bc533] transition-colors break-words">
+                  <Link href="/about" className="hover:text-[#6bc533] transition-colors break-words">
                     Equivalence of Online Mode Degree
                   </Link>
                 </li>
@@ -183,7 +183,7 @@ export default function UniversityFooter() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about/university" className="hover:text-[#6bc533] transition-colors">
+                  <Link href="/about" className="hover:text-[#6bc533] transition-colors">
                     Uttaranchal University
                   </Link>
                 </li>
@@ -213,7 +213,7 @@ export default function UniversityFooter() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact/ciqa" className="hover:text-[#6bc533] transition-colors">
+                  <Link href="/contact" className="hover:text-[#6bc533] transition-colors">
                     CIQA
                   </Link>
                 </li>
